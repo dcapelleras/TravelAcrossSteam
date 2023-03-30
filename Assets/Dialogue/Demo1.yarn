@@ -1,0 +1,105 @@
+title: Start
+tags:
+---
+
+
+Hello Person! Welcome to the demo! How are you?
+-> Four!
+    <<jump Conversation1ESP>>
+-> Yes.
+    <<jump Conversation1ESP>>
+-> No entiendo nah...
+    <<jump Conversation1ESP>>
+===
+
+title: Conversation1
+---
+You can click the objects in the room to interact with them and pick them up to your inventory.
+You can change scenaries with the number keys.
+If that is too complicated for you, do not worry, i have the solution!
+-> Bring me to the scene selection.
+    <<jump SelectScene>>
+-> Give me the first mission.
+===
+
+title: Conversation1ESP
+---
+Tranqui, vamos a cambiar de idioma mejor...
+Puedes pulsar los objetos en la sala para interactuar con ellos y guardarlos en el inventario.
+Puedes cambiar entre escenarios con los numeros del teclado.
+-> Empieza la primera misión.
+    <<jump Mission1ESP>>
+-> Llévame a la selección de escenarios primero.
+    <<jump SelectSceneESP>>
+===
+
+title: SelectScene
+---
+-> First scenary
+    <<camera 1>>
+    <<jump Mission1>>
+-> Second scenary
+    <<camera 2>>
+    <<jump Mission1>>
+===
+
+title: SelectSceneESP
+---
+-> Primer escenario
+    <<camera 1>>
+    <<jump Mission1ESP>>
+-> Segundo escenario
+    <<camera 2>>
+    <<jump Mission1ESP>>
+===
+
+title: Mission1ESP
+---
+¡Hola! ¿Puedes oirme? Soy la científica de la segunda sala. Estoy intentando arreglar mi máquina del tiempo y necesito algunos componentes, primero ¿puedes traerme una patata? No preguntes porqué.
+
+===
+
+title: Mission2ESP
+---
+¡Perfecto! Ahora necesito un calabacín.
+
+===
+
+title: Mission3ESP
+---
+¡Perfecto! Ahora necesito un boniato.
+
+===
+
+title: Mission4ESP
+---
+¡Perfecto! Ahora necesito un ravioli.
+
+===
+
+title: Mission5ESP
+---
+¡Perfecto! Ahora necesito un kiwi.
+
+===
+
+title: Mission6ESP
+---
+¡Perfecto! Ahora necesito una galleta de esas que a veces te traen con el café creo que se llama lotus, que buena está.
+
+===
+
+title: FinalESP
+---
+¡Perfecto! Ya tengo la barriga llena, ya podemos usar la máquina que lleva rato reparada.
+===
+
+title: AlreadyFinishedESP
+---
+Ya has terminado la demo, no seas pesado...
+===
+
+title: MuertePorPortal
+---
+Ups no ha funcionado, supongo que al ser una demo aun no es funcional, has muerto...
+===

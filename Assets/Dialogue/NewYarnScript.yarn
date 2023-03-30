@@ -1,0 +1,59 @@
+﻿title: Start
+tags:
+---
+<<spawnChar Player Location1>>
+<<camera Location1>>
+Hello Player!
+Welcome to the adventure that will change your future!
+Or not!
+Take a sip of water, breath deeply and get ready
+And don't forget the popcorn!!!!
+-> Get sweet popcorn
+    Congratulations, you died of diabetes!
+    Game Over
+->Get salted popcorn
+    Congratulations you died of a stroke!
+    Game Over
+->Get buttered popcorn
+    <<jump Butter>>
+===
+
+
+title: Butter
+---
+    
+You killed of your roommates because of a huge fart!
+    <<something ComunicatorWithYarn burying>>
+->Bury the corpses
+    You died of tireness, they were too many!
+    Game Over
+->Hide the corpses
+    <<jump Hide>>
+->Pretend that nothing happened
+    You continued playing board games alone and died of boredom!
+    Game Over
+===
+
+title: Hide
+---
+They began stinking and the neighbours called the police!
+->Fight the police
+    <<jump Police>>
+->Run away
+    You tripped and died of a traumatism!
+    Game Over
+->Pretend to be forniture
+    <<set $stupidness += 1>>
+    <<jump Police>>
+    
+===
+
+title: Police
+---
+
+<<if $stupidness > 0>>
+    You pretended to be a door and opened for the police, they went in and found noone!
+<<else>>
+    You went out to fight the police but they weren't in their car, probably in your appartment, so you robbed the car and got away!
+<<endif>>
+===

@@ -1,0 +1,7 @@
+﻿title: SecondConversation
+tags:
+---
+<<spawnChar Player Location2>>
+<<camera Location2>>
+Congratulations, you jumped to the second script... but you still suck!
+===
