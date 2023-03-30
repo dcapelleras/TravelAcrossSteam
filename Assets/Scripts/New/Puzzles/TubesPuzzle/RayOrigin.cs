@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RayOrigin : MonoBehaviour
 {
-
+    //to make it work, only activate ray when a piece rotates, then disconnect all
     void Update()
     {
         RaycastHit hit;//origin of the ray, always shoots
@@ -14,8 +14,10 @@ public class RayOrigin : MonoBehaviour
         {
             if (hit.transform.TryGetComponent(out RayReceiver receiver))
             {
-                receiver.ActivateRay();
+                receiver.ActivateRay(true, null);
             }
         }
     }
+
+
 }
