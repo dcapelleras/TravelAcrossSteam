@@ -4,6 +4,40 @@ using UnityEngine;
 
 public class PlayerCable : MonoBehaviour
 {
+    [SerializeField] Transform mousePosTransform;
+    Vector3 newPos;
+    public Cable holdingCable;
+
+    private void Update()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+        {
+            newPos.x = hit.point.x;
+            newPos.y = hit.point.y;
+            if (hit.collider.TryGetComponent(out Cable cable))
+            {
+                newPos = hit.point;
+                newPos.z = cable.transform.position.z;
+            }
+            mousePosTransform.position = newPos;
+            Debug.DrawRay(Camera.main.transform.position, hit.point * hit.distance, Color.yellow, 2f);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     public GameObject holdingCable;
     [SerializeField] Vector3 offset = new Vector3(0, 1, -1);
 
@@ -35,5 +69,5 @@ public class PlayerCable : MonoBehaviour
         }
 
         
-    }
+    }*/
 }
