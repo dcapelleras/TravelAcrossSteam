@@ -709,6 +709,8 @@ MonoBehaviour:
   - {fileID: 1405236345}
   - {fileID: 1184693066}
   completed: 0
+  cablePlugged: {fileID: 0}
+  highlightMat: {fileID: 239378781582670930, guid: a3d0c0cdd203abd4aadc8831c77485cc, type: 3}
 --- !u!1 &181429045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,12 +2806,13 @@ MonoBehaviour:
   normalLayer:
     serializedVersion: 2
     m_Bits: 1
-  ignireRayLayer:
+  ignoreRayLayer:
     serializedVersion: 2
-    m_Bits: 4
+    m_Bits: 0
   player: {fileID: 1666960033}
   initialPosition: {x: 0, y: 0, z: 0}
   socketNumber: 1
+  pluggedSocket: {fileID: 0}
 --- !u!1 &721726170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2924,12 +2927,13 @@ MonoBehaviour:
   normalLayer:
     serializedVersion: 2
     m_Bits: 1
-  ignireRayLayer:
+  ignoreRayLayer:
     serializedVersion: 2
-    m_Bits: 4
+    m_Bits: 0
   player: {fileID: 1666960033}
   initialPosition: {x: 0, y: 0, z: 0}
   socketNumber: 2
+  pluggedSocket: {fileID: 0}
 --- !u!1 &804771804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,12 +3632,13 @@ MonoBehaviour:
   normalLayer:
     serializedVersion: 2
     m_Bits: 0
-  ignireRayLayer:
+  ignoreRayLayer:
     serializedVersion: 2
     m_Bits: 0
   player: {fileID: 0}
   initialPosition: {x: 0, y: 0, z: 0}
   socketNumber: 0
+  pluggedSocket: {fileID: 0}
 --- !u!136 &1068930380
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4428,6 +4433,8 @@ MonoBehaviour:
   - {fileID: 1405236345}
   - {fileID: 1184693066}
   completed: 0
+  cablePlugged: {fileID: 0}
+  highlightMat: {fileID: 239378781582670930, guid: a3d0c0cdd203abd4aadc8831c77485cc, type: 3}
 --- !u!1 &1234241661
 GameObject:
   m_ObjectHideFlags: 0
@@ -5233,6 +5240,8 @@ MonoBehaviour:
   - {fileID: 1405236345}
   - {fileID: 1184693066}
   completed: 0
+  cablePlugged: {fileID: 0}
+  highlightMat: {fileID: 239378781582670930, guid: a3d0c0cdd203abd4aadc8831c77485cc, type: 3}
 --- !u!1 &1454511670
 GameObject:
   m_ObjectHideFlags: 0
@@ -6003,12 +6012,13 @@ MonoBehaviour:
   normalLayer:
     serializedVersion: 2
     m_Bits: 0
-  ignireRayLayer:
+  ignoreRayLayer:
     serializedVersion: 2
     m_Bits: 0
   player: {fileID: 0}
   initialPosition: {x: 0, y: 0, z: 0}
   socketNumber: 0
+  pluggedSocket: {fileID: 0}
 --- !u!54 &1636001253
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6755,12 +6765,13 @@ MonoBehaviour:
   normalLayer:
     serializedVersion: 2
     m_Bits: 1
-  ignireRayLayer:
+  ignoreRayLayer:
     serializedVersion: 2
-    m_Bits: 4
+    m_Bits: 0
   player: {fileID: 1666960033}
   initialPosition: {x: 0, y: 0, z: 0}
   socketNumber: 3
+  pluggedSocket: {fileID: 0}
 --- !u!1 &1841711292
 GameObject:
   m_ObjectHideFlags: 0
@@ -6948,12 +6959,13 @@ MonoBehaviour:
   normalLayer:
     serializedVersion: 2
     m_Bits: 0
-  ignireRayLayer:
+  ignoreRayLayer:
     serializedVersion: 2
     m_Bits: 0
   player: {fileID: 0}
   initialPosition: {x: 0, y: 0, z: 0}
   socketNumber: 0
+  pluggedSocket: {fileID: 0}
 --- !u!136 &1876020324
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -14,19 +14,29 @@ public class CableSocket : MonoBehaviour
 
     public bool completed;
 
+    public Cable cablePlugged;
+
+    [SerializeField] Material highlightMat;
+
     private void OnMouseDown()
     {
+        if (cablePlugged != null)
+        {
+            return;
+        }
         if (player.holdingCable != null)
         {
             if (player.holdingCable.socketNumber == _socketNumber)
             {
                 //fix cable in the socket and set it to complete
-                //**disabling scripts doesnt work, considering instantiating a prefab and disabling the objects
-                Debug.Log("This fixed correctly");
+                Debug.Log("This cable plugged correctly");
+                cablePlugged = player.holdingCable;
+                cablePlugged.pluggedSocket = this;
                 player.holdingCable.transform.position = positionToPlug.position;
-                player.holdingCable.transform.parent= null;
-                player.holdingCable= null;
+                player.holdingCable.transform.parent = null;
+                player.holdingCable = null;
                 completed = true;
+                transform.GetComponent<Renderer>().material = highlightMat;
 
                 for (int i = 0; i < sockets.Count; i++)
                 {
@@ -36,6 +46,15 @@ public class CableSocket : MonoBehaviour
                     }
                 }
                 Debug.Log("Congrats, all cables in place!!!!!");
+            }
+            else
+            {
+                cablePlugged = player.holdingCable;
+                cablePlugged.pluggedSocket = this;
+                player.holdingCable.transform.position = positionToPlug.position;
+                player.holdingCable.transform.parent = null;
+                player.holdingCable = null;
+                Debug.Log("Plugged in the wrong socket");
             }
         }
     }

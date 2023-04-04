@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Cable : MonoBehaviour
 {
-    //from player probably
-    bool holding;
+    
     [SerializeField] Transform mousePosTransform;
     [SerializeField] LayerMask normalLayer;
-    [SerializeField] LayerMask ignireRayLayer;
+    [SerializeField] LayerMask ignoreRayLayer;
 
     [SerializeField] PlayerCable player;
 
     public Vector3 initialPosition;
 
     public int socketNumber;
+
+    public CableSocket pluggedSocket;
 
     private void OnMouseDown()
     {
@@ -23,8 +24,12 @@ public class Cable : MonoBehaviour
             return;
         }
         transform.parent = mousePosTransform;
-        gameObject.layer = ignireRayLayer;
+        gameObject.layer = ignoreRayLayer;
         player.holdingCable = this;
+        if (pluggedSocket != null )
+        {
+            pluggedSocket.cablePlugged = null;
+        }
     }
 
     private void Update()
