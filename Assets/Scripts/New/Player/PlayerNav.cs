@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Yarn.Unity;
 
-public class PlayerNav : MonoBehaviour //player
+public class PlayerNav : MonoBehaviour //have to set a point to go to if i click a puzzle so it doesnt block vision of it
 {
     #region References
     public NavMeshAgent agent;
@@ -75,6 +75,13 @@ public class PlayerNav : MonoBehaviour //player
         transform.position = endgameTransform.position;
         CamManager.instance.MoveToCam(3);
         RoomManager.instance.ChangeLoadingScreen(true);
+    }
+
+    public void TriggerFinishedBookcasePuzzle()
+    {
+        CamManager.instance.MoveToCam(1);
+        dialogueRunner.Stop();
+        dialogueRunner.StartDialogue("FinishBookcasePuzzle");
     }
 
     public void TriggerEndGame(int i)

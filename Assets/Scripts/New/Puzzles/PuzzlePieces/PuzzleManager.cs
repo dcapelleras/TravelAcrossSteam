@@ -6,6 +6,12 @@ public class PuzzleManager : MonoBehaviour
 {
     public int partsToComplete;
     int partsCompleted;
+    Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>(); 
+    }
 
     public void CheckParts()
     {
@@ -15,8 +21,10 @@ public class PuzzleManager : MonoBehaviour
             partsCompleted = 0;
             //puzzle completed
             //teleport to room and trigger endgame dialogue
+            anim.enabled = true;
+            anim.Play("turnShelf");
             PlayerNav player = FindObjectOfType<PlayerNav>();
-            player.TriggerEndGame(1);
+            //player.TriggerFinishedBookcasePuzzle();
         }
     }
 }

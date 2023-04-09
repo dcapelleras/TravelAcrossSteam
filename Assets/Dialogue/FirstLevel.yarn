@@ -2,33 +2,35 @@
 tags:
 ---
 <<Movement 0>>
-Sam: Otro dia igual de aburrido en la oficina... 
-Sam: Vamos a descansar un rato viendo vídeos.
-(Navegando por internet)
-Sam: Como... arreglar... la pantalla... del teléfono...
-Sam: How to basic, parece legítimo...
-... No creo que esto vaya a funcionar...
-Sam: En fin... de vuelta al trabajo que la subscripción de Netflix no se paga sola!
+Sam: Otro dia igual de aburrido en la oficina...
 <<shake 0 5 4>>
 (Se oye una explosión en la sala contígua)
-Sam: QUÉ CO... CARÁMBANOS!!!
+Sam: WTF!!!
 <<Movement 1>>
 ===
 
 title: EnteringRoom
 ---
-Científica: -Uff que desastroso más aterrijaze...
 Voz interior: Parece que hay algo en la pared...
+<<Movement 1>>
 ===
 
 title: FirstPuzzle
 ---
 Sam: Parece un mecanísmo, aunque ha perdido un par de piezas, ¿que pasará si las encuentro y las coloco? (click derecho para volver a ver toda la sala)
+<<Movement 1>>
 ===
 
 title: FirstPuzzleReminder
 ---
 Voz interior: Hay que buscar las piezas que faltan. (el inventario se abre con Esc, selecciona el objeto que quieras usar y luego dónde usarlo)
+===
+
+title: FinishBookcasePuzzle
+---
+Sam: Ya está ordenado.
+<<shake 1 2 2>>
+Sam: ¿Que está ocurriendo?
 ===
 
 title: TerminateGame

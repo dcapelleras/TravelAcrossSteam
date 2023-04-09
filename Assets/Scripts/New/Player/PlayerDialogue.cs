@@ -16,11 +16,10 @@ public class PlayerDialogue : MonoBehaviour
 
     private void Update()
     {
-        if (dialogueRunner.IsDialogueRunning || RoomManager.instance.changingRoom)
+        if (dialogueRunner.IsDialogueRunning || RoomManager.instance.changingRoom) //could instead block movement at the beginning of the dialogue and reset it at the end
         {
             player.AllowMovement(0);
             return;
         }
-        player.AllowMovement(1);
     }
 }

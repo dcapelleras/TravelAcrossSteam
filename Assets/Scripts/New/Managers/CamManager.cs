@@ -43,7 +43,7 @@ public class CamManager : MonoBehaviour
         }
     }
 
-    public void ShakeCam(int camIndex, float intensity, float time)
+    public void ShakeCam(int camIndex, float intensity, float time) //could use camActive instead of camIndex, but works anyway for now
     {
         CinemachineBasicMultiChannelPerlin noise = cinemachines[camIndex].GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         noise.m_AmplitudeGain= intensity;

@@ -10,6 +10,10 @@ public class PlayerCable : MonoBehaviour
 
     private void Update()
     {
+        if (holdingCable == null) //maybe breaks the code, if does, remove.
+        {
+            return;
+        }
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
         {
