@@ -79,7 +79,7 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
 
     public void TriggerFinishedBookcasePuzzle()
     {
-        CamManager.instance.MoveToCam(1);
+        //CamManager.instance.MoveToCam(1);
         dialogueRunner.Stop();
         dialogueRunner.StartDialogue("FinishBookcasePuzzle");
     }

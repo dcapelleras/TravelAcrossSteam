@@ -3,7 +3,7 @@ tags:
 ---
 <<Movement 0>>
 Sam: Otro dia igual de aburrido en la oficina...
-<<shake 0 5 4>>
+<<shake 0 5 3>>
 (Se oye una explosión en la sala contígua)
 Sam: WTF!!!
 <<Movement 1>>
@@ -18,7 +18,6 @@ Voz interior: Parece que hay algo en la pared...
 title: FirstPuzzle
 ---
 Sam: Parece un mecanísmo, aunque ha perdido un par de piezas, ¿que pasará si las encuentro y las coloco? (click derecho para volver a ver toda la sala)
-<<Movement 1>>
 ===
 
 title: FirstPuzzleReminder
@@ -28,8 +27,7 @@ Voz interior: Hay que buscar las piezas que faltan. (el inventario se abre con E
 
 title: FinishBookcasePuzzle
 ---
-Sam: Ya está ordenado.
-<<shake 1 2 2>>
+<<shake 2 2 2>>
 Sam: ¿Que está ocurriendo?
 ===
 

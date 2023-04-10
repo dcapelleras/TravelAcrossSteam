@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.AI;
 
 public class PlayerPuzzle : MonoBehaviour
 {
@@ -10,10 +11,15 @@ public class PlayerPuzzle : MonoBehaviour
     bool doingPuzzle;
     DialogueRunner dialogueRunner;
     bool firstPuzzleRead;
+    NavMeshAgent agent;
+    PlayerNav nav;
+    
 
     private void Awake()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
+        agent = GetComponent<NavMeshAgent>();
+        nav = FindObjectOfType<PlayerNav>();
     }
 
     private void Update()
@@ -36,6 +42,7 @@ public class PlayerPuzzle : MonoBehaviour
                             previousCamUsed = puzzle.puzzleIndex - 1; //puzzle will always have to have the next camera from the room
                             dialogueRunner.Dialogue.Stop();
                             dialogueRunner.StartDialogue("FirstPuzzle");
+                            agent.SetDestination(puzzle.moveToPos.position);
                         }
                         else
                         {
@@ -44,6 +51,7 @@ public class PlayerPuzzle : MonoBehaviour
                             previousCamUsed = puzzle.puzzleIndex - 1; //puzzle will always have to have the next camera from the room
                             dialogueRunner.Dialogue.Stop();
                             dialogueRunner.StartDialogue("FirstPuzzleReminder");
+                            agent.SetDestination(puzzle.moveToPos.position);
                         }
                     }
                         
@@ -57,6 +65,7 @@ public class PlayerPuzzle : MonoBehaviour
                 doingPuzzle= false;
                 CamManager.instance.MoveToCam(previousCamUsed);
                 dialogueRunner.Dialogue.Stop();
+                nav.AllowMovement(1);
             }
         }
     }

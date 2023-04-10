@@ -24,7 +24,7 @@ public class PuzzleManager : MonoBehaviour
             anim.enabled = true;
             anim.Play("turnShelf");
             PlayerNav player = FindObjectOfType<PlayerNav>();
-            //player.TriggerFinishedBookcasePuzzle();
+            player.TriggerFinishedBookcasePuzzle();
         }
     }
 }
