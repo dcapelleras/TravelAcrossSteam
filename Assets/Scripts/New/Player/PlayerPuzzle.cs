@@ -43,6 +43,7 @@ public class PlayerPuzzle : MonoBehaviour
                             dialogueRunner.Dialogue.Stop();
                             dialogueRunner.StartDialogue("FirstPuzzle");
                             agent.SetDestination(puzzle.moveToPos.position);
+                            //InventoryManager_v2.instance.OpenInventory();
                         }
                         else
                         {
@@ -52,6 +53,7 @@ public class PlayerPuzzle : MonoBehaviour
                             dialogueRunner.Dialogue.Stop();
                             dialogueRunner.StartDialogue("FirstPuzzleReminder");
                             agent.SetDestination(puzzle.moveToPos.position);
+                            //InventoryManager_v2.instance.OpenInventory();
                         }
                     }
                         
@@ -60,12 +62,13 @@ public class PlayerPuzzle : MonoBehaviour
         }
         else
         {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 doingPuzzle= false;
                 CamManager.instance.MoveToCam(previousCamUsed);
                 dialogueRunner.Dialogue.Stop();
                 nav.AllowMovement(1);
+                InventoryManager_v2.instance.CloseInventory();
             }
         }
     }

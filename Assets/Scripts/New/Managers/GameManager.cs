@@ -8,8 +8,9 @@ public class GameManager : MonoBehaviour
     public GameObject menuPausa;
     public GameObject exit;
     bool menuOpen;
-
+    [SerializeField] AudioSource audioSource;
     public static GameManager instance;
+    [SerializeField] ScriptableSettings settings;
 
     private void Awake()
     {
@@ -17,6 +18,9 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+        audioSource= GetComponent<AudioSource>();
+        audioSource.volume = settings.volume;
+        audioSource.Play();
     }
 
     // Update is called once per frame

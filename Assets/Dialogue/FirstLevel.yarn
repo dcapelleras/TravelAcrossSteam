@@ -17,12 +17,16 @@ Voz interior: Parece que hay algo en la pared...
 
 title: FirstPuzzle
 ---
-Sam: Parece un mecanísmo, aunque ha perdido un par de piezas, ¿que pasará si las encuentro y las coloco? (click derecho para volver a ver toda la sala)
+Sam: Parece un mecanísmo, aunque ha perdido un par de piezas, ¿que pasará si las encuentro y las coloco? (esc para volver a ver toda la sala)
+Hay que hacer tiempo porque no se abre bien el inventario si aun se mueve el cinemachine
+<<inventory 1>>
 ===
 
 title: FirstPuzzleReminder
 ---
-Voz interior: Hay que buscar las piezas que faltan. (el inventario se abre con Esc, selecciona el objeto que quieras usar y luego dónde usarlo)
+Voz interior: Hay que buscar las piezas que faltan. (selecciona el objeto que quieras usar y luego dónde usarlo)
+Hay que hacer tiempo porque no se abre bien el inventario si aun se mueve el cinemachine
+<<inventory 1>>
 ===
 
 title: FinishBookcasePuzzle

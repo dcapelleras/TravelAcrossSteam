@@ -4,8 +4,10 @@ using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
+using Yarn.Unity;
 
-public class InventoryManager_v2 : MonoBehaviour
+public class InventoryManager_v2 : MonoBehaviour, IDragHandler, IPointerUpHandler
 {
     public Inventory_v2 inventory;
     public static InventoryManager_v2 instance;
@@ -13,6 +15,8 @@ public class InventoryManager_v2 : MonoBehaviour
     public Transform itemContent;
     public GameObject inventoryItem;
     public List<Item> _items = new List<Item>();
+    DialogueRunner _dialogueRunner;
+
 
     private void Awake()
     {
@@ -28,25 +32,21 @@ public class InventoryManager_v2 : MonoBehaviour
                 _items.Add(item);
             }
         }
+        _dialogueRunner = FindObjectOfType<DialogueRunner>();
+        _dialogueRunner.AddCommandHandler<int>("inventory", OpenInventory);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            OpenInventory();
-        }
-    }
 
-    public void OpenInventory()
+    public void OpenInventory(int i)
     {
-        if (InventoryPanel.activeInHierarchy)
-        {
-            InventoryPanel.SetActive(false);
-            return;
-        }
+        Debug.Log("Opening inventory");
         InventoryPanel.SetActive(true);
         ListItems();
+    }
+
+    public void CloseInventory()
+    {
+        InventoryPanel.SetActive(false);
     }
 
     public void Add(Item item)
@@ -78,5 +78,15 @@ public class InventoryManager_v2 : MonoBehaviour
             itemIcon.sprite= item.icon;
         }
         
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        //eventData.position = Input.mousePosition;
     }
 }

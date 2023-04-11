@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class RayReceiver : MonoBehaviour
 { //for a ending of the puzzle, create a new script with the same receive ray but a different outcome
@@ -8,6 +9,8 @@ public class RayReceiver : MonoBehaviour
     [SerializeField] bool isGoal = false;
 
     [SerializeField] RayOrigin origin;
+    [SerializeField] GameObject nextPuzzle;
+    [SerializeField] GameObject nextPuzzleVisual;
 
     private void Update()
     {
@@ -29,6 +32,21 @@ public class RayReceiver : MonoBehaviour
                 //lights or shake 
                 //text saying: now what's happening?
                 //teleports and camera moves, endgame
+
+
+                nextPuzzle.SetActive(true);
+                if (nextPuzzleVisual!= null)
+                {
+                    nextPuzzleVisual.SetActive(false);
+                }
+                //DialogueRunner runner = FindObjectOfType<DialogueRunner>();
+                //runner.Dialogue.Stop();
+                //runner.StartDialogue("PlugCable");
+                this.enabled = false;
+                CamManager.instance.MoveToCam(4); //create new cam and assign the index correctly
+                
+
+
                 Debug.Log("Congratulations, all connected");
                 this.enabled= false;
                 return;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
@@ -9,6 +10,22 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject settingsPanel;
     [SerializeField] GameObject menuPanel;
     [SerializeField] GameObject levelsPanel;
+    [SerializeField] Slider volumeSlider;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] ScriptableSettings settings;
+
+    private void Awake()
+    {
+        audioSource.volume = settings.volume;
+        volumeSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+        audioSource.Play();
+    }
+
+    public void ValueChangeCheck()
+    {
+        settings.volume = volumeSlider.value;
+        audioSource.volume = settings.volume;
+    }
 
     public void PlayGame(string scenename)
     {

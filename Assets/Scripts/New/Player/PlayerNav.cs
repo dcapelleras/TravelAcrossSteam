@@ -15,6 +15,7 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
     bool canMove;
     bool gameEnded = false;
     [SerializeField] Transform endgameTransform;
+    [SerializeField] SpriteRenderer _renderer;
 
     private void Awake()
     {
@@ -26,31 +27,47 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
 
     private void Update()
     {
+        if (Vector3.Distance(agent.destination, transform.position) < 3f)
+        {
+            anim.SetFloat("Walk", 0f);
+        }
         if (!canMove || gameEnded)
         {
             return;
         }
+        
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                agent.SetDestination(hit.point);
-                if ((transform.position.x - hit.point.x) < -0.1f)
+                if (hit.collider.TryGetComponent(out PuzzleDetector puzzle))
                 {
-                    anim.SetTrigger("Right");
+                    agent.SetDestination(puzzle.moveToPos.position);
+                }
+                else
+                {
+                    agent.SetDestination(hit.point);
+                }
+                
+                if ((transform.position.x - hit.point.x) < -0.5f)
+                {
+                    anim.SetFloat("Walk", 1f);
+                    _renderer.flipX = true;
                     //anim turn left
                     //anim walk
                 }
-                else if ((transform.position.x - hit.point.x) > 0.1f)
+                else if ((transform.position.x - hit.point.x) > 0.5f)
                 {
-                    anim.SetTrigger("Left");
+                    anim.SetFloat("Walk", 1f);
+                    _renderer.flipX = false;
                     //anim turn right
                     //anim walk
                 }
                 else
                 {
+                    anim.SetFloat("Walk", 0f);
                     //anim idle
                 }
             }
