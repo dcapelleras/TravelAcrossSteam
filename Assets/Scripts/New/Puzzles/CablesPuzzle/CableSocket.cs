@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class CableSocket : MonoBehaviour
 {
@@ -46,6 +47,9 @@ public class CableSocket : MonoBehaviour
                     }
                 }
                 Debug.Log("Congrats, all cables in place!!!!!");
+                DialogueRunner runner = FindObjectOfType<DialogueRunner>();
+                runner.Dialogue.Stop();
+                runner.StartDialogue("TerminateGame");
             }
             else
             {

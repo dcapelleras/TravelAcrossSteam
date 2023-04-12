@@ -1965,7 +1965,10 @@ MonoBehaviour:
   _socketNumber: 2
   player: {fileID: 1117125192}
   positionToPlug: {fileID: 192688781}
-  sockets: []
+  sockets:
+  - {fileID: 815529973}
+  - {fileID: 192688785}
+  - {fileID: 1264547791}
   completed: 0
   cablePlugged: {fileID: 0}
   highlightMat: {fileID: 1330581024282824822, guid: 54a5b6c5e8f859f42a457a61a5ca881b, type: 3}
@@ -3528,6 +3531,7 @@ GameObject:
   - component: {fileID: 606112068}
   - component: {fileID: 606112067}
   - component: {fileID: 606112066}
+  - component: {fileID: 606112069}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -3611,6 +3615,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &606112069
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606112064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 0}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 1
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &625703714
 GameObject:
   m_ObjectHideFlags: 0
@@ -4813,7 +4834,10 @@ MonoBehaviour:
   _socketNumber: 1
   player: {fileID: 1117125192}
   positionToPlug: {fileID: 815529969}
-  sockets: []
+  sockets:
+  - {fileID: 815529973}
+  - {fileID: 192688785}
+  - {fileID: 1264547791}
   completed: 0
   cablePlugged: {fileID: 0}
   highlightMat: {fileID: 1330581024282824822, guid: 54a5b6c5e8f859f42a457a61a5ca881b, type: 3}
@@ -8139,7 +8163,10 @@ MonoBehaviour:
   _socketNumber: 3
   player: {fileID: 1117125192}
   positionToPlug: {fileID: 1264547787}
-  sockets: []
+  sockets:
+  - {fileID: 815529973}
+  - {fileID: 192688785}
+  - {fileID: 1264547791}
   completed: 0
   cablePlugged: {fileID: 0}
   highlightMat: {fileID: 1330581024282824822, guid: 54a5b6c5e8f859f42a457a61a5ca881b, type: 3}

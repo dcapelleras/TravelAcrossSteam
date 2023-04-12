@@ -2,30 +2,32 @@
 tags:
 ---
 <<Movement 0>>
-Sam: Otro dia igual de aburrido en la oficina...
+Sam: Otra vez haciendo horas extra... Tendré que pedirle otra vez a la vecina que alimente los gatos...
 <<shake 0 5 3>>
-(Se oye una explosión en la sala contígua)
-Sam: WTF!!!
+(Se oye un ruido a la sala del lado)
+Sam: ¡Que susto! Esta oficina se cae a trozos... vamos a ver que ha pasado.
 <<Movement 1>>
 ===
 
 title: EnteringRoom
 ---
-Voz interior: Parece que hay algo en la pared...
+Voz interior: Vaya parece que solo han sido unos libros cayendo...
 <<Movement 1>>
 ===
 
 title: FirstPuzzle
 ---
-Sam: Parece un mecanísmo, aunque ha perdido un par de piezas, ¿que pasará si las encuentro y las coloco? (esc para volver a ver toda la sala)
-Hay que hacer tiempo porque no se abre bien el inventario si aun se mueve el cinemachine
+Sam: Parece que faltan un par de libros de cocina, vamos a buscarlos y colocarlos .
+Instrucciones: (click en el objeto del inventario y luego el hueco donde colocarlo)
+Instrucciones: (esc para volver a ver toda la sala)
 <<inventory 1>>
 ===
 
 title: FirstPuzzleReminder
 ---
-Voz interior: Hay que buscar las piezas que faltan. (selecciona el objeto que quieras usar y luego dónde usarlo)
-Hay que hacer tiempo porque no se abre bien el inventario si aun se mueve el cinemachine
+Sam: Hay que buscar los libros que faltan.
+Instrucciones: (click en el objeto del inventario y luego el hueco donde colocarlo)
+Instrucciones: (esc para volver a ver toda la sala)
 <<inventory 1>>
 ===
 
@@ -33,11 +35,19 @@ title: FinishBookcasePuzzle
 ---
 <<shake 2 2 2>>
 Sam: ¿Que está ocurriendo?
+Sam: Que desastre de cables, tendré que arreglarlo o aún me van a echar la culpa a mí...
+===
+
+title: StartPlugging
+---
+Sam: Ya están los cambles pero sigue sin funcionar... 
+<<startPluggingGame 1>>
+Sam: ¡¡Ah ya entiendo!! 
 ===
 
 title: TerminateGame
 ---
-¿Que es esta sensacion? Parece como si me estuviera desvaneciendo... Tengo que dejar las dr...
+¿Que es esta sensacion? Parece como si me estuviera desvaneciendo... NOOO! No me quiero ir señor Stark!!!
 <<FinishGame 1>>
 <<jump GameOver>>
 ===
@@ -45,8 +55,6 @@ title: TerminateGame
 title: GameOver
 ---
 Narrador: Apareces en una sala desconocida, ¿te has teletransportado?
-Voz interior: Vaya que sala más bonita, parece el lugar ideal para retirarse y terminar la aventura
-Narrador: Esto es todo por ahora, espero que os haya gustado.
-Narrador: ¿Os ha gustado? ¿Holaa? ¡¡Decid algo!! ¿Qué intentáis decir con este silencio?  ¿Que es lo que falla? ¡Es la última sala, lo sabía! ¡Quien querría vivir allí! Faltan como mínimo 2 cajas más...
-Fin: Pues nada, fin del blockout del nivel 0.
+Narrador: En el siguiente capítulo, por solo 9,99$, Sam conoce a una científica que le cambia la visión del mundo y salva al mundo de la tiranía que es el prejuicio de las mujeres en steam.
+Narrador: Y por 1,99$ más, quitamos la gran mayoría de bugs y eliminamos el virus que ahora está en tu PC.
 ===

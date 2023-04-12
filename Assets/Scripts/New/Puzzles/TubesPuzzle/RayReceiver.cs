@@ -11,6 +11,16 @@ public class RayReceiver : MonoBehaviour
     [SerializeField] RayOrigin origin;
     [SerializeField] GameObject nextPuzzle;
     [SerializeField] GameObject nextPuzzleVisual;
+    DialogueRunner dialogueRunner;
+
+    private void Awake()
+    {
+        if (isGoal)
+        {
+            dialogueRunner = FindObjectOfType<DialogueRunner>();
+            dialogueRunner.AddCommandHandler<int>("startPluggingGame", PlugGame);
+        }
+    }
 
     private void Update()
     {
@@ -33,19 +43,11 @@ public class RayReceiver : MonoBehaviour
                 //text saying: now what's happening?
                 //teleports and camera moves, endgame
 
-
-                nextPuzzle.SetActive(true);
-                if (nextPuzzleVisual!= null)
-                {
-                    nextPuzzleVisual.SetActive(false);
-                }
-                //DialogueRunner runner = FindObjectOfType<DialogueRunner>();
-                //runner.Dialogue.Stop();
-                //runner.StartDialogue("PlugCable");
                 this.enabled = false;
-                CamManager.instance.MoveToCam(4); //create new cam and assign the index correctly
-                
 
+                
+                dialogueRunner.Dialogue.Stop();
+                dialogueRunner.StartDialogue("StartPlugging");
 
                 Debug.Log("Congratulations, all connected");
                 this.enabled= false;
@@ -72,6 +74,16 @@ public class RayReceiver : MonoBehaviour
                 }
 
             }
+        }
+    }
+
+    public void PlugGame(int i)
+    {
+        CamManager.instance.MoveToCam(4); //go to the plugs place
+        nextPuzzle.SetActive(true);
+        if (nextPuzzleVisual != null)
+        {
+            nextPuzzleVisual.SetActive(false);
         }
     }
 

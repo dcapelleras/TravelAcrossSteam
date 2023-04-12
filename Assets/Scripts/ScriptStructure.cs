@@ -1,6 +1,8 @@
 public class ScriptStructure
 {
     /*
+    
+    Dialogue: (for now being found from everywhere, maybe i should make a manager with a singleton)
      
     Player: 
         PlayerNav: Controls movement, can enable it or disable it from other scripts and has the animator. Uses the camManager and the dialogueManager
