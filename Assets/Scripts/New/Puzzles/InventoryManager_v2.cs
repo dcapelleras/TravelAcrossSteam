@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine.EventSystems;
 using Yarn.Unity;
 
-public class InventoryManager_v2 : MonoBehaviour, IDragHandler, IPointerUpHandler
+public class InventoryManager_v2 : MonoBehaviour
 {
     public Inventory_v2 inventory;
     public static InventoryManager_v2 instance;
@@ -78,15 +78,5 @@ public class InventoryManager_v2 : MonoBehaviour, IDragHandler, IPointerUpHandle
             itemIcon.sprite= item.icon;
         }
         
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        //eventData.position = Input.mousePosition;
     }
 }

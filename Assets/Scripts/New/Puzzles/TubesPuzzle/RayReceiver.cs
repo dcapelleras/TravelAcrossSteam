@@ -31,28 +31,15 @@ public class RayReceiver : MonoBehaviour
         }
         if (connected)
         {
-            if (isGoal)
-            {
-                //trigger end of puzzle
-                //text saying: it looks complete, but still doesn't work...
-                //camera moves to the plugs
-                //text saying: ohh, that's why, let me plug them in
-                //puzzle
-                //camera to shelf
-                //lights or shake 
-                //text saying: now what's happening?
-                //teleports and camera moves, endgame
-
-                this.enabled = false;
-
-                
-                dialogueRunner.Dialogue.Stop();
-                dialogueRunner.StartDialogue("StartPlugging");
-
-                Debug.Log("Congratulations, all connected");
-                this.enabled= false;
-                return;
-            }
+            //trigger end of puzzle
+            //text saying: it looks complete, but still doesn't work...
+            //camera moves to the plugs
+            //text saying: ohh, that's why, let me plug them in
+            //puzzle
+            //camera to shelf
+            //lights or shake 
+            //text saying: now what's happening?
+            //teleports and camera moves, endgame
 
             RaycastHit hit1;
             RaycastHit hit2;
@@ -73,6 +60,30 @@ public class RayReceiver : MonoBehaviour
                     receiver.ActivateRay();
                 }
 
+            }
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (!origin.connected)
+        {
+            return;
+        }
+        if (connected)
+        {
+
+            if (isGoal)
+            {
+                this.enabled = false;
+
+
+                dialogueRunner.Dialogue.Stop();
+                dialogueRunner.StartDialogue("StartPlugging");
+
+                Debug.Log("Congratulations, all connected");
+                this.enabled = false;
+                return;
             }
         }
     }

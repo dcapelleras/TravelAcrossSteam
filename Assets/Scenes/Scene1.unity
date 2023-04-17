@@ -5333,7 +5333,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -11552,7 +11552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8764642708841713794, guid: 4b1d28e2e73aba84e876b651a95bfeea, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: CanvasInventory
       objectReference: {fileID: 0}
     - target: {fileID: 8764642708841713795, guid: 4b1d28e2e73aba84e876b651a95bfeea, type: 3}
       propertyPath: m_BlockingObjects
