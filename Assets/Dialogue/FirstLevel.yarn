@@ -2,23 +2,26 @@
 tags:
 ---
 <<Movement 0>>
-Sam: Otra vez haciendo horas extra... Tendré que pedirle otra vez a la vecina que alimente los gatos...
-<<shake 0 5 3>>
-(Se oye un ruido a la sala del lado)
-Sam: ¡Que susto! Esta oficina se cae a trozos... vamos a ver que ha pasado.
+Sam: Ugh, hoy ha sido un día agotador en la recepción. No puedo esperar a irme a casa.
+Sam: Encima me toca limpiar...
 <<Movement 1>>
 ===
 
 title: EnteringRoom
 ---
-Voz interior: Vaya parece que solo han sido unos libros cayendo...
+Sam: Está muy oscuro a ver si encuentro la luz.
+<<shake 2 1 1>>
+Ouch (se cae)
+(vuelve la luz)
+¡Oh no! ¡Ya he venido yo a cargarme algo!!
+Parece que he arruinado esta máquina, a ver si me van a echar la culpa!
+Por ahora probaré a recoger las piezas y a ver si me las ingenio para dejarlo mas o menos como estaba.
 <<Movement 1>>
 ===
 
 title: FirstPuzzle
 ---
-Sam: Parece que faltan un par de libros de cocina, vamos a buscarlos y colocarlos .
-Instrucciones: (click en el objeto del inventario y luego el hueco donde colocarlo)
+Sam: Parece que a esta estantería le faltan algunos libros, mejor los coloco antes que me culpen a mí.
 Instrucciones: (esc para volver a ver toda la sala)
 <<inventory 1>>
 ===
@@ -26,15 +29,14 @@ Instrucciones: (esc para volver a ver toda la sala)
 title: FirstPuzzleReminder
 ---
 Sam: Hay que buscar los libros que faltan.
-Instrucciones: (click en el objeto del inventario y luego el hueco donde colocarlo)
+Instrucciones: (arrastra el objeto del inventario al hueco)
 Instrucciones: (esc para volver a ver toda la sala)
 <<inventory 1>>
 ===
 
 title: FinishBookcasePuzzle
 ---
-<<shake 2 2 2>>
-Sam: ¿Que está ocurriendo?
+Sam: ¡Por fin termino! Bueno mejor ordeno tambien la sala del lado que aún me van a regañar.
 Sam: Que desastre de cables, tendré que arreglarlo o aún me van a echar la culpa a mí...
 ===
 

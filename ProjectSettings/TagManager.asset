@@ -15,6 +15,7 @@ TagManager:
   - Cable1
   - Cable2
   - Cable3
+  - Final
   layers:
   - Default
   - TransparentFX
