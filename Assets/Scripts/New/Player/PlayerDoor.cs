@@ -36,6 +36,7 @@ public class PlayerDoor : MonoBehaviour
         {
             if (Vector3.Distance(crossingDoor.transform.position, transform.position) < 3f)
             {
+                
                 CrossDoor();
                 RoomManager.instance.ChangeLoadingScreen(false);
             }

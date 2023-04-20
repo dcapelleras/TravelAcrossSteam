@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Yarn.Unity;
 
 public class RoomManager : MonoBehaviour
 {
     public static RoomManager instance;
 
     [SerializeField] GameObject loadingScreen;
-
-    DialogueRunner dialogueRunner;
     
     public float loadingScreenTime = 5f;
 
@@ -23,7 +20,6 @@ public class RoomManager : MonoBehaviour
         {
             instance = this;
         }
-        dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
     public void ChangeLoadingScreen(bool isEndgame)
@@ -47,8 +43,9 @@ public class RoomManager : MonoBehaviour
         else if (firstTimeEnteringRoom)
         {
             firstTimeEnteringRoom = false;
-            dialogueRunner.Dialogue.Stop();
-            dialogueRunner.StartDialogue("EnteringRoom");
+            DialogueManager.instance.WarehouseDialogue();
         }
     }
+
+
 }

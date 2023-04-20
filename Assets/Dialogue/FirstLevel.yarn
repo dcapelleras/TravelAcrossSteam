@@ -3,19 +3,7 @@ tags:
 ---
 <<Movement 0>>
 Sam: Ugh, hoy ha sido un día agotador en la recepción. No puedo esperar a irme a casa.
-Sam: Encima me toca limpiar...
-<<Movement 1>>
-===
-
-title: EnteringRoom
----
-Sam: Está muy oscuro a ver si encuentro la luz.
-<<shake 2 1 1>>
-Ouch (se cae)
-(vuelve la luz)
-¡Oh no! ¡Ya he venido yo a cargarme algo!!
-Parece que he arruinado esta máquina, a ver si me van a echar la culpa!
-Por ahora probaré a recoger las piezas y a ver si me las ingenio para dejarlo mas o menos como estaba.
+Sam: Encima me toca recoger este desastre...
 <<Movement 1>>
 ===
 
@@ -37,14 +25,26 @@ Instrucciones: (esc para volver a ver toda la sala)
 title: FinishBookcasePuzzle
 ---
 Sam: ¡Por fin termino! Bueno mejor ordeno tambien la sala del lado que aún me van a regañar.
-Sam: Que desastre de cables, tendré que arreglarlo o aún me van a echar la culpa a mí...
+===
+
+title: EnteringRoom
+---
+Sam: Está muy oscuro a ver si encuentro la luz.
+<<shake 1 1 1>>
+Ouch (se cae)
+(vuelve la luz)
+<<WarehouseLights 1>>
+¡Oh no! ¡Ya he venido yo a cargarme algo!!
+Parece que he arruinado esta máquina, a ver si me van a echar la culpa!
+Por ahora probaré a recoger las piezas y a ver si me las ingenio para dejarlo mas o menos como estaba.
+<<Movement 1>>
 ===
 
 title: StartPlugging
 ---
-Sam: Ya están los cambles pero sigue sin funcionar... 
+Sam: Ya están los cables pero sigue sin funcionar...
 <<startPluggingGame 1>>
-Sam: ¡¡Ah ya entiendo!! 
+Sam: ¡¡Ah ya entiendo!!
 ===
 
 title: TerminateGame
