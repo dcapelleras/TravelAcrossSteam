@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PuzzlePiece : MonoBehaviour
 {
-    [SerializeField] Material correctMat;
+    [SerializeField] GameObject correctObject;
     public Item correctItem;
     [SerializeField] PuzzleManager puzzle;
 
@@ -14,8 +14,9 @@ public class PuzzlePiece : MonoBehaviour
         {
             InventoryManager_v2.instance.Remove(item);
             InventoryManager_v2.instance.ListItems();
-            transform.GetComponent<Renderer>().material = correctMat;
+            Instantiate(correctObject, transform.position, Quaternion.identity);
             puzzle.CheckParts();
+            gameObject.SetActive(false);
         }
     }
 }

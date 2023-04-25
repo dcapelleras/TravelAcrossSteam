@@ -21,8 +21,8 @@ public class PuzzleManager : MonoBehaviour
             partsCompleted = 0;
             //puzzle completed
             //teleport to room and trigger endgame dialogue
-            anim.enabled = true;
-            anim.Play("turnShelf");
+            //anim.enabled = true;
+            //anim.Play("turnShelf");
             PlayerNav player = FindObjectOfType<PlayerNav>();
             player.TriggerFinishedBookcasePuzzle();
         }

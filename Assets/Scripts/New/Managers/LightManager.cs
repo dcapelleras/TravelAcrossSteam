@@ -6,6 +6,7 @@ using UnityEngine;
 public class LightManager : MonoBehaviour
 {
     [SerializeField] List<Light> warehouselights;
+    [SerializeField] float warehouseIntensity = 4f;
 
     public static LightManager instance;
 
@@ -21,7 +22,7 @@ public class LightManager : MonoBehaviour
     {
         foreach (Light l in warehouselights)
         {
-            l.intensity = 5f;
+            l.intensity = warehouseIntensity;
         }
     }
 }

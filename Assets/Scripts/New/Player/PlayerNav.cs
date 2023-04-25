@@ -16,6 +16,8 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
     bool gameEnded = false;
     [SerializeField] Transform endgameTransform;
     [SerializeField] SpriteRenderer _renderer;
+    [SerializeField] GameObject staticDoor1;
+    [SerializeField] GameObject animatedDoor1;
 
     private void Awake()
     {
@@ -99,6 +101,8 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
         //CamManager.instance.MoveToCam(1);
         dialogueRunner.Stop();
         dialogueRunner.StartDialogue("FinishBookcasePuzzle");
+        staticDoor1.SetActive(false);
+        animatedDoor1.SetActive(true);
     }
 
     public void TriggerEndGame(int i)
