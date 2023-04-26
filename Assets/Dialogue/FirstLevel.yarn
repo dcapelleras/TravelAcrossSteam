@@ -26,6 +26,7 @@ Instruccions: (Esc per tornar a veure tota la sala)
 title: FinishBookcasePuzzle
 ---
 Sam: Per fi he acabat! Bé, millor organitzo també la sala del costat, no m’agradaria que em renyessin per deixar-ho a mitges.
+<<Movement 1>>
 ===
 
 title: EnteringRoom
@@ -43,16 +44,23 @@ Per ara provaré a recollir les peces i a veure si aconsegueixo deixar-ho més o
 
 title: StartPlugging
 ---
-Sam: Ja està tot al seu lloc però segueix espatllat...
+Sam: Ja està tot al seu lloc...
 <<startPluggingGame 1>>
-Sam: ¡¡Ah ara ho entenc!!
+Sam: Ara només falta conectar connectar-ho i ja estarà!
 ===
 
-title: TerminateGame
+title: FinishCables
 ---
-¿Que es esta sensacion? Parece como si me estuviera desvaneciendo... NOOO! No me quiero ir señor Stark!!!
-<<FinishGame 1>>
-<<jump GameOver>>
+Sam: Ara sí sembla que funciona, em pregunto per què deu servir... No crec que ningú s'enfadi si entro a mirar un segon.
+<<FinishCable 1>>
+<<Movement 1>>
+===
+
+title: StartingTeleport
+---
+Sam: Què està passant?
+Sam: Què es aquesta sensació tan extranya? Què m'està passant?
+<<TeleportToNasa 1>>
 ===
 
 title: GameOver

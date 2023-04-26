@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class DialogueManager : MonoBehaviour
         }
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         dialogueRunner.AddCommandHandler<int>("WarehouseLights", TurnOnWarehouseLights);
+        dialogueRunner.AddCommandHandler<int>("TeleportToNasa", StartTeleport);
     }
 
     public void WarehouseDialogue()
@@ -29,5 +31,16 @@ public class DialogueManager : MonoBehaviour
     public void TurnOnWarehouseLights(int i)
     {
         LightManager.instance.TurnOnWarehouse();
+    }
+
+    public void PrepareTeleport()
+    {
+        dialogueRunner.Dialogue.Stop();
+        dialogueRunner.StartDialogue("StartingTeleport");
+    }
+
+    public void StartTeleport(int i)
+    {
+        SceneManager.LoadScene(2);
     }
 }
