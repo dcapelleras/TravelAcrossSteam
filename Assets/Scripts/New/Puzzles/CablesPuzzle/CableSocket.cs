@@ -9,8 +9,6 @@ public class CableSocket : MonoBehaviour
 
     [SerializeField] PlayerCable player;
 
-    [SerializeField] Animator machineAnimator;
-
     [SerializeField] Transform positionToPlug;
 
     public List<CableSocket> sockets;
@@ -49,13 +47,9 @@ public class CableSocket : MonoBehaviour
                     }
                 }
                 Debug.Log("Congrats, all cables in place!!!!!");
-                CamManager.instance.MoveToCam(3);
                 DialogueRunner runner = FindObjectOfType<DialogueRunner>();
                 runner.Dialogue.Stop();
-                runner.StartDialogue("FinishCables");
-                player.gameObject.SetActive(false);
-                machineAnimator.SetBool("abrir", true);
-                
+                runner.StartDialogue("TerminateGame");
             }
             else
             {

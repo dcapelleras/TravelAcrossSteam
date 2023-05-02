@@ -11,7 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene1.unity
     guid: 08b1661a15f7e214ba45d71221e367ef
-  - enabled: 1
-    path: Assets/Scenes/NASA EXTERIOR.unity
-    guid: e51550427d5b57b469383e8c8cae3b82
   m_configObjects: {}

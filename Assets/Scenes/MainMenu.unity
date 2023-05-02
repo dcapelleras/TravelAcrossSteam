@@ -262,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5177207962252625128, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_text
-      value: Adjustaments
+      value: Ajustes
       objectReference: {fileID: 0}
     - target: {fileID: 5501681730798382194, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_Pivot.x
@@ -895,7 +895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5177207962252625128, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_text
-      value: Nivell 1
+      value: Nivel 1
       objectReference: {fileID: 0}
     - target: {fileID: 5501681730798382194, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_Pivot.x
@@ -1228,7 +1228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5177207962252625128, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_text
-      value: Tornar
+      value: Volver
       objectReference: {fileID: 0}
     - target: {fileID: 5501681730798382194, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_Pivot.x
@@ -1383,7 +1383,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Adjutaments
+  m_text: Ajustes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1497,7 +1497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5177207962252625128, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_text
-      value: Tornar
+      value: Volver
       objectReference: {fileID: 0}
     - target: {fileID: 5501681730798382194, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_Pivot.x
@@ -1736,7 +1736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Instruccions
+  m_text: Instrucciones
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2023,7 +2023,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Volum
+  m_text: Volumen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2205,7 +2205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Travel Through STEAM
+  m_text: El mejor juego de la historia (tributo)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2616,7 +2616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5177207962252625128, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_text
-      value: Sortir
+      value: Salir
       objectReference: {fileID: 0}
     - target: {fileID: 5501681730798382194, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_Pivot.x
@@ -2746,7 +2746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4927809944943889353, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: NASA EXTERIOR
+      value: Scene1
       objectReference: {fileID: 0}
     - target: {fileID: 4927809944943889353, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2754,7 +2754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5177207962252625128, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_text
-      value: Nivell 2
+      value: Nivel 1(sorry no hay mas)
       objectReference: {fileID: 0}
     - target: {fileID: 5501681730798382194, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_Pivot.x
@@ -3185,7 +3185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5177207962252625128, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_text
-      value: Instruccions
+      value: Instrucciones
       objectReference: {fileID: 0}
     - target: {fileID: 5501681730798382194, guid: b637642193f07904e9ca7ddf08380055, type: 3}
       propertyPath: m_Pivot.x

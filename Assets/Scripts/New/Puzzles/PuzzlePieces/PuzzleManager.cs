@@ -7,7 +7,6 @@ public class PuzzleManager : MonoBehaviour
     public int partsToComplete;
     int partsCompleted;
     Animator anim;
-    public int puzzleIndex = 0;
 
     private void Awake()
     {
@@ -19,21 +18,13 @@ public class PuzzleManager : MonoBehaviour
         partsCompleted++;
         if (partsCompleted == partsToComplete)
         {
+            partsCompleted = 0;
+            //puzzle completed
+            //teleport to room and trigger endgame dialogue
+            //anim.enabled = true;
+            //anim.Play("turnShelf");
             PlayerNav player = FindObjectOfType<PlayerNav>();
-            if (puzzleIndex == 0)
-            {
-                partsCompleted = 0;
-                //puzzle completed
-                //teleport to room and trigger endgame dialogue
-                //anim.enabled = true;
-                //anim.Play("turnShelf");
-                
-                player.TriggerFinishedBookcasePuzzle();
-            }
-            else if (puzzleIndex == 1)
-            {
-                player.TriggerFinishMachinePuzzle();
-            }
+            player.TriggerFinishedBookcasePuzzle();
         }
     }
 }

@@ -14,7 +14,7 @@ public class PuzzlePiece : MonoBehaviour
         {
             InventoryManager_v2.instance.Remove(item);
             InventoryManager_v2.instance.ListItems();
-            Instantiate(correctObject, transform.position, transform.rotation);
+            Instantiate(correctObject, transform.position, Quaternion.identity);
             puzzle.CheckParts();
             gameObject.SetActive(false);
         }
