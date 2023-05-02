@@ -23,7 +23,6 @@ public class VialPlayer : MonoBehaviour
                     else
                     {
                         selectedVial = vial;
-                        Debug.Log("Selecting a vial");
                     }
                 }
             }

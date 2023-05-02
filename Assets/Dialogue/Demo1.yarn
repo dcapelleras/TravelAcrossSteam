@@ -1,8 +1,28 @@
 title: Start
 tags:
 ---
+Què acaba de passar...? On soc?
+Fí... esperem que t'hagi agradat.
+I doncs, t'ha agradat?
+-> Moltíssim
+    <<jump GoodOpinion>>
+-> Es millorable
+    <<jump BadOpinion>>
+===
 
+title: BadOpinion
+---
+Gràcies per la honestitat.
+i gracies per la seva generosa donació de 1500€.
+===
 
+title: GoodOpinion
+---
+Moltes gràcies per jugar!
+===
+
+title: OldStart
+---
 Hello Person! Welcome to the demo! How are you?
 -> Four!
     <<jump Conversation1ESP>>

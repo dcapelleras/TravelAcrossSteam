@@ -30,6 +30,11 @@ public class BlockManager : MonoBehaviour
         actions.Clear();
         for (int i = 0; i < spots.Count; i++)
         {
+            if (spots[i] == null)
+            {
+                Debug.Log("No existe");
+                return;
+            }
             if (spots[i].TryGetComponent(out CodeSpot spot))
             {
                 if (spot.isFull)

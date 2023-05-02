@@ -16,13 +16,21 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
     bool gameEnded = false;
     [SerializeField] Transform endgameTransform;
     [SerializeField] SpriteRenderer _renderer;
+    [SerializeField] GameObject staticDoor1;
+    [SerializeField] GameObject animatedDoor1;
+
+    [SerializeField] GameObject visualCables;
+    [SerializeField] GameObject workingCables;
+
+    [SerializeField] GameObject triggerTeleport;
 
     private void Awake()
     {
         cam = Camera.main;
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         dialogueRunner.AddCommandHandler<int>("Movement", AllowMovement);
-        dialogueRunner.AddCommandHandler<int>("FinishGame", EndGame);
+        dialogueRunner.AddCommandHandler<int>("FinishCable", AfterCables);
+        dialogueRunner.AddCommandHandler<int>("startPluggingGame", StartPluggingGame);
     }
 
     private void Update()
@@ -84,14 +92,15 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
         canMove = true;
     }
 
-    public void EndGame(int i)
+    public void AfterCables(int i)
     {
-        AllowMovement(0);
-        gameEnded = true;
-        agent.enabled = false;
-        transform.position = endgameTransform.position;
-        CamManager.instance.MoveToCam(3);
-        RoomManager.instance.ChangeLoadingScreen(true);
+        //AllowMovement(0);
+        //gameEnded = true;
+        //agent.enabled = false;
+        //transform.position = endgameTransform.position;
+        CamManager.instance.MoveToCam(2);
+        triggerTeleport.SetActive(true);
+        //RoomManager.instance.ChangeLoadingScreen(true);
     }
 
     public void TriggerFinishedBookcasePuzzle()
@@ -99,11 +108,41 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
         //CamManager.instance.MoveToCam(1);
         dialogueRunner.Stop();
         dialogueRunner.StartDialogue("FinishBookcasePuzzle");
+        staticDoor1.SetActive(false);
+        animatedDoor1.SetActive(true);
+
+
+        CamManager.instance.MoveToCam(0);
+        PlayerPuzzle puzzle = GetComponent<PlayerPuzzle>();
+        puzzle.doingPuzzle = false;
+        InventoryManager_v2.instance.CloseInventory();
+    }
+
+    public void TriggerFinishMachinePuzzle()
+    {
+        Debug.Log("Finished machine puzzle");
+        dialogueRunner.Stop();
+        dialogueRunner.StartDialogue("StartPlugging");
+
+        PlayerPuzzle playerPuzzle= GetComponent<PlayerPuzzle>();
+        playerPuzzle.machineFinished = true;
+
+        CamManager.instance.MoveToCam(2);
+        PlayerPuzzle puzzle = GetComponent<PlayerPuzzle>();
+        puzzle.doingPuzzle = false;
+        InventoryManager_v2.instance.CloseInventory();
     }
 
     public void TriggerEndGame(int i)
     {
         dialogueRunner.Dialogue.Stop();
         dialogueRunner.StartDialogue("TerminateGame");
+    }
+
+    public void StartPluggingGame(int i) //move cam to cables, change visual cable for working one
+    {
+        CamManager.instance.MoveToCam(4);
+        visualCables.SetActive(false);
+        workingCables.SetActive(true);
     }
 }

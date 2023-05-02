@@ -8,12 +8,12 @@ using UnityEngine.AI;
 public class PlayerPuzzle : MonoBehaviour
 {
     int previousCamUsed;
-    bool doingPuzzle;
+    public bool doingPuzzle;
     DialogueRunner dialogueRunner;
     bool firstPuzzleRead;
     NavMeshAgent agent;
     PlayerNav nav;
-    
+    public bool machineFinished;
 
     private void Awake()
     {
@@ -34,10 +34,18 @@ public class PlayerPuzzle : MonoBehaviour
                 {
                     if (hit.collider.TryGetComponent(out PuzzleDetector puzzle))
                     {
-                        if (!firstPuzzleRead)
+                        if (machineFinished)
+                        {
+                            if (puzzle.puzzleIndex == 3)
+                            {
+                                puzzle.puzzleIndex = 4;
+                            }
+                        }
+                        if (!firstPuzzleRead && (puzzle.puzzleIndex == 1 || puzzle.puzzleIndex == 3))
                         {
                             firstPuzzleRead = true;
                             doingPuzzle = true;
+                            
                             CamManager.instance.MoveToCam(puzzle.puzzleIndex);
                             previousCamUsed = puzzle.puzzleIndex - 1; //puzzle will always have to have the next camera from the room
                             dialogueRunner.Dialogue.Stop();
@@ -45,7 +53,7 @@ public class PlayerPuzzle : MonoBehaviour
                             agent.SetDestination(puzzle.moveToPos.position);
                             //InventoryManager_v2.instance.OpenInventory();
                         }
-                        else
+                        else if(firstPuzzleRead && (puzzle.puzzleIndex == 1 || puzzle.puzzleIndex == 3))
                         {
                             doingPuzzle = true;
                             CamManager.instance.MoveToCam(puzzle.puzzleIndex);

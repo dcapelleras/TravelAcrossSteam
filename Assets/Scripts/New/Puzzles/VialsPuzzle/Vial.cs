@@ -13,6 +13,10 @@ public class Vial : MonoBehaviour
 
     public List<GameObject> liquidObjects= new List<GameObject>();
 
+    public bool isCorrect;
+
+    [SerializeField] VialsManager vialManager;
+
     private void Start()
     {
         for (int i = 0; i < liquidParts.Count; i++)
@@ -45,6 +49,27 @@ public class Vial : MonoBehaviour
         filledParts++;
         liquidParts.Add(liquid);
         UpdateVisual();
+        if (filledParts == liquidPositions.Count) 
+        {
+            int type = -1;
+            for (int i = 0; i < liquidParts.Count; i++) //por cada liquidpart
+            {
+                if (type < 0)
+                {
+                    type = liquidParts[i]._typeIndex; //guarda el primer tipo de las parts
+                }
+                else
+                {
+                    if (liquidParts[i]._typeIndex != type) //a partir del segundo, si no es igual que el primero, se queda incorrect
+                    {
+                        isCorrect = false;
+                        return;
+                    }
+                }
+            }
+            isCorrect = true;
+            vialManager.CheckVials();
+        }
 
     }
 

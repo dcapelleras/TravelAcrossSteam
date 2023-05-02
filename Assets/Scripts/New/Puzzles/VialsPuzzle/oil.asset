@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: oil
   m_EditorClassIdentifier: 
   _obj: {fileID: 2868779050835674670, guid: 33dc2c1b3814e7d4896b375a1834fddf, type: 3}
+  _typeIndex: 1

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: water
   m_EditorClassIdentifier: 
   _obj: {fileID: 1614368386247948603, guid: f192693a433e04549bf29ce78c9ed7ac, type: 3}
+  _typeIndex: 2
