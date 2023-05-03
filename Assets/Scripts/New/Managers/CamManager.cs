@@ -29,7 +29,7 @@ public class CamManager : MonoBehaviour
 
     public void MoveToCam(int camIndex)
     {
-        camActive= camIndex;
+        camActive = camIndex;
         for (int i = 0; i < cinemachines.Count; i++)
         {
             if (i != camIndex)
@@ -51,7 +51,7 @@ public class CamManager : MonoBehaviour
             return;
         }
         CinemachineBasicMultiChannelPerlin noise = cinemachines[camIndex].GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        noise.m_AmplitudeGain= intensity;
+        noise.m_AmplitudeGain = intensity;
         shakeTimer = time;
     }
 
@@ -61,7 +61,7 @@ public class CamManager : MonoBehaviour
         {
             shakeTimer -= Time.deltaTime;
         }
-        else if (shakeTimer <=0)
+        else if (shakeTimer <= 0)
         {
             ShakeCam(camActive, 0f, 0f);
         }

@@ -20,7 +20,7 @@ public class Door : MonoBehaviour
         if (Vector3.Distance(transform.position, player.position) < raydistance && !doorOpen)
         {
             transform.GetComponentInParent<Animator>().SetTrigger("Open");
-            doorOpen= true;
+            doorOpen = true;
         }
         else if (Vector3.Distance(transform.position, player.position) > raydistance && doorOpen)
         {

@@ -19,12 +19,18 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
     [SerializeField] GameObject staticDoor1;
     [SerializeField] GameObject animatedDoor1;
 
+    [SerializeField] GameObject visualCables;
+    [SerializeField] GameObject workingCables;
+
+    [SerializeField] GameObject triggerTeleport;
+
     private void Awake()
     {
         cam = Camera.main;
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         dialogueRunner.AddCommandHandler<int>("Movement", AllowMovement);
-        dialogueRunner.AddCommandHandler<int>("FinishGame", EndGame);
+        dialogueRunner.AddCommandHandler<int>("FinishCable", AfterCables);
+        dialogueRunner.AddCommandHandler<int>("startPluggingGame", StartPluggingGame);
     }
 
     private void Update()
@@ -37,7 +43,7 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
         {
             return;
         }
-        
+
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -52,18 +58,18 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
                 {
                     agent.SetDestination(hit.point);
                 }
-                
+
                 if ((transform.position.x - hit.point.x) < -0.5f)
                 {
                     anim.SetFloat("Walk", 1f);
-                    _renderer.flipX = true;
+                    _renderer.flipX = false;
                     //anim turn left
                     //anim walk
                 }
                 else if ((transform.position.x - hit.point.x) > 0.5f)
                 {
                     anim.SetFloat("Walk", 1f);
-                    _renderer.flipX = false;
+                    _renderer.flipX = true;
                     //anim turn right
                     //anim walk
                 }
@@ -78,22 +84,23 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
 
     public void AllowMovement(int allowed)
     {
-        if (allowed== 0)
+        if (allowed == 0)
         {
-            canMove= false;
+            canMove = false;
             return;
         }
         canMove = true;
     }
 
-    public void EndGame(int i)
+    public void AfterCables(int i)
     {
-        AllowMovement(0);
-        gameEnded = true;
-        agent.enabled = false;
-        transform.position = endgameTransform.position;
-        CamManager.instance.MoveToCam(3);
-        RoomManager.instance.ChangeLoadingScreen(true);
+        //AllowMovement(0);
+        //gameEnded = true;
+        //agent.enabled = false;
+        //transform.position = endgameTransform.position;
+        CamManager.instance.MoveToCam(2);
+        triggerTeleport.SetActive(true);
+        //RoomManager.instance.ChangeLoadingScreen(true);
     }
 
     public void TriggerFinishedBookcasePuzzle()
@@ -103,11 +110,39 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
         dialogueRunner.StartDialogue("FinishBookcasePuzzle");
         staticDoor1.SetActive(false);
         animatedDoor1.SetActive(true);
+
+
+        CamManager.instance.MoveToCam(0);
+        PlayerPuzzle puzzle = GetComponent<PlayerPuzzle>();
+        puzzle.doingPuzzle = false;
+        InventoryManager_v2.instance.CloseInventory();
+    }
+
+    public void TriggerFinishMachinePuzzle()
+    {
+        Debug.Log("Finished machine puzzle");
+        dialogueRunner.Stop();
+        dialogueRunner.StartDialogue("StartPlugging");
+
+        PlayerPuzzle playerPuzzle = GetComponent<PlayerPuzzle>();
+        playerPuzzle.machineFinished = true;
+
+        CamManager.instance.MoveToCam(2);
+        PlayerPuzzle puzzle = GetComponent<PlayerPuzzle>();
+        puzzle.doingPuzzle = false;
+        InventoryManager_v2.instance.CloseInventory();
     }
 
     public void TriggerEndGame(int i)
     {
         dialogueRunner.Dialogue.Stop();
         dialogueRunner.StartDialogue("TerminateGame");
+    }
+
+    public void StartPluggingGame(int i) //move cam to cables, change visual cable for working one
+    {
+        CamManager.instance.MoveToCam(4);
+        visualCables.SetActive(false);
+        workingCables.SetActive(true);
     }
 }

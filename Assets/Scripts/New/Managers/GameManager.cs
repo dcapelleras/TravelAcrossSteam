@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        audioSource= GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         audioSource.volume = settings.volume;
         audioSource.Play();
     }
@@ -47,14 +47,13 @@ public class GameManager : MonoBehaviour
         exit.SetActive(false);
     }
 
-    public void Exit() 
-    { 
+    public void Exit()
+    {
         exit.SetActive(true);
     }
 
     public void QuitGame()
     {
-        Debug.Log("No puedes huir MWAHAHAHA... porque en unity no funciona el quit =)");
         SceneManager.LoadScene("MainMenu");
     }
 }

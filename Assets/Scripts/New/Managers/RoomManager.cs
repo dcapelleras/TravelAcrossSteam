@@ -7,7 +7,7 @@ public class RoomManager : MonoBehaviour
     public static RoomManager instance;
 
     [SerializeField] GameObject loadingScreen;
-    
+
     public float loadingScreenTime = 5f;
 
     bool firstTimeEnteringRoom = true;
@@ -33,8 +33,8 @@ public class RoomManager : MonoBehaviour
     IEnumerator UnloadLoadingScreen(bool isEndgame)
     {
         yield return new WaitForSeconds(1f); //yield return new WaitForSeconds(loadingScreenTime); 
-        changingRoom =false;
-        loadingScreen.SetActive(false);
+        changingRoom = false;
+        //loadingScreen.SetActive(false);
         if (isEndgame)
         {
             //dialogueRunner.Dialogue.Stop();

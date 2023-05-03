@@ -7,10 +7,16 @@ public class PlayerCable : MonoBehaviour
     [SerializeField] Transform mousePosTransform;
     Vector3 newPos;
     public Cable holdingCable;
+    [SerializeField] Transform startingPosition;
+
+    private void OnEnable()
+    {
+        newPos = startingPosition.position;
+    }
 
     private void Update()
     {
-    
+
         //activate the player when needed
 
 
@@ -23,6 +29,7 @@ public class PlayerCable : MonoBehaviour
             {
                 newPos = hit.point;
                 newPos.z = cable.transform.position.z;
+                newPos.y += 0.5f;
             }
             mousePosTransform.position = newPos;
             Debug.DrawRay(Camera.main.transform.position, hit.point * hit.distance, Color.yellow, 2f);
@@ -30,21 +37,9 @@ public class PlayerCable : MonoBehaviour
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     /*
     public GameObject holdingCable;
     [SerializeField] Vector3 offset = new Vector3(0, 1, -1);
-
     private void Update()
     {
         RaycastHit hit;
@@ -71,7 +66,6 @@ public class PlayerCable : MonoBehaviour
                 holdingCable = null;
             }
         }
-
         
     }*/
 }

@@ -9,7 +9,7 @@ public class PlayerDoor : MonoBehaviour
 
     private void Awake()
     {
-        nav= GetComponent<PlayerNav>();
+        nav = GetComponent<PlayerNav>();
     }
 
     private void Update()
@@ -29,14 +29,14 @@ public class PlayerDoor : MonoBehaviour
                     crossingDoor = null;
                 }
             }
-            
+
         }
 
         if (crossingDoor != null)
         {
             if (Vector3.Distance(crossingDoor.transform.position, transform.position) < 4f)
             {
-                
+
                 CrossDoor();
                 RoomManager.instance.ChangeLoadingScreen(false);
             }

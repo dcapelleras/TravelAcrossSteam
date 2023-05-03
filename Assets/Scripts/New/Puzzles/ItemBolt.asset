@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ItemBolt
   m_EditorClassIdentifier: 
   id: 3
-  itemName: Bolt
+  itemName: Cargol hexagonal
   icon: {fileID: 21300000, guid: 92ecc1493afadd24a91939e8df35baf1, type: 3}
   thisItem: {fileID: 11400000}
   value: 0
