@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item2
   m_EditorClassIdentifier: 
   id: 2
-  itemName: Item2
+  itemName: Caixa composta
   icon: {fileID: 21300000, guid: a0c5890697cf90e4ca4d0ee436d7f9be, type: 3}
   thisItem: {fileID: 11400000}
   value: 0

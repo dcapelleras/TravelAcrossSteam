@@ -27,10 +27,9 @@ public class MenuManager : MonoBehaviour
         audioSource.volume = settings.volume;
     }
 
-    public void PlayGame(string scenename)
+    public void PlayGame(int sceneIndex)
     {
-        SceneManager.LoadScene(scenename);
-        //scene manager load scene 1
+        SceneManager.LoadScene(sceneIndex);
     }
 
     public void SelectLevel()

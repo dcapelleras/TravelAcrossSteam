@@ -6,18 +6,19 @@ Fí... esperem que t'hagi agradat.
 I doncs, t'ha agradat?
 -> Moltíssim
     <<jump GoodOpinion>>
--> Es millorable
+-> És millorable
     <<jump BadOpinion>>
 ===
 
 title: BadOpinion
 ---
-Gràcies per la honestitat.
-i gracies per la seva generosa donació de 1500€.
+Està lleig dir mentides, estar clar que t'ha encantat.
+Moltes gràcies per jugar!
 ===
 
 title: GoodOpinion
 ---
+Gràcies per la honestitat!
 Moltes gràcies per jugar!
 ===
 
