@@ -6,6 +6,8 @@ using Yarn.Unity;
 
 public class CamManager : MonoBehaviour
 {
+    [SerializeField] Transform playerTransform;
+
     public static CamManager instance;
 
     public List<CinemachineVirtualCamera> cinemachines;
@@ -25,11 +27,14 @@ public class CamManager : MonoBehaviour
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         dialogueRunner.AddCommandHandler<int>("camera", MoveToCam);
         dialogueRunner.AddCommandHandler<int, float, float>("shake", ShakeCam);
+        dialogueRunner.AddCommandHandler("parentCam", ParentCam);
+        ParentCam();
     }
 
     public void MoveToCam(int camIndex)
     {
         camActive = camIndex;
+        ParentCam();
         for (int i = 0; i < cinemachines.Count; i++)
         {
             if (i != camIndex)
@@ -41,6 +46,11 @@ public class CamManager : MonoBehaviour
                 cinemachines[i].Priority = 11;
             }
         }
+    }
+
+    public void ParentCam() 
+    {
+        cinemachines[camActive].transform.parent = playerTransform;
     }
 
     public void ShakeCam(int camIndex, float intensity, float time) //could use camActive instead of camIndex, but works anyway for now

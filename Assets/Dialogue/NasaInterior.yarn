@@ -1,0 +1,82 @@
+﻿title: Start
+tags:
+---
+<<movement 0>>
+Sam: Doncs ja he entrat, suposo que ja no puc fer-me enrere, aprofitaré per veure com es per dins.
+Sam: La recepció sembla una mica antiquada, suposo que l'alta tecnología deu ser més endavant.
+Comentari:(prova a obrir la porta)
+<<movement 1>>
+===
+
+title: TriedOpeningDoor
+---
+<<movement 0>>
+Sam: Vaja ja m'ho imaginava que estaría tancat, ja m'he fet ilusions per res...
+<<callJanitor>>
+Comentari:(apareix conserge)
+Tom: Renoi! Que puntual! Deus estar esperant als homes per entrar no?
+Tom: Tranquila ja t'obro jo, es una bona costum això d'arribar d'hora! Res com la bona olor a netejaterres a les 5 del matí!
+Comentari:(toca anar a l'oficina, l'unica que està oberta es la que toca anar, i potser alguna més sense res important)
+Comentari:(Sería considerable fer aquest nivell sencer amb vista d'àguila)
+===
+
+title: JanitorOpenedDoor
+---
+Tom: Doncs ja ho tenim! Porta oberta! 
+Tom: Et deixo fer que he de seguir amb la feina!! Ja estic amb tu estimada fregona!
+<<movement 1>>
+===
+
+title: InOffice
+---
+<<movement 0>>
+Sam: Vaja sembla que m'ha confós per un científic de la Nasa, es extrany ja que segons la revista "Trending Tecnologies" tots els científics d'aquí son homes...
+Sam: Em pregunto per qui em deuen haver confós.
+Sam: En fí, de res serveix donar-hi voltes, aprofitaré aquesta oportunitat única en la vida per veure què es fa a la Nasa!!
+Sam: Per començar miraré aviam si alguna de les oficines està oberta per donar un cop d'ull.
+<<movement 1>>
+===
+
+title: PCPuzzle
+---
+Sam: Quin ordinador més antic!! Això ni el meu re-besavi!
+Sam: O aquí treballa una col·leccionista d'antiguitats o he viatjat en el temps!! jajaj!
+Comentari:(s'encen el PC)
+Inclús sembla que funciona!
+Comentari:(Surt un puzzle)
+Sam: Que interessant, això es casi com un trencaclosques, aviam si donant-li voltes se m'acudeix la resposta.
+Comentari:(fa el puzzle)
+Sam: Doncs al final me n'he sortit! Aviam que més hi ha per aquí... Aviam com son els calendaris en aquests ordinadors antics.
+Sam: 00/00/1900............. (Cara de sorpresa) Al final serà veritat que he viatjat en el temps!
+Comentari: (arriba una dona)
+Científica: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
+Científica: Quina és la teva especialitat? 
+Sam: Jo no... no treballo aquí... 
+Científica: I que fas aquí? No hauríes d'entrar en oficines on no treballes!
+Sam: Ho sento... i sento haver tocat l'ordinador...
+Científica: (sobresaltada) Noo! Estic a punt d'un gran descobriment! I a sobre estava amb feina d'un company que no en té ni idea i no para de demanar ajuda...
+Científica: (Mira el PC) Mmmh... Está tot fet... Ho has fet tu?
+Sam: Sí, ho sento, m'agrada molt aquest tipus de tasques i ho he vist a mitges...
+Científica: Ara et veig amb uns altres ulls, deixa'm que em torni a presentar.
+Catherine Johnson: Encantada, soc la Catherine Johnson.
+Catherine Johnson: Ja que m'has ajudat deixa que t'ensenyi la meva investigació.
+Catherine Johnson: Estic fent això i allò sobre càlculs d'orbites i crec que he trobat una formula per millorar els viatges espacials (explicar millor)
+Sam: Es increïble, i que falta per que ho apliquin? Puc ajudar en alguna cosa?
+Catherine Johnson: Doncs l'únic que falta es demostrar que funcionaría aplicant aquesta formula als valors d'un viatge real.
+Catherine Johnson: En realitat em serviríen les dades d'un viatge anterior, però no tinc accés a elles així que no es una opció.
+Sam: Només això? Amb el mèrit que té un descobriment tant important no es pot quedar fora només per això! Si fa falta jo mateixa aconseguiré els documents!
+Catherine Johnson: Em tens molt sorpresa! Però has arribat aquí i se't veu més que motivada, així que es pot intentar.
+Catherine Johnson: Primer hauràs d'anar a l'oficina del costat de la recepció, la més gran, i entrar-hi quan no hi hagi ningú per agafar la clau de sobre la taula.
+Catherine Johnson: Un cop la tinguis, torna i et donaré més instruccions.
+===
+
+title: StealthGame
+---
+Sam: Ja tinc la clau!
+Catherine Johnson: Genial! Però ara vé la part difícil.
+Catherine Johnson: Has de creuar la porta de davant aquesta oficina, tranquila, està oberta, però a partir d'allà hauràs de assegurar-te que ningú et veu.
+Catherine Johnson: Creuant la porta et trobaràs un passadís, i avançant pel passadís et trobaràs una porta vermella, aquí es on necessitaràs la clau.
+Catherine Johnson: Un cop hagis entrat veuràs la sala de registres, simplement has de trobar els documents referents a algun dels antics llançaments espacials i tornar sense ser vista.
+Sam: Ja m'estic començant a arrepentir... però cap innovació s'ha fet sense esforç!
+Sam: He d'anar al passadís, i sense que em vegin he d'arribar a la porta vermella, després només falta buscar els documents i tornar sense que em vegin.
+===
