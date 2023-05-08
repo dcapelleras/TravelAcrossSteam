@@ -1,0 +1,1 @@
+public enum Action { left, right, forward, none }

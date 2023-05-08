@@ -28,11 +28,13 @@ public class CamManager : MonoBehaviour
         dialogueRunner.AddCommandHandler<int>("camera", MoveToCam);
         dialogueRunner.AddCommandHandler<int, float, float>("shake", ShakeCam);
         dialogueRunner.AddCommandHandler("parentCam", ParentCam);
+        camActive= 0;
         ParentCam();
     }
 
     public void MoveToCam(int camIndex)
     {
+        UnparentCam();
         camActive = camIndex;
         ParentCam();
         for (int i = 0; i < cinemachines.Count; i++)
@@ -50,7 +52,12 @@ public class CamManager : MonoBehaviour
 
     public void ParentCam() 
     {
-        cinemachines[camActive].transform.parent = playerTransform;
+        cinemachines[camActive].GetComponent<CinemachineFollow>().isActive= true;
+    }
+
+    public void UnparentCam()
+    {
+        cinemachines[camActive].GetComponent<CinemachineFollow>().isActive = false;
     }
 
     public void ShakeCam(int camIndex, float intensity, float time) //could use camActive instead of camIndex, but works anyway for now

@@ -7,6 +7,7 @@ public class NasaDialogueManager : MonoBehaviour
 {
     public static NasaDialogueManager instance;
     DialogueRunner runner;
+    LineView lineView;
 
     private void Awake()
     {
@@ -15,6 +16,7 @@ public class NasaDialogueManager : MonoBehaviour
             instance = this;
         }
         runner = FindObjectOfType<DialogueRunner>();
+        lineView = FindObjectOfType<LineView>();
     }
 
     public void JanitorOpenedOffices()
@@ -29,5 +31,4 @@ public class NasaDialogueManager : MonoBehaviour
         runner.StartDialogue("InOffice");
     }
 
-    
 }

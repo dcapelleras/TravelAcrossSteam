@@ -152,9 +152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: {fileID: 4998736717297257328}
   anim: {fileID: 4998736717297257329}
-  invisWallLayer:
-    serializedVersion: 2
-    m_Bits: 128
   canMove: 1
 --- !u!1 &4998736717297257342
 GameObject:

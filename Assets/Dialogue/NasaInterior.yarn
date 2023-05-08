@@ -39,25 +39,25 @@ Sam: Per començar miraré aviam si alguna de les oficines està oberta per dona
 
 title: PCPuzzle
 ---
-Sam: Quin ordinador més antic!! Això ni el meu re-besavi!
+Sam: Quin ordinador més antic!! Això ni el meu rebesavi!
 Sam: O aquí treballa una col·leccionista d'antiguitats o he viatjat en el temps!! jajaj!
 Comentari:(s'encen el PC)
-Inclús sembla que funciona!
+Sam: Inclús sembla que funciona!
 Comentari:(Surt un puzzle)
 Sam: Que interessant, això es casi com un trencaclosques, aviam si donant-li voltes se m'acudeix la resposta.
 Comentari:(fa el puzzle)
 Sam: Doncs al final me n'he sortit! Aviam que més hi ha per aquí... Aviam com son els calendaris en aquests ordinadors antics.
 Sam: 00/00/1900............. (Cara de sorpresa) Al final serà veritat que he viatjat en el temps!
 Comentari: (arriba una dona)
-Científica: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
-Científica: Quina és la teva especialitat? 
+???: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
+???: Quina és la teva especialitat? 
 Sam: Jo no... no treballo aquí... 
-Científica: I que fas aquí? No hauríes d'entrar en oficines on no treballes!
+???: I que fas aquí? No hauríes d'entrar en oficines on no treballes!
 Sam: Ho sento... i sento haver tocat l'ordinador...
-Científica: (sobresaltada) Noo! Estic a punt d'un gran descobriment! I a sobre estava amb feina d'un company que no en té ni idea i no para de demanar ajuda...
-Científica: (Mira el PC) Mmmh... Está tot fet... Ho has fet tu?
+???: (sobresaltada) Noo! Estic a punt d'un gran descobriment! I a sobre estava amb feina d'un company que no en té ni idea i no para de demanar ajuda...
+???: (Mira el PC) Mmmh... Está tot fet... Ho has fet tu?
 Sam: Sí, ho sento, m'agrada molt aquest tipus de tasques i ho he vist a mitges...
-Científica: Ara et veig amb uns altres ulls, deixa'm que em torni a presentar.
+???: Ara et veig amb uns altres ulls, deixa'm que em torni a presentar.
 Catherine Johnson: Encantada, soc la Catherine Johnson.
 Catherine Johnson: Ja que m'has ajudat deixa que t'ensenyi la meva investigació.
 Catherine Johnson: Estic fent això i allò sobre càlculs d'orbites i crec que he trobat una formula per millorar els viatges espacials (explicar millor)
@@ -79,4 +79,9 @@ Catherine Johnson: Creuant la porta et trobaràs un passadís, i avançant pel p
 Catherine Johnson: Un cop hagis entrat veuràs la sala de registres, simplement has de trobar els documents referents a algun dels antics llançaments espacials i tornar sense ser vista.
 Sam: Ja m'estic començant a arrepentir... però cap innovació s'ha fet sense esforç!
 Sam: He d'anar al passadís, i sense que em vegin he d'arribar a la porta vermella, després només falta buscar els documents i tornar sense que em vegin.
+===
+
+title: SkippedText
+---
+
 ===
