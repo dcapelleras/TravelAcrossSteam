@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class CodingManager : MonoBehaviour
@@ -53,6 +54,9 @@ public class CodingManager : MonoBehaviour
                 {
                     //se pueden hacer cosas extra en plan cambiar el color o activar luces o cosas
                     Debug.Log("Congratulations!");
+                    SceneManager.UnloadSceneAsync("CodingMinigame");
+                    //maybe go to the next puzzle, maybe make only 1
+                    NasaDialogueManager.instance.FinishCodingPuzzle();
                 }
                 if (actions[i] == Action.forward)
                 {

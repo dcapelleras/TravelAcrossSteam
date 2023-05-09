@@ -39,17 +39,23 @@ Sam: Per començar miraré aviam que és el que es fa per aquí.
 
 title: PCPuzzle
 ---
+<<movement 0>>
 Sam: Què deu ser això? Sembla una targeta de programació, pero dubto que aquí facin servir una cosa tan antiga.
 Sam: O aquí treballa una col·leccionista d'antiguitats o he viatjat en el temps!! jajaj!
 Sam: Potser es un passatemps de qui treballa aquí.
 Comentari:(Surt puzzle de programació)
 Sam: Que interessant, això es casi com un trencaclosques, aviam si donant-li voltes se m'acudeix la resposta.
-Comentari:(fa el puzzle)
+<<progPuzzle>>
+===
+
+title: AfterPCPuzzle
+---
+Comentari:(fa el puzzle), (podria haverne de fer més d'un)
 Sam: Doncs al final me n'he sortit! Espero que no s'enfadin amb mí per fer el trencaclosques.
 Comentari: (arriba una dona)
 ???: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
 ???: Quina és la teva especialitat? 
-Sam: Jo no... no treballo aquí... 
+Sam: Jo no... no treballo aquí...
 ???: I que fas aquí? No hauríes d'entrar en oficines on no treballes!
 Sam: Ho sento... i sento haver tocat els teus trencaclosques...
 ???: (sobresaltada) trencaclosques?? Estic a punt d'un gran descobriment! I a sobre estava amb feina d'un company que no en té ni idea i no para de demanar ajuda...
@@ -66,10 +72,12 @@ Sam: Només això? Amb el mèrit que té un descobriment tant important no es po
 Catherine Johnson: Em tens molt sorpresa! Però has arribat aquí i se't veu més que motivada, així que es pot intentar.
 Catherine Johnson: Primer hauràs d'anar a l'oficina del costat de la recepció, la més gran, i entrar-hi quan no hi hagi ningú per agafar la clau de sobre la taula.
 Catherine Johnson: Un cop la tinguis, torna i et donaré més instruccions.
+<<movement 1>>
 ===
 
 title: StealthGame
 ---
+<<movement 0>>
 Sam: Ja tinc la clau!
 Catherine Johnson: Genial! Però ara vé la part difícil.
 Catherine Johnson: Has de creuar la porta de davant aquesta oficina, tranquila, està oberta, però a partir d'allà hauràs de assegurar-te que ningú et veu.
@@ -77,9 +85,6 @@ Catherine Johnson: Creuant la porta et trobaràs un passadís, i avançant pel p
 Catherine Johnson: Un cop hagis entrat veuràs la sala de registres, simplement has de trobar els documents referents a algun dels antics llançaments espacials i tornar sense ser vista.
 Sam: Ja m'estic començant a arrepentir... però cap innovació s'ha fet sense esforç!
 Sam: He d'anar al passadís, i sense que em vegin he d'arribar a la porta vermella, després només falta buscar els documents i tornar sense que em vegin.
+<<movement 1>>
 ===
 
-title: SkippedText
----
-
-===

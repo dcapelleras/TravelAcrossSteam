@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
 public class NasaDialogueManager : MonoBehaviour
@@ -17,6 +18,7 @@ public class NasaDialogueManager : MonoBehaviour
         }
         runner = FindObjectOfType<DialogueRunner>();
         lineView = FindObjectOfType<LineView>();
+        runner.AddCommandHandler("progPuzzle", ProgrammingPuzzle);
     }
 
     public void JanitorOpenedOffices()
@@ -31,4 +33,20 @@ public class NasaDialogueManager : MonoBehaviour
         runner.StartDialogue("InOffice");
     }
 
+    public void StartProgrammingPuzzle()
+    {
+        runner.Dialogue.Stop();
+        runner.StartDialogue("PCPuzzle");
+    }
+
+    public void ProgrammingPuzzle()
+    {
+        SceneManager.LoadSceneAsync("CodingMinigame", LoadSceneMode.Additive);
+    }
+
+    public void FinishCodingPuzzle()
+    {
+        runner.Dialogue.Stop();
+        runner.StartDialogue("AfterPCPuzzle");
+    }
 }

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NASA EXTERIOR.unity
     guid: e51550427d5b57b469383e8c8cae3b82
+  - enabled: 1
+    path: Assets/Scenes/CodingMinigame.unity
+    guid: 128fcf64af4d34941bc94e3988e5de22
   m_configObjects: {}
