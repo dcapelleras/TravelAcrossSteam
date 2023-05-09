@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2.0411909, g: 0.29244977, b: 0.09031311, a: 1}
+  m_IndirectSpecularColor: {r: 2.0424757, g: 0.29253525, b: 0.09025659, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15441,6 +15441,7 @@ GameObject:
   - component: {fileID: 903780725}
   - component: {fileID: 903780727}
   - component: {fileID: 903780726}
+  - component: {fileID: 903780728}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -15575,6 +15576,18 @@ MonoBehaviour:
   exit: {fileID: 1075191677}
   audioSource: {fileID: 903780726}
   settings: {fileID: 11400000, guid: ce0bbea3b47f96c4786806f775181c78, type: 2}
+--- !u!114 &903780728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903780724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365d3d78004975049b97599a3acc0540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &905320134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4413940594227516441, guid: f6c225948c30fa843be47008f591e3f5, type: 3}
@@ -19899,6 +19912,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7778558435068644803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435068644806, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: useFadeEffect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435068644806, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: useTypewriterEffect
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7778558435732307477, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}

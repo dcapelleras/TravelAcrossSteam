@@ -28,7 +28,6 @@ public class Janitor : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, doorAssistTransform.position) < 1f)
             {
-                Debug.Log("the janitor unlocked the door");
                 timer += Time.deltaTime;
                 if (timer > 2f)
                 {

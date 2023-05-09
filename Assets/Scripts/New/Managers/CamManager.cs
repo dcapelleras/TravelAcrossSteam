@@ -52,12 +52,18 @@ public class CamManager : MonoBehaviour
 
     public void ParentCam() 
     {
-        cinemachines[camActive].GetComponent<CinemachineFollow>().isActive= true;
+        if (cinemachines[camActive].TryGetComponent(out CinemachineFollow follow))
+        {
+            follow.isActive= true;
+        }
     }
 
     public void UnparentCam()
     {
-        cinemachines[camActive].GetComponent<CinemachineFollow>().isActive = false;
+        if (cinemachines[camActive].TryGetComponent(out CinemachineFollow follow))
+        {
+            follow.isActive = false;
+        }
     }
 
     public void ShakeCam(int camIndex, float intensity, float time) //could use camActive instead of camIndex, but works anyway for now

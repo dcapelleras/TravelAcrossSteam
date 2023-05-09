@@ -9,6 +9,7 @@ public class NasaDialogueManager : MonoBehaviour
     public static NasaDialogueManager instance;
     DialogueRunner runner;
     LineView lineView;
+    [SerializeField] GameObject decorationPeople;
 
     private void Awake()
     {
@@ -48,5 +49,8 @@ public class NasaDialogueManager : MonoBehaviour
     {
         runner.Dialogue.Stop();
         runner.StartDialogue("AfterPCPuzzle");
+        decorationPeople.SetActive(true); //activate decoration people
     }
+
+
 }
