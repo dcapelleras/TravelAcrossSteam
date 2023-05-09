@@ -10,6 +10,7 @@ public class GuardSpotArea : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Detecting player");
             guard.DetectPlayer();
         }
     }
