@@ -10,12 +10,23 @@ public class CodingManager : MonoBehaviour
 
     public List<Action> actions;
 
+    Vector3 initialSpritePos;
+    Quaternion initialSpriteRot;
+    [SerializeField] Transform spriteTransform;
+    [SerializeField] List<Action> actionsRequired;
+
+    [SerializeField] float spriteMoveDistance;
+
+    int correctCounter;
+
     private void Awake()
     {
         for (int i = 0; i < codingLines.Count; i++)
         {
             actions.Add(Action.none);
         }
+        initialSpritePos = spriteTransform.position;
+        initialSpriteRot = spriteTransform.rotation;
     }
 
     public void UpdateCodeList(int lineIndex, Action _action)
@@ -30,9 +41,40 @@ public class CodingManager : MonoBehaviour
 
     IEnumerator RunCodingCommands()
     {
+        spriteTransform.position = initialSpritePos;
+        spriteTransform.rotation = initialSpriteRot;
         for (int i = 0; i < actions.Count; i++)
         {
             Debug.Log(actions[i].ToString());
+            if (actions[i] == actionsRequired[i])
+            {
+                correctCounter++;
+                if (correctCounter == actionsRequired.Count)
+                {
+                    //se pueden hacer cosas extra en plan cambiar el color o activar luces o cosas
+                    Debug.Log("Congratulations!");
+                }
+                if (actions[i] == Action.forward)
+                {
+                    spriteTransform.position += spriteTransform.up * spriteMoveDistance;
+                }
+                else if (actions[i] == Action.left)
+                {
+                    spriteTransform.Rotate(Vector3.forward * 90);
+                }
+                else if (actions[i] == Action.right)
+                {
+                    spriteTransform.Rotate(Vector3.forward * -90);
+                }
+            }
+            else
+            {
+                Debug.Log("Parece que no es la combinación correcta");
+                spriteTransform.position = initialSpritePos;
+                spriteTransform.rotation = initialSpriteRot;
+                correctCounter = 0;
+                yield break;
+            }
             yield return new WaitForSeconds(1);
         }
     }
