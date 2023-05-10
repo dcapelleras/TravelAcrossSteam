@@ -16,7 +16,7 @@ public class PlayerDialogue : MonoBehaviour
 
     private void Update()
     {
-        if (player == null || dialogueRunner == null)
+        if (player == null || dialogueRunner == null || RoomManager.instance == null)
         {
             return;
         }

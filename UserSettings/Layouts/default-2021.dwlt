@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 156
+  controlID: 39
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 157
+  controlID: 40
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 140
+  controlID: 41
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 141
+  controlID: 42
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 84
+  controlID: 104
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -318,8 +318,8 @@ MonoBehaviour:
     y: 0
     width: 537
     height: 256
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -344,8 +344,8 @@ MonoBehaviour:
     y: 0
     width: 299
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -413,7 +413,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -477,7 +477,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8ce8fdff62ecfdff7a29feffdc42feff3458feff5e59feffca5bfeff545efeff4c5ffeff7061feffbe68fefffa8ffeff3aa8feff50e0feff5ce2feff66e5feffb6e7feffd6eafefff216ffff1220ffff1a20ffff2420ffffee2efffff037ffff884efffff252ffff865effffa262ffff5864fffff868ffff9c70ffffbc73ffff40b7ffff0efbffff5e620000d462000022630000c20801005c280100c2280100303c0100663d0100f86f0100c8ab01007aac010050660200766602002aa90200ecaf020064b0020082b0020086260300a42603007c290300
+      m_ExpandedIDs: 82a0ffffeaaffffff6b2ffff58cdffff8ce4ffffa8e9ffff0ceaffff74f9ffff0efbffff666400000e5002002a51020052580200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -781,9 +781,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.2764745, y: 30.938835, z: 53.799965}
+    m_Target: {x: -4.4829445, y: 10.17528, z: 19.47641}
     speed: 2
-    m_Value: {x: -2.2764745, y: 30.938835, z: 53.799965}
+    m_Value: {x: -4.4829445, y: 10.17528, z: 19.47641}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -830,13 +830,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.43253934, y: -0.003519226, z: 0.0016876861, w: -0.90160924}
+    m_Target: {x: 0.033768855, y: -0.8776013, z: 0.47410512, w: 0.06250912}
     speed: 2
-    m_Value: {x: -0.4338872, y: -0.004868114, z: 0.0023437922, w: -0.900951}
+    m_Value: {x: 0.033768732, y: -0.8775981, z: 0.47410336, w: 0.06250889}
   m_Size:
-    m_Target: 83.86372
+    m_Target: 12.245566
     speed: 2
-    m_Value: 87.815414
+    m_Value: 12.245566
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -983,22 +983,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/New
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 56
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/New
   m_LastFoldersGridSize: 56
-  m_LastProjectPath: C:\Users\jupiter\Desktop\TravelThroughSteamGit\TravelAcrossSteam
+  m_LastProjectPath: F:\Projects\TravelThroughSteam\TravelAcrossSteam
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 265}
-    m_SelectedIDs: 18660000
-    m_LastClickedID: 26136
-    m_ExpandedIDs: 0000000002660000046600000666000008660000166600001a660000546600005c66000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 89}
+    m_SelectedIDs: 6ac50000
+    m_LastClickedID: 50538
+    m_ExpandedIDs: 0000000038630000666300006ac500007ac5000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1026,7 +1026,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000002660000046600000666000008660000
+    m_ExpandedIDs: 0000000038630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1171,9 +1171,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1467
+    x: 1621
     y: 73
-    width: 452
+    width: 298
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:

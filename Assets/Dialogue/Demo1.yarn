@@ -1,7 +1,43 @@
 title: Start
 tags:
 ---
-Què acaba de passar...? On soc?
+<<movement 0>>
+Sam: Què acaba de passar...? On soc?
+Sam: Masa...? Estaré al·lucinant? Juraría que fa un moment estava a l'oficina...
+Sam: Sempre havía somiat en venir aquí i s'ha complert el meu desig de la forma més extranya.
+Sam: Suposo que es cert el que diuen que desitjant molt les coses, acaben arribant! Suposo que ja que hi som, entraré!
+Comentari: (camina cap a l'oficina fins la porta i canvia l'escena)
+<<movement 1>>
+===
+
+title: ShouldEnter
+---
+<<movement 0>>
+Sam: Doncs aquí estem, sembla que està obert.
+Sam: Hauría d'entrar o no?
+-> Evidentment, què faré aquí fora sinó?
+    <<jump Entered>>
+-> No ho se pas Ricard, sembla mala idea...
+    <<jump NotEntered>>
+===
+
+title: Entered
+---
+Decidit, cap a dins que vaig!
+<<enterBuilding>>
+===
+
+title: NotEntered
+---
+Saps què, ja m'ho deia tothom que una noia aquí no hi pinta res, millor em quedo fora.
+<<dontEnter>>
+<<movement 1>>
+===
+
+title: JokeStart
+tags:
+---
+
 Fí... esperem que t'hagi agradat.
 I doncs, t'ha agradat?
 -> Moltíssim
