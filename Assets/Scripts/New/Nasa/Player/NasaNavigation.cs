@@ -16,6 +16,10 @@ public class NasaNavigation : MonoBehaviour
 
     NasaDoor doorBeingCrossed;
 
+    public EventClickable pickingObject;
+
+    public bool hasBossKeys;
+
     private void Awake()
     {
         dialogue = GetComponent<NasaDialogueMovement>();
@@ -54,6 +58,15 @@ public class NasaNavigation : MonoBehaviour
                 }
             }
         }
+        if (pickingObject != null)
+        {
+            if (Vector3.Distance(transform.position, pickingObject.transform.position) < pickingObject.distanceToPick)
+            {
+                pickingObject.ExecuteAction();
+                pickingObject = null;
+                hasBossKeys = true;
+            }
+        }
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -62,6 +75,15 @@ public class NasaNavigation : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
+                if (hit.collider.TryGetComponent(out EventClickable clickable))
+                {
+                    pickingObject = clickable;
+                    MoveToThisDestination(clickable.placeToPickKeys);
+                }
+                else
+                {
+                    pickingObject = null;
+                }
                 if (hit.collider.TryGetComponent(out PuzzleDetector puzzle))
                 {
                     nav.SetDestination(puzzle.moveToPos.position);

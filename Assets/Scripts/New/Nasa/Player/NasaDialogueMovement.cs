@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
-using UnityEngine.AI;
 
 public class NasaDialogueMovement : MonoBehaviour
 {
@@ -14,13 +13,9 @@ public class NasaDialogueMovement : MonoBehaviour
     private void Awake()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
-        nav = GetComponent<NasaNavigation>();
-    }
-
-    private void Start()
-    {
         dialogueRunner.AddCommandHandler<int>("movement", AllowMovement);
         dialogueRunner.AddCommandHandler("callJanitor", CallJanitor);
+        nav = GetComponent<NasaNavigation>();
     }
 
     public void AllowMovement(int allowed)

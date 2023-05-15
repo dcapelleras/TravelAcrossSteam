@@ -153,6 +153,8 @@ MonoBehaviour:
   rend: {fileID: 4998736717297257328}
   anim: {fileID: 4998736717297257329}
   canMove: 1
+  pickingObject: {fileID: 0}
+  hasBossKeys: 0
 --- !u!1 &4998736717297257342
 GameObject:
   m_ObjectHideFlags: 0

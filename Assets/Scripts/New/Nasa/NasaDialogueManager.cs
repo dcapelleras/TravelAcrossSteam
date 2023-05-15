@@ -10,6 +10,9 @@ public class NasaDialogueManager : MonoBehaviour
     DialogueRunner runner;
     LineView lineView;
     [SerializeField] GameObject decorationPeople;
+    [SerializeField] GameObject MargaretH;
+    [SerializeField] GameObject bossKeys;
+    [SerializeField] NasaDoor doorToCommand;
 
     private void Awake()
     {
@@ -20,6 +23,7 @@ public class NasaDialogueManager : MonoBehaviour
         runner = FindObjectOfType<DialogueRunner>();
         lineView = FindObjectOfType<LineView>();
         runner.AddCommandHandler("progPuzzle", ProgrammingPuzzle);
+        runner.AddCommandHandler("margaret", MargaretAppears);
     }
 
     public void JanitorOpenedOffices()
@@ -52,5 +56,16 @@ public class NasaDialogueManager : MonoBehaviour
         decorationPeople.SetActive(true); //activate decoration people
     }
 
+    public void MargaretAppears()
+    {
+        MargaretH.SetActive(true);
+        bossKeys.SetActive(true);
+    }
 
+    public void GotKeysAndTalkedToMargaret()
+    {
+        runner.Dialogue.Stop();
+        runner.StartDialogue("MargaretAfterBossKeys");
+        doorToCommand.isLocked = false;
+    }
 }

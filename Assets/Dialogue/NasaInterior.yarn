@@ -1,4 +1,4 @@
-﻿title: Start
+title: Start
 tags:
 ---
 <<movement 0>>
@@ -52,6 +52,7 @@ title: AfterPCPuzzle
 ---
 Comentari:(fa el puzzle), (podria haverne de fer més d'un)
 Sam: Doncs al final me n'he sortit! Espero que no s'enfadin amb mí per fer el trencaclosques.
+<<margaret>>
 Comentari: (arriba una dona)
 ???: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
 ???: Quina és la teva especialitat? 
@@ -62,17 +63,19 @@ Sam: Ho sento... i sento haver tocat els teus trencaclosques...
 ???: (Mira els papers) Mmmh... Está tot fet... Ho has fet tu?
 Sam: Sí, ho sento, m'agrada molt aquest tipus de tasques i ho he vist a mitges...
 ???: Ara et veig amb uns altres ulls, deixa'm que em torni a presentar.
-Catherine Johnson: Encantada, soc la Catherine Johnson.
-Catherine Johnson: Ja que m'has ajudat deixa que t'ensenyi la meva investigació.
-Catherine Johnson: Estic fent això i allò sobre càlculs d'orbites i crec que he trobat una formula per millorar els viatges espacials (explicar millor)
+Margaret Hamilton: Encantada, soc la Margaret Hamilton.
+Sam: Es tot un plaer! Jo soc la Sam.
+Margaret Hamilton: Ja que m'has ajudat, Sam, deixa que t'ensenyi la meva investigació.
+Margaret Hamilton: Estic fent això i allò sobre càlculs d'orbites i crec que he trobat una formula per millorar els viatges espacials (explicar millor)
 Sam: Es increïble, i que falta per que ho apliquin? Puc ajudar en alguna cosa?
-Catherine Johnson: Doncs l'únic que falta es demostrar que funcionaría aplicant aquesta formula als valors d'un viatge real.
-Catherine Johnson: En realitat em serviríen les dades d'un viatge anterior, però no tinc accés a elles així que no es una opció.
+Margaret Hamilton: Doncs l'únic que falta es demostrar que funcionaría aplicant aquesta formula als valors d'un viatge real.
+Margaret Hamilton: En realitat em serviríen les dades d'un viatge anterior, però no tinc accés a elles així que no es una opció.
 Sam: Només això? Amb el mèrit que té un descobriment tant important no es pot quedar fora només per això! Si fa falta jo mateixa aconseguiré els documents!
-Catherine Johnson: Em tens molt sorpresa! Però has arribat aquí i se't veu més que motivada, així que es pot intentar.
-Catherine Johnson: Primer hauràs d'anar a l'oficina del costat de la recepció, la més gran, i entrar-hi quan no hi hagi ningú per agafar la clau de sobre la taula.
-Catherine Johnson: Un cop la tinguis, torna i et donaré més instruccions.
+Margaret Hamilton: Em tens molt sorpresa! Però has arribat aquí i se't veu més que motivada, així que es pot intentar.
+Margaret Hamilton: Primer hauràs d'anar a l'oficina del costat de la recepció, la més gran, i entrar-hi quan no hi hagi ningú per agafar la clau de sobre la taula.
+Margaret Hamilton: Un cop la tinguis, torna i et donaré més instruccions.
 Comentari: (en aquest punt ja haurà aparegut tothom a l'oficina, durant el puzzle)
+Comentari: (Puc posar a cada guardia un punt d'orígen i un punt on mirar, per quan faci uns moments que no segueixen al personatge)
 <<movement 1>>
 ===
 
@@ -80,12 +83,28 @@ title: StealthGame
 ---
 <<movement 0>>
 Sam: Ja tinc la clau!
-Catherine Johnson: Genial! Però ara vé la part difícil.
-Catherine Johnson: Has de creuar la porta de davant aquesta oficina, tranquila, està oberta, però a partir d'allà hauràs de assegurar-te que ningú et veu.
-Catherine Johnson: Creuant la porta et trobaràs un passadís, i avançant pel passadís et trobaràs una porta vermella, aquí es on necessitaràs la clau.
-Catherine Johnson: Un cop hagis entrat veuràs la sala de registres, simplement has de trobar els documents referents a algun dels antics llançaments espacials i tornar sense ser vista.
+Margaret Hamilton: Genial! Però ara vé la part difícil.
+Margaret Hamilton: Has de creuar la porta de davant aquesta oficina, tranquila, està oberta, però a partir d'allà hauràs de assegurar-te que ningú et veu.
+Margaret Hamilton: Creuant la porta et trobaràs un passadís, i avançant pel passadís et trobaràs una porta vermella, aquí es on necessitaràs la clau.
+Margaret Hamilton: Un cop hagis entrat veuràs la sala de registres, simplement has de trobar els documents referents a algun dels antics llançaments espacials i tornar sense ser vista.
 Sam: Ja m'estic començant a arrepentir... però cap innovació s'ha fet sense esforç!
 Sam: He d'anar al passadís, i sense que em vegin he d'arribar a la porta vermella, després només falta buscar els documents i tornar sense que em vegin.
 <<movement 1>>
 ===
 
+title: MargaretAfterBossKeys
+---
+<<movement 0>>
+Margaret Hamilton: Ben fet!
+Margaret Hamilton: Ara falta la part arriscada, si no ho vols fer no et preocupis, al cap i a la fí no et puc demanar una cosa que jo no tinc el valor de fer.
+Margaret Hamilton: Hauràs de creuar aquesta porta situada al fons de la sala, la que dona a la sala de comandaments.
+Sam: (Oh mare meva podré entrar a la sala de comandaments! Cara de poker, que no es noti l'emoció!)
+Margaret Hamilton: Si és massa ho entenc.
+Sam: (dissimulant l'emoció) Pots comptar amb mí, faré l'esforç per l'equip.
+Margaret Hamilton: No em para de sorprendre la teva valentía!
+Margaret Hamilton: Doncs aquí vé la part complicada... Hauràs de passar la sala de comandaments fins al fons, evitant tots els numerosos guardies assentats a la sala, on et trobaràs la porta al magatzem.
+Margaret Hamilton: Allà faltarà buscar els documents de registre dels últims vols espacials... La carpeta vermella dins l'arxivador blau, i portarlo de nou fins aquí.
+Sam: Entès, registre dels últims vols espacials. 
+Sam: (carpeta vermella dins l'arxivador blau)
+<<movement 1>>
+===
