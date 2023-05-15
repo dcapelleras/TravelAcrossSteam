@@ -37093,7 +37093,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 50
+  m_Speed: 20
   m_Acceleration: 200
   avoidancePriority: 50
   m_AngularSpeed: 0
@@ -37208,6 +37208,8 @@ MonoBehaviour:
   rend: {fileID: 4739643667858574387}
   anim: {fileID: 4739643667858574386}
   canMove: 1
+  pickingObject: {fileID: 0}
+  hasBossKeys: 0
 --- !u!114 &4739643666629883833
 MonoBehaviour:
   m_ObjectHideFlags: 0

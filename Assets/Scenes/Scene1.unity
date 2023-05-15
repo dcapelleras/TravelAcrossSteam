@@ -2733,8 +2733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decorationPeople: {fileID: 1692257371}
   MargaretH: {fileID: 6400710396635761457}
-  bossKeys: {fileID: 0}
-  doorToCommand: {fileID: 0}
+  bossKeys: {fileID: 984344569}
+  doorToCommand: {fileID: 171861074}
 --- !u!82 &542370476
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10214,6 +10214,10 @@ PrefabInstance:
     - target: {fileID: 4998736716621689072, guid: ff1864660709599438be932b3a957fc5, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998736716621689074, guid: ff1864660709599438be932b3a957fc5, type: 3}
+      propertyPath: m_Speed
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4998736716621689078, guid: ff1864660709599438be932b3a957fc5, type: 3}
       propertyPath: m_RootOrder
