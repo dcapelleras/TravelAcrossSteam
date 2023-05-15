@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,9 +14,13 @@ public class Guard : MonoBehaviour
     [SerializeField] float maxZPos;
     [SerializeField] float minZPos;
     [SerializeField] Transform placeToLookAt;
-    Vector3 initialPos;
+    Vector3 goalPos;
     float timerToGoBack;
     float timeToGoBack = 4f;
+    bool patrolling;
+    [SerializeField] float timeBetweenPatrolChange = 5f;
+
+    [SerializeField] List<Transform> wayPoints= new List<Transform>();
 
     private void Awake()
     {
@@ -24,7 +29,19 @@ public class Guard : MonoBehaviour
 
     private void Start()
     {
-        initialPos = transform.position;
+        goalPos = wayPoints[0].position;
+    }
+
+    private void OnEnable()
+    {
+        patrolling = true;
+        StartCoroutine(PatrolBetweenPoints());
+    }
+
+    private void OnDisable()
+    {
+        patrolling = false;
+        StopCoroutine(PatrolBetweenPoints());
     }
 
     private void Update()
@@ -35,7 +52,7 @@ public class Guard : MonoBehaviour
         }
         if (timerToGoBack < timeToGoBack)
         {
-            if (Vector3.Distance(transform.position, initialPos) > 12f)
+            if (Vector3.Distance(transform.position, goalPos) > 12f)
             {
                 timerToGoBack += Time.deltaTime;
             }
@@ -52,10 +69,20 @@ public class Guard : MonoBehaviour
         }
         if (transform.position.x > maxXPos || transform.position.x < minXPos || transform.position.z > maxZPos || transform.position.z < minZPos || (timerToGoBack >= timeToGoBack)) 
         {
-            Debug.Log("going back to initial pos");
-            nav.SetDestination(initialPos);
+            nav.SetDestination(goalPos);
         }
-        Debug.Log("distance between transform pos and initial pos"+Vector3.Distance(transform.position, initialPos));
+    }
+
+    IEnumerator PatrolBetweenPoints()
+    {
+        while (patrolling)
+        {
+            for (int i = 0; i < wayPoints.Count; i++)
+            {
+                goalPos = wayPoints[i].position;
+                yield return new WaitForSeconds(timeBetweenPatrolChange);
+            }
+        }
     }
 
     public void DetectPlayer()

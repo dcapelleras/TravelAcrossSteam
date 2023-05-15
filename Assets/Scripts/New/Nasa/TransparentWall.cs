@@ -5,41 +5,26 @@ using UnityEngine;
 public class TransparentWall : MonoBehaviour
 {
     Renderer rend;
-    [SerializeField]Material normalMaterial;
-    [SerializeField]Material invisMaterial;
-
-    bool playerInFront;
+    [SerializeField] Material normalMaterial;
+    [SerializeField] Material invisMaterial;
+    [SerializeField] int canClickMask;
+    [SerializeField] int cannotClickMask;
 
     private void Awake()
     {
         rend = GetComponent<Renderer>();
+        gameObject.layer= 0;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void BlockVision()
     {
-        if (other.CompareTag("Player"))
-        {
-            playerInFront= true;
-        }
+        rend.material = invisMaterial;
+        gameObject.layer = canClickMask;
     }
 
-    private void OnTriggerExit(Collider other)
+    public void UnblockVision()
     {
-        if (other.CompareTag("Player"))
-        {
-            playerInFront = false;
-        }
-    }
-
-    private void Update()
-    {
-        if (playerInFront)
-        {
-            rend.material= invisMaterial;
-        }
-        else
-        {
-            rend.material= normalMaterial;
-        }
+        gameObject.layer = cannotClickMask;
+        rend.material = normalMaterial;
     }
 }

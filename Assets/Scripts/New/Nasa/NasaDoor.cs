@@ -26,12 +26,12 @@ public class NasaDoor : MonoBehaviour
         Debug.DrawRay(transform.position, (player.position - transform.position).normalized * raydistance, Color.white);
         if (Vector3.Distance(transform.position, player.position) < raydistance && !doorOpen)
         {
-            transform.GetComponentInParent<Animator>().SetTrigger("Open");
+            transform.GetComponent<Animator>().SetTrigger("Open");
             doorOpen = true;
         }
         else if (Vector3.Distance(transform.position, player.position) > raydistance && doorOpen)
         {
-            transform.GetComponentInParent<Animator>().SetTrigger("Close");
+            transform.GetComponent<Animator>().SetTrigger("Close");
             doorOpen = false;
         }
     }

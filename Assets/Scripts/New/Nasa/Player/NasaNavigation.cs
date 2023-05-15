@@ -20,6 +20,9 @@ public class NasaNavigation : MonoBehaviour
 
     public bool hasBossKeys;
 
+    public bool invertedAxis;
+
+
     private void Awake()
     {
         dialogue = GetComponent<NasaDialogueMovement>();
@@ -29,6 +32,10 @@ public class NasaNavigation : MonoBehaviour
 
     private void Update()
     {
+        if (transform.rotation != cam.transform.rotation)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, cam.transform.rotation, 2f);
+        }
 
         if (Vector3.Distance(nav.destination, transform.position) < 3f)
         {
@@ -98,8 +105,9 @@ public class NasaNavigation : MonoBehaviour
                     }
                     else if (!door.isLocked)
                     {
+                        CamManager.instance.MoveToCam(doorBeingCrossed.doorIndex);
                         nav.SetDestination(door.crossedPos.position);
-                        CamManager.instance.MoveToCam(door.doorIndex);
+                        
                     }
                 }
                 else
@@ -107,25 +115,51 @@ public class NasaNavigation : MonoBehaviour
                     nav.SetDestination(hit.point);
                 }
 
-                if ((transform.position.x - hit.point.x) < -0.5f)
+                if (invertedAxis)
                 {
-                    anim.SetFloat("Walk", 1f);
-                    rend.flipX = false;
-                    //anim turn left
-                    //anim walk
-                }
-                else if ((transform.position.x - hit.point.x) > 0.5f)
-                {
-                    anim.SetFloat("Walk", 1f);
-                    rend.flipX = true;
-                    //anim turn right
-                    //anim walk
+                    if ((transform.position.z - hit.point.z) < -0.5f) //walk to front
+                    {
+                        anim.SetFloat("Walk", 1f);
+                        rend.flipX = false;
+                        //anim turn left
+                        //anim walk
+                    }
+                    else if ((transform.position.z - hit.point.z) > 0.5f) //walk to back
+                    {
+                        anim.SetFloat("Walk", 1f);
+                        rend.flipX = true;
+                        //anim turn right
+                        //anim walk
+                    }
+                    else
+                    {
+                        anim.SetFloat("Walk", 0f);
+                        //anim idle
+                    }
                 }
                 else
                 {
-                    anim.SetFloat("Walk", 0f);
-                    //anim idle
+                    if ((transform.position.x - hit.point.x) < -0.5f) //walk to left
+                    {
+                        anim.SetFloat("Walk", 1f);
+                        rend.flipX = false;
+                        //anim turn left
+                        //anim walk
+                    }
+                    else if ((transform.position.x - hit.point.x) > 0.5f) //walk to right
+                    {
+                        anim.SetFloat("Walk", 1f);
+                        rend.flipX = true;
+                        //anim turn right
+                        //anim walk
+                    }
+                    else
+                    {
+                        anim.SetFloat("Walk", 0f);
+                        //anim idle
+                    }
                 }
+                
             }
         }
     }
