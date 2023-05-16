@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 public class CodingManager : MonoBehaviour
 {
@@ -17,6 +16,8 @@ public class CodingManager : MonoBehaviour
     [SerializeField] List<Action> actionsRequired;
 
     [SerializeField] float spriteMoveDistance;
+
+    [SerializeField] float timeBetweenMoves = 1f;
 
     int correctCounter;
 
@@ -79,7 +80,7 @@ public class CodingManager : MonoBehaviour
                 correctCounter = 0;
                 yield break;
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(timeBetweenMoves);
         }
     }
 }

@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
+using Yarn.Unity;
 
 public class Guard : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
+    NasaNavigation playerNav;
     NavMeshAgent nav;
     [SerializeField] float maxXPos;
     [SerializeField] float minXPos;
@@ -22,9 +24,20 @@ public class Guard : MonoBehaviour
 
     [SerializeField] List<Transform> wayPoints= new List<Transform>();
 
+    [SerializeField] Transform placeToSend;
+    float timeFriendly = 5f;
+    float timerWhileFriendly;
+    bool friendly;
+
+    DialogueRunner runner;
+
+
     private void Awake()
     {
+        runner = FindObjectOfType<DialogueRunner>();
         nav= GetComponent<NavMeshAgent>();
+        playerNav = playerTransform.GetComponent<NasaNavigation>();
+        runner.AddCommandHandler("sendPlayerGuard", SendPlayerBack);
     }
 
     private void Start()
@@ -46,9 +59,21 @@ public class Guard : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(playerTransform.position, transform.position) < 1f)
+        if (friendly)
         {
-            Debug.Log("Player catched");
+            timerWhileFriendly += Time.deltaTime;
+            if (timerWhileFriendly >= timeFriendly)
+            {
+                friendly = false;
+            }
+        }
+        if (Vector3.Distance(playerTransform.position, transform.position) < 3.2f)
+        {
+            if (!friendly)
+            {
+                CatchPlayer();
+            }
+
         }
         if (timerToGoBack < timeToGoBack)
         {
@@ -87,7 +112,23 @@ public class Guard : MonoBehaviour
 
     public void DetectPlayer()
     {
-        timerToGoBack = 0;
-        nav.SetDestination(playerTransform.position);
+        if (!friendly)
+        {
+            timerToGoBack = 0;
+            nav.SetDestination(playerTransform.position);
+        }
+        
+    }
+
+    void CatchPlayer()
+    {
+        friendly = true;
+        timerWhileFriendly= 0;
+        NasaDialogueManager.instance.CatchedDialogue();
+    }
+
+    public void SendPlayerBack()
+    {
+        FindObjectOfType<NasaNavigation>().MoveToThisDestination(placeToSend);
     }
 }

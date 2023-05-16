@@ -13,6 +13,7 @@ public class NasaDialogueManager : MonoBehaviour
     [SerializeField] GameObject MargaretH;
     [SerializeField] GameObject bossKeys;
     [SerializeField] NasaDoor doorToCommand;
+    [SerializeField] List<Transform> placesToGoBackAfterCatch= new List<Transform>();
 
     private void Awake()
     {
@@ -67,5 +68,13 @@ public class NasaDialogueManager : MonoBehaviour
         runner.Dialogue.Stop();
         runner.StartDialogue("MargaretAfterBossKeys");
         doorToCommand.isLocked = false;
+    }
+
+    public void CatchedDialogue()
+    {
+        if (!runner.Dialogue.IsActive)
+        {
+            runner.StartDialogue("PlayerCatched");
+        }
     }
 }

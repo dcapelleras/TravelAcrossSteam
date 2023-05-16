@@ -108,3 +108,15 @@ Sam: Entès, registre dels últims vols espacials.
 Sam: (carpeta vermella dins l'arxivador blau)
 <<movement 1>>
 ===
+
+title: PlayerCatched
+---
+<<movement 0>>
+Guardia: Alto aquí senyoreta! Això es zona restringida!
+Guardia: Torna al teu lloc de treball immediatament!
+<<sendPlayerGuard>>
+Sam: (Vaja, m'han enxampat)
+Sam: (Tal com m'ha dit la Margaret, he de evitar que em vegin)
+Sam: (Hauré de vigilar més...)
+<<movement 1>>
+===

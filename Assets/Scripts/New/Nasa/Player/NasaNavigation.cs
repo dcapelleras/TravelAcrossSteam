@@ -20,6 +20,8 @@ public class NasaNavigation : MonoBehaviour
 
     public bool hasBossKeys;
 
+    public bool hasFolderWithDocs;
+
     public bool invertedAxis;
 
 
@@ -71,7 +73,6 @@ public class NasaNavigation : MonoBehaviour
             {
                 pickingObject.ExecuteAction();
                 pickingObject = null;
-                hasBossKeys = true;
             }
         }
 
@@ -85,7 +86,7 @@ public class NasaNavigation : MonoBehaviour
                 if (hit.collider.TryGetComponent(out EventClickable clickable))
                 {
                     pickingObject = clickable;
-                    MoveToThisDestination(clickable.placeToPickKeys);
+                    MoveToThisDestination(clickable.placeToPick);
                 }
                 else
                 {

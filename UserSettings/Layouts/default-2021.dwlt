@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 177
+  controlID: 131
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 178
+  controlID: 132
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 19
+  controlID: 133
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 20
+  controlID: 134
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 141
+  controlID: 147
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -318,8 +318,8 @@ MonoBehaviour:
     y: 0
     width: 547
     height: 256
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -632,9 +632,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -57.48687, y: -11.313019, z: 226.91684}
+    m_Target: {x: -50.876083, y: 50.69216, z: 204.4077}
     speed: 2
-    m_Value: {x: -57.48687, y: -11.313019, z: 226.91684}
+    m_Value: {x: -50.876083, y: 50.69216, z: 204.4077}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -681,20 +681,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.5497038, y: 0.00049293024, z: -0.00034609257, w: 0.8353773}
+    m_Target: {x: 0.28986064, y: 0.6553091, z: -0.30213666, w: 0.62872773}
     speed: 2
-    m_Value: {x: 0.5496956, y: 0.0004929229, z: -0.0003460874, w: 0.8353648}
+    m_Value: {x: 0.28985566, y: 0.6552978, z: -0.30213147, w: 0.62871695}
   m_Size:
-    m_Target: 88.30112
+    m_Target: 32.93911
     speed: 2
-    m_Value: 88.30112
+    m_Value: 32.93911
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 0.94053
-    m_SpeedNormalized: 0.47
+    m_Speed: 0.88056
+    m_SpeedNormalized: 0.44
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -743,9 +743,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 0efbffffec630000
+      m_SelectedIDs: 26660000
+      m_LastClickedID: 26150
+      m_ExpandedIDs: 0efbffff82640000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -983,22 +983,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/New/Nasa/Puzzle/StealthPuzzle
+    - Assets/Scripts/New/Nasa
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 56
   m_LastFolders:
-  - Assets/Scripts/New/Nasa/Puzzle/StealthPuzzle
+  - Assets/Scripts/New/Nasa
   m_LastFoldersGridSize: 56
   m_LastProjectPath: C:\Users\jupiter\Desktop\TravelThroughSteamGit\TravelAcrossSteam
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 105}
-    m_SelectedIDs: d46a0000
-    m_LastClickedID: 27348
-    m_ExpandedIDs: 000000005e6a00009c6a0000d66a0000d86a0000da6a000000ca9a3bffffff7f
+    m_SelectedIDs: 866a0000
+    m_LastClickedID: 27270
+    m_ExpandedIDs: 00000000826a0000846a0000866a0000886a0000c86a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1026,7 +1026,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005e6a0000
+    m_ExpandedIDs: 00000000826a0000846a0000866a0000886a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

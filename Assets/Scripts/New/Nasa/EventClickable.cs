@@ -5,7 +5,7 @@ using UnityEngine;
 public class EventClickable : MonoBehaviour
 {
     public int alreadyExecuted;
-    public Transform placeToPickKeys;
+    public Transform placeToPick;
     public float distanceToPick;
     public virtual void ExecuteAction()
     {
