@@ -13,16 +13,21 @@ public class CodingManager : MonoBehaviour
     Vector3 initialSpritePos;
     Quaternion initialSpriteRot;
     [SerializeField] Transform spriteTransform;
+    Rigidbody2D spriteRb;
     [SerializeField] List<Action> actionsRequired;
+    
 
     [SerializeField] float spriteMoveDistance;
 
     [SerializeField] float timeBetweenMoves = 1f;
 
+    public bool hasCollided;
+
     int correctCounter;
 
     private void Awake()
     {
+        spriteRb = spriteTransform.GetComponent<Rigidbody2D>();
         for (int i = 0; i < codingLines.Count; i++)
         {
             actions.Add(Action.none);
@@ -43,11 +48,29 @@ public class CodingManager : MonoBehaviour
 
     IEnumerator RunCodingCommands()
     {
+        hasCollided = false;
         spriteTransform.position = initialSpritePos;
         spriteTransform.rotation = initialSpriteRot;
         for (int i = 0; i < actions.Count; i++)
         {
+            
             Debug.Log(actions[i].ToString());
+            if (actions[i] == Action.forward)
+            {
+                spriteRb.MovePosition(spriteRb.position + (Vector2)spriteTransform.up * spriteMoveDistance);
+                //spriteTransform.position += spriteTransform.up * spriteMoveDistance;
+            }
+            else if (actions[i] == Action.left)
+            {
+                spriteTransform.Rotate(Vector3.forward * 90);
+            }
+            else if (actions[i] == Action.right)
+            {
+                spriteTransform.Rotate(Vector3.forward * -90);
+            }
+
+            
+
             if (actions[i] == actionsRequired[i])
             {
                 correctCounter++;
@@ -59,28 +82,23 @@ public class CodingManager : MonoBehaviour
                     //maybe go to the next puzzle, maybe make only 1
                     NasaDialogueManager.instance.FinishCodingPuzzle();
                 }
-                if (actions[i] == Action.forward)
-                {
-                    spriteTransform.position += spriteTransform.up * spriteMoveDistance;
-                }
-                else if (actions[i] == Action.left)
-                {
-                    spriteTransform.Rotate(Vector3.forward * 90);
-                }
-                else if (actions[i] == Action.right)
-                {
-                    spriteTransform.Rotate(Vector3.forward * -90);
-                }
+                
             }
-            else
+            
+            yield return new WaitForSeconds(timeBetweenMoves);
+            if (hasCollided)
             {
-                Debug.Log("Parece que no es la combinación correcta");
-                spriteTransform.position = initialSpritePos;
-                spriteTransform.rotation = initialSpriteRot;
-                correctCounter = 0;
+                WrongCombination();
                 yield break;
             }
-            yield return new WaitForSeconds(timeBetweenMoves);
         }
+    }
+
+    void WrongCombination()
+    {
+        Debug.Log("Parece que no es la combinación correcta");
+        spriteTransform.position = initialSpritePos;
+        spriteTransform.rotation = initialSpriteRot;
+        correctCounter = 0;
     }
 }
