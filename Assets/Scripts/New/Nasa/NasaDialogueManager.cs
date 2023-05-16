@@ -13,7 +13,6 @@ public class NasaDialogueManager : MonoBehaviour
     [SerializeField] GameObject MargaretH;
     [SerializeField] GameObject bossKeys;
     [SerializeField] NasaDoor doorToCommand;
-    [SerializeField] List<Transform> placesToGoBackAfterCatch= new List<Transform>();
 
     private void Awake()
     {
