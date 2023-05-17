@@ -20,4 +20,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CodingMinigame.unity
     guid: 128fcf64af4d34941bc94e3988e5de22
+  - enabled: 1
+    path: Assets/Scenes/Coding2Minigame.unity
+    guid: 375465376b63c5d438e0e5e48c9178b8
+  - enabled: 1
+    path: Assets/Scenes/Coding3Minigame.unity
+    guid: 6ca04c3c795424f44be38ff596858e70
+  - enabled: 1
+    path: Assets/Scenes/Coding4Minigame.unity
+    guid: fcec6cb3188d10f4e830d98379186201
+  - enabled: 1
+    path: Assets/Scenes/Coding5Minigame.unity
+    guid: 5a2a7d3409279374e8c1b1e8715f8e12
   m_configObjects: {}

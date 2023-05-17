@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     public static GameManager instance;
     [SerializeField] ScriptableSettings settings;
+    [SerializeField] GameObject tutorialPanel;
+    [SerializeField]List<GameObject> tutorials;
 
     private void Awake()
     {
@@ -55,5 +57,22 @@ public class GameManager : MonoBehaviour
     public void QuitGame()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ShowTutorial(int index)
+    {
+        tutorialPanel.SetActive(true);
+        tutorials[index].SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void HideTutorial()
+    {
+        foreach (GameObject t in tutorials)
+        {
+            t.SetActive(false);
+        }
+        tutorialPanel.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

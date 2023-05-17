@@ -1,3 +1,4 @@
+using Cinemachine.Utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class CodingManager : MonoBehaviour
 {
+    [SerializeField] int puzzleIndex;
+
     public List<CodingLine> codingLines;
 
     public List<Action> actions;
@@ -49,16 +52,14 @@ public class CodingManager : MonoBehaviour
     IEnumerator RunCodingCommands()
     {
         hasCollided = false;
-        spriteTransform.position = initialSpritePos;
+        spriteRb.position = initialSpritePos;
         spriteTransform.rotation = initialSpriteRot;
         for (int i = 0; i < actions.Count; i++)
         {
-            
             Debug.Log(actions[i].ToString());
             if (actions[i] == Action.forward)
             {
                 spriteRb.MovePosition(spriteRb.position + (Vector2)spriteTransform.up * spriteMoveDistance);
-                //spriteTransform.position += spriteTransform.up * spriteMoveDistance;
             }
             else if (actions[i] == Action.left)
             {
@@ -69,29 +70,53 @@ public class CodingManager : MonoBehaviour
                 spriteTransform.Rotate(Vector3.forward * -90);
             }
 
-            
-
             if (actions[i] == actionsRequired[i])
             {
                 correctCounter++;
                 if (correctCounter == actionsRequired.Count)
                 {
-                    //se pueden hacer cosas extra en plan cambiar el color o activar luces o cosas
-                    Debug.Log("Congratulations!");
-                    SceneManager.UnloadSceneAsync("CodingMinigame");
-                    //maybe go to the next puzzle, maybe make only 1
-                    NasaDialogueManager.instance.FinishCodingPuzzle();
+                    switch (puzzleIndex)
+                    {
+                        case 0:
+                            SceneManager.LoadSceneAsync(5, LoadSceneMode.Additive);
+                            SceneManager.UnloadSceneAsync(4);
+                            break;
+                        case 1:
+                            SceneManager.LoadSceneAsync(6, LoadSceneMode.Additive);
+                            SceneManager.UnloadSceneAsync(5);
+                            break;
+                        case 2:
+                            SceneManager.LoadSceneAsync(7, LoadSceneMode.Additive);
+                            SceneManager.UnloadSceneAsync(6);
+                            break;
+                        case 3:
+                            SceneManager.LoadSceneAsync(8, LoadSceneMode.Additive);
+                            SceneManager.UnloadSceneAsync(7);
+                            break;
+                        case 4:
+                            NasaDialogueManager.instance.FinishCodingPuzzle();
+                            SceneManager.UnloadSceneAsync(8);
+                            break;
+                    }
+                    
                 }
-                
             }
-            
-            yield return new WaitForSeconds(timeBetweenMoves);
+            float timeToWait = 0;
+            if (actions[i] != Action.none)
+            {
+                timeToWait = timeBetweenMoves;
+            }
+            yield return new WaitForSeconds(timeToWait);
             if (hasCollided)
             {
                 WrongCombination();
                 yield break;
             }
+            
         }
+        spriteRb.position = initialSpritePos;
+        spriteTransform.rotation = initialSpriteRot;
+
     }
 
     void WrongCombination()
