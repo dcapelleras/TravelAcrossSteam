@@ -24,20 +24,17 @@ public class Guard : MonoBehaviour
 
     [SerializeField] List<Transform> wayPoints= new List<Transform>();
 
-    [SerializeField] Transform placeToSend;
     float timeFriendly = 5f;
     float timerWhileFriendly;
     bool friendly;
 
-    DialogueRunner runner;
+    public int roomIndexToGoBack;
 
 
     private void Awake()
     {
-        runner = FindObjectOfType<DialogueRunner>();
         nav= GetComponent<NavMeshAgent>();
         playerNav = playerTransform.GetComponent<NasaNavigation>();
-        runner.AddCommandHandler("sendPlayerGuard", SendPlayerBack);
     }
 
     private void Start()
@@ -71,7 +68,7 @@ public class Guard : MonoBehaviour
         {
             if (!friendly)
             {
-                CatchPlayer();
+                CatchPlayer(roomIndexToGoBack);
             }
 
         }
@@ -120,15 +117,11 @@ public class Guard : MonoBehaviour
         
     }
 
-    void CatchPlayer()
+    void CatchPlayer(int roomIndex)
     {
         friendly = true;
         timerWhileFriendly= 0;
         NasaDialogueManager.instance.CatchedDialogue();
-    }
-
-    public void SendPlayerBack()
-    {
-        FindObjectOfType<NasaNavigation>().MoveToThisDestination(placeToSend);
+        NasaDialogueManager.instance.roomIndexToGoBack = roomIndex;
     }
 }

@@ -13,6 +13,9 @@ public class NasaDialogueManager : MonoBehaviour
     [SerializeField] GameObject MargaretH;
     [SerializeField] GameObject bossKeys;
     [SerializeField] NasaDoor doorToCommand;
+    public int roomIndexToGoBack;
+
+    [SerializeField] List<Transform> placesToSend;
 
     private void Awake()
     {
@@ -24,6 +27,7 @@ public class NasaDialogueManager : MonoBehaviour
         lineView = FindObjectOfType<LineView>();
         runner.AddCommandHandler("progPuzzle", ProgrammingPuzzle);
         runner.AddCommandHandler("margaret", MargaretAppears);
+        runner.AddCommandHandler("sendPlayerGuard", SendPlayerBack);
     }
 
     public void JanitorOpenedOffices()
@@ -75,5 +79,10 @@ public class NasaDialogueManager : MonoBehaviour
         {
             runner.StartDialogue("PlayerCatched");
         }
+    }
+
+    public void SendPlayerBack()
+    {
+        FindObjectOfType<NasaNavigation>().MoveToThisDestination(placesToSend[roomIndexToGoBack]);
     }
 }

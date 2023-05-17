@@ -114,6 +114,7 @@ public class CodingManager : MonoBehaviour
             }
             
         }
+        correctCounter = 0;
         spriteRb.position = initialSpritePos;
         spriteTransform.rotation = initialSpriteRot;
 
