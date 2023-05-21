@@ -106,9 +106,12 @@ public class NasaNavigation : MonoBehaviour
                     }
                     else if (!door.isLocked)
                     {
+                        if (door.changesAxisView)
+                        {
+                            invertedAxis = !invertedAxis;
+                        }
                         CamManager.instance.MoveToCam(doorBeingCrossed.doorIndex);
                         nav.SetDestination(door.crossedPos.position);
-                        
                     }
                 }
                 else
@@ -143,14 +146,14 @@ public class NasaNavigation : MonoBehaviour
                     if ((transform.position.x - hit.point.x) < -0.5f) //walk to left
                     {
                         anim.SetFloat("Walk", 1f);
-                        rend.flipX = false;
+                        rend.flipX = true;
                         //anim turn left
                         //anim walk
                     }
                     else if ((transform.position.x - hit.point.x) > 0.5f) //walk to right
                     {
                         anim.SetFloat("Walk", 1f);
-                        rend.flipX = true;
+                        rend.flipX = false;
                         //anim turn right
                         //anim walk
                     }

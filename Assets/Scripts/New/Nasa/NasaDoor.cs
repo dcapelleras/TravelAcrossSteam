@@ -17,6 +17,8 @@ public class NasaDoor : MonoBehaviour
 
     public int eventIndex;
 
+    public bool changesAxisView;
+
     private void Update()
     {
         if (isLocked)
