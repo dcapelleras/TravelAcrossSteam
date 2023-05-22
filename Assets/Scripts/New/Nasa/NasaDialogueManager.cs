@@ -85,4 +85,24 @@ public class NasaDialogueManager : MonoBehaviour
     {
         FindObjectOfType<NasaNavigation>().MoveToThisDestination(placesToSend[roomIndexToGoBack]);
     }
+
+    public void StartSlidingPuzzle()
+    {
+        runner.Dialogue.Stop();
+        runner.StartDialogue("StartSlidingPuzzleDialogue");
+        CamManager.instance.MoveToCam(4);
+    }
+
+    public void FinishSlidingPuzzle()
+    {
+        runner.Dialogue.Stop();
+        runner.StartDialogue("FinishSlidingPuzzleDialogue");
+        CamManager.instance.MoveToCam(3);
+    }
+
+    public void GotDocumentsToMargaret()
+    {
+        runner.Dialogue.Stop();
+        runner.StartDialogue("MargaretAfterDocuments");
+    }
 }

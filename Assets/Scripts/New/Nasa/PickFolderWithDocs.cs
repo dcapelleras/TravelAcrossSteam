@@ -9,6 +9,11 @@ public class PickFolderWithDocs : EventClickable
         base.ExecuteAction();
         NasaNavigation nav = FindObjectOfType<NasaNavigation>();
         nav.hasFolderWithDocs= true;
+        nav.MoveToThisDestination(placeToPick);
+        nav.rend.flipX= false;
+        //start puzzle game
+        //change camera for cam[4]
+        NasaDialogueManager.instance.StartSlidingPuzzle();
         gameObject.SetActive(false);
     }
 }

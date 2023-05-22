@@ -8,29 +8,26 @@ public class StartingProgrammingPuzzleTrigger : EventTriggerBase
     [SerializeField] NasaNavigation nav;
     public override void ExecuteTrigger()
     {
-        switch (alreadyExecuted)
-        {
-            case 0:
-                base.ExecuteTrigger();
-                NasaDialogueManager.instance.StartProgrammingPuzzle();
-                nav.MoveToThisDestination(stopPosition);
-                break;
-            case 1:
-                NasaDialogueManager.instance.GotKeysAndTalkedToMargaret();
-                nav.MoveToThisDestination(stopPosition);
-                if (nav.hasBossKeys)
-                {
-                    base.ExecuteTrigger();
-                }
-                break;
-
-        }
 
         if (alreadyExecuted == 0)
         {
-            base.ExecuteTrigger();
+            alreadyExecuted = 1;
             NasaDialogueManager.instance.StartProgrammingPuzzle();
             NasaNavigation nav = FindObjectOfType<NasaNavigation>();
+            nav.MoveToThisDestination(stopPosition);
+        }
+
+        if (nav.hasBossKeys && alreadyExecuted == 1)
+        {
+            alreadyExecuted = 2;
+            NasaDialogueManager.instance.GotKeysAndTalkedToMargaret();
+            nav.MoveToThisDestination(stopPosition);
+        }
+
+        if (alreadyExecuted == 2 && nav.hasFolderWithDocs)
+        {
+            alreadyExecuted = 3;
+            NasaDialogueManager.instance.GotDocumentsToMargaret();
             nav.MoveToThisDestination(stopPosition);
         }
     }

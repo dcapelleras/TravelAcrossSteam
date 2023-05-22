@@ -115,8 +115,24 @@ Guardia: Alto aquí senyoreta! Això es zona restringida!
 Guardia: Torna al teu lloc de treball immediatament!
 <<sendPlayerGuard>>
 Sam: (Vaja, m'han enxampat)
-Sam: (Tal com m'ha dit la Margaret, he de evitar que em vegin)
+Sam: (Tal com m'ha dit la Margaret, he d'evitar que em vegin)
 Sam: (Hauré de vigilar més...)
+Instruccions: Evita passar prop del centre de visió dels guardies o sortir-ne abans que et vinguin a cridar l'atenció.
+<<movement 1>>
+===
+
+title: StartSlidingPuzzleDialogue
+---
+<<movement 0>>
+Sam: Estan tots els papers desordenats i fets un desastre!
+Sam: Vaig a ordenarlos una mica, es el mínim que puc fer per ajudar la Margaret.
+===
+
+title: FinishSlidingPuzzleDialogue
+---
+Sam: Ja està tot al seu lloc, ara sí es llegíble!
+Sam: Suposos que amb això no tindrà cap problema per presentar el descobriment.
+Sam: Ara només falta portar-li!
 <<movement 1>>
 ===
 
@@ -125,4 +141,9 @@ title: MargaretAfterDocuments
 Margaret Hamilton: Ho has aconseguit! 
 Margaret Hamilton: Ara podrem fer història!
 (explicacio de consequencies del descobriment)
+(apareix pantalla de some time later)
+(carrega escena final de margaret rebent el reconeixement de tothom i agraint a la sam i animantla a començar la seva carrera)
+("opcional" La sam es teletransporta a la actualitat i se la veu a la recepcio de la upc apuntantse a ingenyeria)
+(El recepcionista li pregunta que quina motivació té per apuntar-se i respon que ha tingut molt bons referents.)
+(FI)
 ===

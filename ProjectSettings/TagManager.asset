@@ -16,6 +16,7 @@ TagManager:
   - Cable2
   - Cable3
   - Final
+  - Wall
   layers:
   - Default
   - TransparentFX

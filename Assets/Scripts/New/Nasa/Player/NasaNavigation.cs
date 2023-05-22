@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,7 +9,7 @@ public class NasaNavigation : MonoBehaviour
 {
     NavMeshAgent nav;
     Camera cam;
-    [SerializeField] SpriteRenderer rend;
+    public SpriteRenderer rend;
     [SerializeField] Animator anim;
     NasaDialogueMovement dialogue;
 
@@ -48,6 +49,37 @@ public class NasaNavigation : MonoBehaviour
             anim.SetFloat("Walk", 1f);
         }
 
+        if (invertedAxis)
+        {
+            if ((transform.position.z - nav.destination.z) < -0.5f) //walk to front
+            {
+                rend.flipX = false;
+                //anim turn left
+                //anim walk
+            }
+            else if ((transform.position.z - nav.destination.z) > 0.5f) //walk to back
+            {
+                rend.flipX = true;
+                //anim turn right
+                //anim walk
+            }
+        }
+        else
+        {
+            if ((transform.position.x - nav.destination.x) < -0.5f) //walk to left
+            {
+                rend.flipX = true;
+                //anim turn left
+                //anim walk
+            }
+            else if ((transform.position.x - nav.destination.x) > 0.5f) //walk to right
+            {
+                rend.flipX = false;
+                //anim turn right
+                //anim walk
+            }
+        }
+
         if (!canMove)
         {
             return;
@@ -83,6 +115,11 @@ public class NasaNavigation : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
+                if (hit.collider.CompareTag("Wall"))
+                {
+                    return;
+                }
+
                 if (hit.collider.TryGetComponent(out EventClickable clickable))
                 {
                     pickingObject = clickable;
