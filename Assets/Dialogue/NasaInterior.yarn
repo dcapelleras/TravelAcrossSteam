@@ -42,15 +42,13 @@ title: PCPuzzle
 Sam: Què deu ser això? Sembla una targeta de programació, pero dubto que aquí facin servir una cosa tan antiga.
 Sam: O aquí treballa una col·leccionista d'antiguitats o he viatjat en el temps!! jajaj!
 Sam: Potser es un passatemps de qui treballa aquí.
-Comentari:(Surt puzzle de programació)
 Sam: Que interessant, això es casi com un trencaclosques, aviam si donant-li voltes se m'acudeix la resposta.
 <<progPuzzle>>
 ===
 
 title: AfterPCPuzzle
 ---
-Comentari:(fa el puzzle), (podria haverne de fer més d'un)
-Sam: Doncs al final me n'he sortit! Espero que no s'enfadin amb mí per fer el trencaclosques.
+Sam: Doncs al final me n'he sortit! Espero que no s'enfadin amb mí per haver fet el trencaclosques.
 <<margaret>>
 Comentari: (arriba una dona)
 ???: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
@@ -58,40 +56,25 @@ Comentari: (arriba una dona)
 Sam: Jo no... no treballo aquí...
 ???: I que fas aquí? No hauríes d'entrar en oficines on no treballes!
 Sam: Ho sento... i sento haver tocat els teus trencaclosques...
-???: (sobresaltada) trencaclosques?? Estic a punt d'un gran descobriment! I a sobre estava amb feina d'un company que no en té ni idea i no para de demanar ajuda...
+???: (sobresaltada) trencaclosques?? Estic a punt d'un gran descobriment! I a sobre estava amb feines extra que no fan més que relentitzarme...
 ???: (Mira els papers) Mmmh... Está tot fet... Ho has fet tu?
 Sam: Sí, ho sento, m'agrada molt aquest tipus de tasques i ho he vist a mitges...
 ???: Ara et veig amb uns altres ulls, deixa'm que em torni a presentar.
 Margaret Hamilton: Encantada, soc la Margaret Hamilton.
 Sam: Es tot un plaer! Jo soc la Sam.
 Margaret Hamilton: Ja que m'has ajudat, Sam, deixa que t'ensenyi la meva investigació.
-Margaret Hamilton: Estic fent això i allò sobre càlculs d'orbites i crec que he trobat una formula per millorar els viatges espacials (explicar millor)
-Sam: Es increïble, i que falta per que ho apliquin? Puc ajudar en alguna cosa?
-Margaret Hamilton: Doncs l'únic que falta es demostrar que funcionaría aplicant aquesta formula als valors d'un viatge real.
-Margaret Hamilton: En realitat em serviríen les dades d'un viatge anterior, però no tinc accés a elles així que no es una opció.
-Sam: Només això? Amb el mèrit que té un descobriment tant important no es pot quedar fora només per això! Si fa falta jo mateixa aconseguiré els documents!
+Margaret Hamilton: Estic acabant els càlculs d'òrbita per un nou programa espacial revolucionari.
+Sam: Increïble, sembla que es possible que presencii un moment históric! I que necessites per aconseguir-ho? Puc ajudar en alguna cosa?
+Margaret Hamilton: Doncs l'únic que falta es probar els càlculs, però no es tan fàcil, necessito documents confidencials als quals la majoría aquí tenen accés però ser una dona té les seves desavantatges...
+Sam: Quina tontería! Només falta això? Amb el mèrit i importància que té la teva feina hauríes de tenir la màxima prioritat!
+Sam: Si fa falta jo mateixa aconseguiré els documents!
 Margaret Hamilton: Em tens molt sorpresa! Però has arribat aquí i se't veu més que motivada, així que es pot intentar.
 Margaret Hamilton: Primer hauràs d'anar a l'oficina del costat de la recepció, la més gran, i entrar-hi quan no hi hagi ningú per agafar la clau de sobre la taula.
 Margaret Hamilton: Un cop la tinguis, torna i et donaré més instruccions.
-Comentari: (en aquest punt ja haurà aparegut tothom a l'oficina, durant el puzzle)
-Comentari: (Puc posar a cada guardia un punt d'orígen i un punt on mirar, per quan faci uns moments que no segueixen al personatge)
 <<movement 1>>
 ===
 
 title: StealthGame
----
-<<movement 0>>
-Sam: Ja tinc la clau!
-Margaret Hamilton: Genial! Però ara vé la part difícil.
-Margaret Hamilton: Has de creuar la porta de davant aquesta oficina, tranquila, està oberta, però a partir d'allà hauràs de assegurar-te que ningú et veu.
-Margaret Hamilton: Creuant la porta et trobaràs un passadís, i avançant pel passadís et trobaràs una porta vermella, aquí es on necessitaràs la clau.
-Margaret Hamilton: Un cop hagis entrat veuràs la sala de registres, simplement has de trobar els documents referents a algun dels antics llançaments espacials i tornar sense ser vista.
-Sam: Ja m'estic començant a arrepentir... però cap innovació s'ha fet sense esforç!
-Sam: He d'anar al passadís, i sense que em vegin he d'arribar a la porta vermella, després només falta buscar els documents i tornar sense que em vegin.
-<<movement 1>>
-===
-
-title: MargaretAfterBossKeys
 ---
 <<movement 0>>
 Margaret Hamilton: Ben fet!
@@ -105,6 +88,19 @@ Margaret Hamilton: Doncs aquí vé la part complicada... Hauràs de passar la sa
 Margaret Hamilton: Allà faltarà buscar els documents de registre dels últims vols espacials... La carpeta vermella dins l'arxivador blau, i portarlo de nou fins aquí.
 Sam: Entès, registre dels últims vols espacials. 
 Sam: (carpeta vermella dins l'arxivador blau)
+<<movement 1>>
+===
+
+title: MargaretAfterBossKeys
+---
+<<movement 0>>
+Sam: Ja tinc la clau!
+Margaret Hamilton: Genial! Però ara vé la part difícil.
+Margaret Hamilton: Has de creuar la porta de davant aquesta oficina, tranquila, està oberta, però a partir d'allà hauràs de assegurar-te que ningú et veu.
+Margaret Hamilton: Creuant la porta et trobaràs un passadís, i avançant pel passadís et trobaràs una porta vermella, aquí es on necessitaràs la clau.
+Margaret Hamilton: Un cop hagis entrat veuràs la sala de registres, simplement has de trobar els documents referents a les especificacions del cohet.
+Sam: Ja m'estic començant a arrepentir... però cap innovació s'ha fet sense esforç!
+Sam: He d'anar al passadís, i sense que em vegin he d'arribar a la porta vermella, després només falta buscar els documents i tornar sense que em vegin.
 <<movement 1>>
 ===
 
@@ -125,22 +121,30 @@ title: StartSlidingPuzzleDialogue
 ---
 <<movement 0>>
 Sam: Estan tots els papers desordenats i fets un desastre!
-Sam: Vaig a ordenarlos una mica, es el mínim que puc fer per ajudar la Margaret.
+Sam: Vaig a ordenarlos, es el mínim que puc fer per ajudar la Margaret.
 ===
 
 title: FinishSlidingPuzzleDialogue
 ---
 Sam: Ja està tot al seu lloc, ara sí es llegíble!
-Sam: Suposos que amb això no tindrà cap problema per presentar el descobriment.
+Sam: Suposos que amb això no tindrà cap problema per acabar els càlculs.
 Sam: Ara només falta portar-li!
 <<movement 1>>
 ===
 
 title: MargaretAfterDocuments
 ---
-Margaret Hamilton: Ho has aconseguit! 
-Margaret Hamilton: Ara podrem fer història!
-(explicacio de consequencies del descobriment)
+<<movement 0>>
+Margaret Hamilton: Ho has aconseguit! La veritat es que no tenía moltes esperances!
+Margaret Hamilton: No t'agradaría ser la meva ajudant?
+Sam: M'encantaría però no crec que pugui, hauría de tornar d'on vinc (tot i que no sé com...)
+Margaret Hamilton: Quina pena, es necessita gent amb empenta i decidida en aquest sector!
+Margaret Hamilton: Ara ja falta menys! Deixa que t'expliqui l'importància d'aquest projecte!
+Margaret Hamilton: Igual que l'humanitat fins fa relativament poc només podía somiar en veure la terra des de l'espai i ho vam aconseguir...
+Margaret Hamilton: Ara estem a punt de realitzar una missió encara més ambiciosa! Estem a punt de conquistar la lluna!
+Margaret Hamilton: Tots aquests càlculs són part del que farà possible la pròxima missió: El programa Apollo!
+Sam: No m'ho puc creure! (Es possible que realment estigui a l'època del primer viatge a la lluna?)
+Margaret Hamilton: Ara només falta... 
 (apareix pantalla de some time later)
 (carrega escena final de margaret rebent el reconeixement de tothom i agraint a la sam i animantla a començar la seva carrera)
 ("opcional" La sam es teletransporta a la actualitat i se la veu a la recepcio de la upc apuntantse a ingenyeria)
