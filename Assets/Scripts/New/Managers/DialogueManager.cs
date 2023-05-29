@@ -19,7 +19,14 @@ public class DialogueManager : MonoBehaviour
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         dialogueRunner.AddCommandHandler<int>("WarehouseLights", TurnOnWarehouseLights);
         dialogueRunner.AddCommandHandler<int>("TeleportToNasa", StartTeleport);
+        dialogueRunner.AddCommandHandler<int>("OpenTutorial", OpenThisTutorial);
     }
+
+    public void OpenThisTutorial(int i)
+    {
+        GameManager.instance.ShowTutorial(i);
+    }
+
 
     public void WarehouseDialogue()
     {

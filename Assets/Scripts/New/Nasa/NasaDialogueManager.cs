@@ -28,6 +28,13 @@ public class NasaDialogueManager : MonoBehaviour
         runner.AddCommandHandler("progPuzzle", ProgrammingPuzzle);
         runner.AddCommandHandler("margaret", MargaretAppears);
         runner.AddCommandHandler("sendPlayerGuard", SendPlayerBack);
+        runner.AddCommandHandler<int>("OpenTutorial", ShowThisTutorial);
+        runner.AddCommandHandler("lastScene", GoToLastScene);
+    }
+
+    public void ShowThisTutorial(int i)
+    {
+        GameManager.instance.ShowTutorial(i);
     }
 
     public void JanitorOpenedOffices()
@@ -104,5 +111,10 @@ public class NasaDialogueManager : MonoBehaviour
     {
         runner.Dialogue.Stop();
         runner.StartDialogue("MargaretAfterDocuments");
+    }
+
+    public void GoToLastScene()
+    {
+        SceneManager.LoadScene(2); //will be the 9
     }
 }

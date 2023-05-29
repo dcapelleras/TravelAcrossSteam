@@ -4,22 +4,22 @@ tags:
 <<Movement 0>>
 Sam: Ugh, Avui ha sigut un dia esgotador a la recepció. No puc esperar a marxar ja a casa..
 Sam: A sobre em toca recollir aquest desastre… Millor em poso mans a l’obra.
+<<OpenTutorial 0>>
+Sam: Sembla que hauré de ordenar l'estantería.
 <<Movement 1>>
 ===
 
 title: FirstPuzzle
 ---
 Sam: Sembla que aquí és on hauria de posar els trastos. Millor els col·loco abans em donin la culpa.
-Instruccions: (Arrossega l'objecte de l'inventari a la casella de l'armari.)
-Instruccions: (Esc per tornar a veure tota la sala)
+Sam: Anem a recollir objectes.
 <<inventory 1>>
 ===
 
 title: FirstPuzzleReminder
 ---
 Sam: Cal cercar, recollir i col·locar els objectes que falten.
-Instruccions: (Arrossega l'objecte de l'inventari a la casella de l'armari.)
-Instruccions: (Esc per tornar a veure tota la sala)
+Sam: Aviam els objectes que tinc guardats...
 <<inventory 1>>
 ===
 
@@ -46,6 +46,7 @@ title: StartPlugging
 ---
 Sam: Ja està tot al seu lloc...
 <<startPluggingGame 1>>
+<<OpenTutorial 1>>
 Sam: Ara només falta conectar connectar-ho i ja estarà!
 <<camera 4>>
 ===

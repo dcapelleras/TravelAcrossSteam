@@ -42,6 +42,7 @@ title: PCPuzzle
 Sam: Què deu ser això? Sembla una targeta de programació, pero dubto que aquí facin servir una cosa tan antiga.
 Sam: O aquí treballa una col·leccionista d'antiguitats o he viatjat en el temps!! jajaj!
 Sam: Potser es un passatemps de qui treballa aquí.
+<<OpenTutorial 0>>
 Sam: Que interessant, això es casi com un trencaclosques, aviam si donant-li voltes se m'acudeix la resposta.
 <<progPuzzle>>
 ===
@@ -70,6 +71,7 @@ Sam: Quina tontería! Només falta això? Amb el mèrit i importància que té l
 Sam: Si fa falta jo mateixa aconseguiré els documents!
 Margaret Hamilton: Em tens molt sorpresa! Però has arribat aquí i se't veu més que motivada, així que es pot intentar.
 Margaret Hamilton: Primer hauràs d'anar a l'oficina del costat de la recepció, la més gran, i entrar-hi quan no hi hagi ningú per agafar la clau de sobre la taula.
+<<OpenTutorial 1>>
 Margaret Hamilton: Un cop la tinguis, torna i et donaré més instruccions.
 <<movement 1>>
 ===
@@ -121,6 +123,7 @@ title: StartSlidingPuzzleDialogue
 ---
 <<movement 0>>
 Sam: Estan tots els papers desordenats i fets un desastre!
+<<OpenTutorial 2>>
 Sam: Vaig a ordenarlos, es el mínim que puc fer per ajudar la Margaret.
 ===
 
@@ -146,6 +149,7 @@ Margaret Hamilton: Tots aquests càlculs són part del que farà possible la pr�
 Sam: No m'ho puc creure! (Es possible que realment estigui a l'època del primer viatge a la lluna?)
 Margaret Hamilton: Ara només falta... 
 (apareix pantalla de some time later)
+<<lastScene>>
 (carrega escena final de margaret rebent el reconeixement de tothom i agraint a la sam i animantla a començar la seva carrera)
 ("opcional" La sam es teletransporta a la actualitat i se la veu a la recepcio de la upc apuntantse a ingenyeria)
 (El recepcionista li pregunta que quina motivació té per apuntar-se i respon que ha tingut molt bons referents.)
