@@ -8,6 +8,9 @@ public class Margaret : MonoBehaviour
     [SerializeField] Transform myDeskPos;
     NavMeshAgent agent;
     Camera cam;
+    [SerializeField] Animator anim;
+    bool isIdle;
+    bool isSitting;
 
     private void Awake()
     {
@@ -26,5 +29,22 @@ public class Margaret : MonoBehaviour
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, cam.transform.rotation, 2f);
         }
+        if (!isSitting)
+        {
+            if (!isIdle)
+            {
+                if (agent.remainingDistance < 3f)
+                {
+                    isIdle = true;
+                    anim.SetBool("idle", true);
+                }
+            }
+        }
+    }
+
+    public void SitDown()
+    {
+        isSitting = true;
+        anim.SetBool("sit", true);
     }
 }
