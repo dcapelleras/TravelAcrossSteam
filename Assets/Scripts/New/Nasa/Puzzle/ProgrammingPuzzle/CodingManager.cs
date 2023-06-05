@@ -7,26 +7,26 @@ using UnityEngine.SceneManagement;
 
 public class CodingManager : MonoBehaviour
 {
-    [SerializeField] int puzzleIndex;
+    [SerializeField] int puzzleIndex = 0;
 
-    public List<CodingLine> codingLines;
+    public List<CodingLine> codingLines = new List<CodingLine>();
 
-    public List<Action> actions;
+    public List<Action> actions = new List<Action>();
 
     Vector3 initialSpritePos;
     Quaternion initialSpriteRot;
     [SerializeField] Transform spriteTransform;
     Rigidbody2D spriteRb;
-    [SerializeField] List<Action> actionsRequired;
+    [SerializeField] List<Action> actionsRequired = new List<Action>();
     
 
     [SerializeField] float spriteMoveDistance;
 
     [SerializeField] float timeBetweenMoves = 1f;
 
-    public bool hasCollided;
+    public bool hasCollided = false;
 
-    int correctCounter;
+    int correctCounter = 0;
 
     private void Awake()
     {
