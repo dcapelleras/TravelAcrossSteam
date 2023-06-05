@@ -67,6 +67,14 @@ public class NasaDialogueManager : MonoBehaviour
         decorationPeople.SetActive(true); //activate decoration people
     }
 
+    private void Update() //for testing purposes only
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            FinishCodingPuzzle();
+        }
+    }
+
     public void MargaretAppears()
     {
         MargaretH.SetActive(true);
@@ -77,7 +85,7 @@ public class NasaDialogueManager : MonoBehaviour
     {
         runner.Dialogue.Stop();
         runner.StartDialogue("MargaretAfterBossKeys");
-        doorToCommand.isLocked = false;
+        doorToCommand.UnlockDoor();
     }
 
     public void CatchedDialogue()

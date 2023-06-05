@@ -10032,11 +10032,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossedPos: {fileID: 1105246230}
   inFront: {fileID: 1105246230}
+  doorVisualToOpen: {fileID: 0}
   raydistance: 0
   doorIndex: 0
   player: {fileID: 4739643666629883829}
   isLocked: 1
   eventIndex: 0
+  changesAxisView: 0
+  openPosition: {x: 0, y: 0, z: 0}
+  openRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!65 &585358422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14837,11 +14841,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossedPos: {fileID: 1105246230}
   inFront: {fileID: 1105246230}
+  doorVisualToOpen: {fileID: 0}
   raydistance: 0
   doorIndex: 0
   player: {fileID: 4739643666629883829}
   isLocked: 1
   eventIndex: 0
+  changesAxisView: 0
+  openPosition: {x: 0, y: 0, z: 0}
+  openRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!65 &842747680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15786,6 +15794,8 @@ MonoBehaviour:
   exit: {fileID: 1075191677}
   audioSource: {fileID: 903780726}
   settings: {fileID: 11400000, guid: ce0bbea3b47f96c4786806f775181c78, type: 2}
+  tutorialPanel: {fileID: 0}
+  tutorials: []
 --- !u!114 &903780728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21303,11 +21313,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossedPos: {fileID: 1105246230}
   inFront: {fileID: 1105246230}
+  doorVisualToOpen: {fileID: 0}
   raydistance: 0
   doorIndex: 0
   player: {fileID: 4739643666629883829}
   isLocked: 1
   eventIndex: 0
+  changesAxisView: 0
+  openPosition: {x: 0, y: 0, z: 0}
+  openRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!65 &1210730777
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22212,11 +22226,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossedPos: {fileID: 1105246230}
   inFront: {fileID: 1105246230}
+  doorVisualToOpen: {fileID: 0}
   raydistance: 0
   doorIndex: 0
   player: {fileID: 4739643666629883829}
   isLocked: 1
   eventIndex: 0
+  changesAxisView: 0
+  openPosition: {x: 0, y: 0, z: 0}
+  openRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!65 &1266802188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37093,7 +37111,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 20
+  m_Speed: 8
   m_Acceleration: 200
   avoidancePriority: 50
   m_AngularSpeed: 0
@@ -37210,6 +37228,9 @@ MonoBehaviour:
   canMove: 1
   pickingObject: {fileID: 0}
   hasBossKeys: 0
+  hasFolderWithDocs: 0
+  invertedAxis: 0
+  isExterior: 1
 --- !u!114 &4739643666629883833
 MonoBehaviour:
   m_ObjectHideFlags: 0

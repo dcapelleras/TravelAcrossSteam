@@ -25,10 +25,6 @@ public class Margaret : MonoBehaviour
 
     private void Update()
     {
-        if (transform.rotation != cam.transform.rotation)
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, cam.transform.rotation, 2f);
-        }
         if (!isSitting)
         {
             if (!isIdle)

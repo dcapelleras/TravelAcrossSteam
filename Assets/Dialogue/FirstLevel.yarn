@@ -33,12 +33,11 @@ title: EnteringRoom
 ---
 Sam: És molt fosc, vaig a veure si trobo la llum.
 <<shake 1 1 1>>
-Aii!! (cau)
 (torna la llum)
 <<WarehouseLights 1>>
-Oh no! Ja l'he pifiat, ja havía de venir jo a trencar alguna cosa!!
-Sembla que he arruïnat aquesta màquina, la que em caurà si se n’adonen!
-Per ara provaré a recollir les peces i a veure si aconsegueixo deixar-ho més o menys com estava.
+Oh no! Això està fet un desastre espero que no es pensin que he sigut jo!!
+Sembla que aquesta màquina cau a trossos, té tot de peces escampades pel terra!
+Per ara provaré a recollir les peces i a veure si aconsegueixo que no faci mal a la vista.
 <<Movement 1>>
 ===
 

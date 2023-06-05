@@ -25,6 +25,8 @@ public class NasaNavigation : MonoBehaviour
 
     public bool invertedAxis;
 
+    public bool isExterior;
+
 
     private void Awake()
     {
@@ -68,13 +70,27 @@ public class NasaNavigation : MonoBehaviour
         {
             if ((transform.position.x - nav.destination.x) < -0.5f) //walk to left
             {
-                rend.flipX = true;
+                if (isExterior)
+                {
+                    rend.flipX = false;
+                }
+                else
+                {
+                    rend.flipX = true;
+                }
                 //anim turn left
                 //anim walk
             }
             else if ((transform.position.x - nav.destination.x) > 0.5f) //walk to right
             {
-                rend.flipX = false;
+                if (isExterior)
+                {
+                    rend.flipX = true;
+                }
+                else
+                {
+                    rend.flipX = false;
+                }
                 //anim turn right
                 //anim walk
             }
@@ -87,7 +103,7 @@ public class NasaNavigation : MonoBehaviour
 
         if (doorBeingCrossed != null)
         {
-            if (Vector3.Distance(transform.position, doorBeingCrossed.inFront.position) < 3.1f)
+            if (Vector3.Distance(transform.position, doorBeingCrossed.inFront.position) < 4.1f)
             {
                 if (doorBeingCrossed.eventIndex != 0)
                 {
@@ -183,14 +199,28 @@ public class NasaNavigation : MonoBehaviour
                     if ((transform.position.x - hit.point.x) < -0.5f) //walk to left
                     {
                         anim.SetFloat("Walk", 1f);
-                        rend.flipX = true;
+                        if (isExterior)
+                        {
+                            rend.flipX = false;
+                        }
+                        else
+                        {
+                            rend.flipX = true;
+                        }
                         //anim turn left
                         //anim walk
                     }
                     else if ((transform.position.x - hit.point.x) > 0.5f) //walk to right
                     {
                         anim.SetFloat("Walk", 1f);
-                        rend.flipX = false;
+                        if (isExterior)
+                        {
+                            rend.flipX = true;
+                        }
+                        else
+                        {
+                            rend.flipX = false;
+                        }
                         //anim turn right
                         //anim walk
                     }

@@ -22,6 +22,7 @@ public class Janitor : MonoBehaviour
     public void GoAssistDoor()
     {
         agent.SetDestination(doorAssistTransform.position);
+
     }
 
     private void Update()
@@ -34,7 +35,7 @@ public class Janitor : MonoBehaviour
                 timer += Time.deltaTime;
                 if (timer > 2f)
                 {
-                    receptionDoor.isLocked = false;
+                    receptionDoor.UnlockDoor();
                     GoAway();
                     NasaDialogueManager.instance.JanitorOpenedOffices();
                 }
