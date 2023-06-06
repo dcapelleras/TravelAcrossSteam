@@ -2382,6 +2382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Corridor_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1161841497049354, guid: 78196c2946aba40bcb735ee1782fd7dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1384181091344236, guid: 78196c2946aba40bcb735ee1782fd7dc, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4618,6 +4622,10 @@ PrefabInstance:
     - target: {fileID: 1785033800017144, guid: 695aa4942897a40e6a9b55f63cfbce2a, type: 3}
       propertyPath: m_Name
       value: Room_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785033800017144, guid: 695aa4942897a40e6a9b55f63cfbce2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1840546132300856, guid: 695aa4942897a40e6a9b55f63cfbce2a, type: 3}
       propertyPath: m_IsActive
@@ -29429,7 +29437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &4397470499116791944
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34429,7 +34437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &8917110066558736087
 GameObject:
   m_ObjectHideFlags: 0

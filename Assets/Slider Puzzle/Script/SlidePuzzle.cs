@@ -247,7 +247,7 @@ public class SlidePuzzle : MonoBehaviour
 		if (!canSlide)
         {
             time += Time.deltaTime;
-            slideObject[moveIndex].transform.localPosition = Vector3.MoveTowards(slideObject[moveIndex].transform.localPosition, moveToPosition, 0.05f);
+            slideObject[moveIndex].transform.localPosition = Vector3.MoveTowards(slideObject[moveIndex].transform.localPosition, moveToPosition, 0.25f);
 
             if (shakeCamera)
             {
