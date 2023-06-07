@@ -33,6 +33,13 @@ public class CinemachineFollow : MonoBehaviour
             {
                 pos.z = player.transform.position.z + zOffset;
             }
+            if (movableAxis== 1)
+            {
+                if (pos.z < -30f)
+                {
+                    return;
+                }
+            }
             transform.position = pos;
         }
     }

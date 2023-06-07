@@ -272,7 +272,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623845291}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623845291}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
@@ -718,6 +718,10 @@ PrefabInstance:
       propertyPath: timeBetweenMoves
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1045128956612911405, guid: ab8728362d165984192ce342cfe21766, type: 3}
+      propertyPath: spriteMoveDistance
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1045128956612911411, guid: ab8728362d165984192ce342cfe21766, type: 3}
       propertyPath: m_Name
       value: programming puzzle
@@ -738,6 +742,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -61.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1045128956670287244, guid: ab8728362d165984192ce342cfe21766, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -945.664
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045128956670287244, guid: ab8728362d165984192ce342cfe21766, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 472.8344
+      objectReference: {fileID: 0}
     - target: {fileID: 1045128956914325240, guid: ab8728362d165984192ce342cfe21766, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 31.32
@@ -753,6 +765,14 @@ PrefabInstance:
     - target: {fileID: 1045128957373839220, guid: ab8728362d165984192ce342cfe21766, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 113.499985
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045128957766363705, guid: ab8728362d165984192ce342cfe21766, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1076
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045128957766363705, guid: ab8728362d165984192ce342cfe21766, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -537.98
       objectReference: {fileID: 0}
     - target: {fileID: 1045128958011925723, guid: ab8728362d165984192ce342cfe21766, type: 3}
       propertyPath: m_AnchoredPosition.x

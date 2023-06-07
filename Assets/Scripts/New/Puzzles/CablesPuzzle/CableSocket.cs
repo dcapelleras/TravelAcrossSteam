@@ -31,12 +31,13 @@ public class CableSocket : MonoBehaviour
         {
             if (player.holdingCable.socketNumber == _socketNumber)
             {
-                //fix cable in the socket and set it to complete
+                player.holdingCable.visualSubstitute.SetActive(true);
                 Debug.Log("This cable plugged correctly");
                 cablePlugged = player.holdingCable;
                 cablePlugged.pluggedSocket = this;
                 player.holdingCable.transform.position = positionToPlug.position;
                 player.holdingCable.transform.parent = null;
+                player.holdingCable.gameObject.SetActive(false);
                 player.holdingCable = null;
                 completed = true;
                 transform.GetComponent<Renderer>().material = highlightMat;
