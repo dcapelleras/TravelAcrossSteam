@@ -112,6 +112,11 @@ public class NasaNavigation : MonoBehaviour
                         dialogue.CheckClosedReceptionDoor();
                         doorBeingCrossed.eventIndex= 0;
                     }
+                    else if (doorBeingCrossed.eventIndex == 3)
+                    {
+                        NasaDialogueManager.instance.OpenWarehouse();
+                        doorBeingCrossed.eventIndex = 0;
+                    }
                 }
             }
         }

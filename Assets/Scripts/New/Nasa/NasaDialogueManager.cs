@@ -13,6 +13,7 @@ public class NasaDialogueManager : MonoBehaviour
     [SerializeField] GameObject MargaretH;
     [SerializeField] GameObject bossKeys;
     [SerializeField] NasaDoor doorToCommand;
+    [SerializeField] NasaDoor doorToWarehouse;
     public int roomIndexToGoBack;
 
     [SerializeField] List<Transform> placesToSend;
@@ -30,6 +31,7 @@ public class NasaDialogueManager : MonoBehaviour
         runner.AddCommandHandler("sendPlayerGuard", SendPlayerBack);
         runner.AddCommandHandler<int>("OpenTutorial", ShowThisTutorial);
         runner.AddCommandHandler("lastScene", GoToLastScene);
+        runner.AddCommandHandler("openWarehouse", UnlockWarehouseDoor);
     }
 
     public void ShowThisTutorial(int i)
@@ -99,6 +101,17 @@ public class NasaDialogueManager : MonoBehaviour
     public void SendPlayerBack()
     {
         FindObjectOfType<NasaNavigation>().MoveToThisDestination(placesToSend[roomIndexToGoBack]);
+    }
+
+    public void OpenWarehouse()
+    {
+        runner.Dialogue.Stop();
+        runner.StartDialogue("WarehouseOpened");
+    }
+
+    public void UnlockWarehouseDoor()
+    {
+        doorToWarehouse.UnlockDoor();
     }
 
     public void StartSlidingPuzzle()

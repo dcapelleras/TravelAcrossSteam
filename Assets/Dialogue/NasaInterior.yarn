@@ -119,6 +119,15 @@ Instruccions: Evita passar prop del centre de visió dels guardies o sortir-ne a
 <<movement 1>>
 ===
 
+title: WarehouseOpened
+---
+<<movement 0>>
+Sam: Ara només falta utilitzar la clau i...
+Sam: Porta oberta!
+<<openWarehouse>>
+<<movement 1>>
+===
+
 title: StartSlidingPuzzleDialogue
 ---
 <<movement 0>>
