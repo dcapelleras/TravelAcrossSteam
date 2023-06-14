@@ -9,7 +9,7 @@ public class NasaNavigation : MonoBehaviour
 {
     NavMeshAgent nav;
     Camera cam;
-    public SpriteRenderer rend;
+    //public SpriteRenderer rend;
     [SerializeField] Animator anim;
     NasaDialogueMovement dialogue;
 
@@ -37,12 +37,17 @@ public class NasaNavigation : MonoBehaviour
 
     private void Update()
     {
+        /*
         if (transform.rotation != cam.transform.rotation)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, cam.transform.rotation, 2f);
+        }*/
+        float dist = 3f;
+        if (isExterior)
+        {
+            dist = 1.35f;
         }
-
-        if (Vector3.Distance(nav.destination, transform.position) < 3f)
+        if (Vector3.Distance(nav.destination, transform.position) < dist)
         {
             anim.SetFloat("Walk", 0f);
         }
@@ -50,7 +55,7 @@ public class NasaNavigation : MonoBehaviour
         {
             anim.SetFloat("Walk", 1f);
         }
-
+        /*
         if (invertedAxis)
         {
             if ((transform.position.z - nav.destination.z) < -0.5f) //walk to front
@@ -95,7 +100,7 @@ public class NasaNavigation : MonoBehaviour
                 //anim walk
             }
         }
-
+        */
         if (!canMove)
         {
             return;
@@ -176,7 +181,7 @@ public class NasaNavigation : MonoBehaviour
                 {
                     nav.SetDestination(hit.point);
                 }
-
+                /*
                 if (invertedAxis)
                 {
                     if ((transform.position.z - hit.point.z) < -0.5f) //walk to front
@@ -234,7 +239,7 @@ public class NasaNavigation : MonoBehaviour
                         anim.SetFloat("Walk", 0f);
                         //anim idle
                     }
-                }
+                }*/
                 
             }
         }

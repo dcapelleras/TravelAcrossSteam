@@ -9,7 +9,7 @@ using Yarn.Unity;
 public class Guard : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
-    NasaNavigation playerNav;
+    [SerializeField] Animator anim;
     NavMeshAgent nav;
     [SerializeField] float maxXPos;
     [SerializeField] float minXPos;
@@ -34,7 +34,6 @@ public class Guard : MonoBehaviour
     private void Awake()
     {
         nav= GetComponent<NavMeshAgent>();
-        playerNav = playerTransform.GetComponent<NasaNavigation>();
     }
 
     private void Start()
@@ -56,6 +55,14 @@ public class Guard : MonoBehaviour
 
     private void Update()
     {
+        if (nav.remainingDistance < 1)
+        {
+            anim.SetBool("walking", false);
+        }
+        else
+        {
+            anim.SetBool("walking", true);
+        }
         if (friendly)
         {
             timerWhileFriendly += Time.deltaTime;
@@ -119,6 +126,8 @@ public class Guard : MonoBehaviour
 
     void CatchPlayer(int roomIndex)
     {
+        nav.isStopped = true;
+        nav.ResetPath();
         friendly = true;
         timerWhileFriendly= 0;
         NasaDialogueManager.instance.CatchedDialogue();

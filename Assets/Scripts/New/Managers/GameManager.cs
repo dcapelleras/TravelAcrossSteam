@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     {
         tutorialPanel.SetActive(true);
         tutorials[index].SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
     public void HideTutorial()
@@ -73,6 +73,6 @@ public class GameManager : MonoBehaviour
             t.SetActive(false);
         }
         tutorialPanel.SetActive(false);
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
     }
 }

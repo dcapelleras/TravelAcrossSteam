@@ -10,7 +10,7 @@ public class Janitor : MonoBehaviour
     [SerializeField]NasaDoor receptionDoor;
     NavMeshAgent agent;
     [SerializeField] Transform awayPosition;
-    [SerializeField] SpriteRenderer rend;
+    //[SerializeField] SpriteRenderer rend;
     [SerializeField] Animator anim;
     float timer = 0;
 
@@ -54,6 +54,6 @@ public class Janitor : MonoBehaviour
     void GoAway()
     {
         agent.SetDestination(awayPosition.position);
-        rend.flipX = true;
+        //rend.flipX = true;
     }
 }

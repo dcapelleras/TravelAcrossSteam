@@ -136,6 +136,6 @@ public class NasaDialogueManager : MonoBehaviour
 
     public void GoToLastScene()
     {
-        SceneManager.LoadScene(2); //will be the 9
+        SceneManager.LoadScene(9); //will be the 9
     }
 }
