@@ -14,6 +14,8 @@ public class CinemachineFollow : MonoBehaviour
 
     [SerializeField] float zOffset;
 
+    [SerializeField] Vector3 limitPos;
+
     private void Awake()
     {
         player = FindObjectOfType<NasaNavigation>();
@@ -26,6 +28,7 @@ public class CinemachineFollow : MonoBehaviour
         {
             if (movableAxis== 0)
             {
+                
                 pos.x = player.transform.position.x;
                 
             }
@@ -37,6 +40,7 @@ public class CinemachineFollow : MonoBehaviour
             {
                 if (pos.z < -30f)
                 {
+                    transform.position = limitPos;
                     return;
                 }
             }

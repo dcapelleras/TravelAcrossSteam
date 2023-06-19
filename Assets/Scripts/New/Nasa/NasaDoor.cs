@@ -23,6 +23,8 @@ public class NasaDoor : MonoBehaviour
     [SerializeField] Vector3 openPosition;
     [SerializeField] Quaternion openRotation;
 
+    public int indexForGuards;
+
     public void UnlockDoor()
     {
         isLocked= false;

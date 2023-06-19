@@ -29,9 +29,9 @@ Tom: Et deixo fer que he de seguir amb la feina!! Ja estic amb tu estimada frego
 title: InOffice
 ---
 <<movement 0>>
-Sam: Vaja sembla que m'ha confós per un científic de la Nasa, es extrany ja que segons la revista "Trending Tecnologies" tots els científics d'aquí son homes...
+Sam: Vaja sembla que m'ha confós per un científic de la Masa, es extrany ja que segons la revista "Trending Tecnologies" tots els científics d'aquí son homes...
 Sam: Em pregunto per qui em deuen haver confós.
-Sam: En fí, de res serveix donar-hi voltes, aprofitaré aquesta oportunitat única en la vida per veure què es fa a la Nasa!!
+Sam: En fí, de res serveix donar-hi voltes, aprofitaré aquesta oportunitat única en la vida per veure què es fa a la Masa!!
 Sam: Per començar miraré aviam que és el que es fa per aquí.
 <<movement 1>>
 ===
@@ -50,7 +50,6 @@ Sam: Que interessant, això es casi com un trencaclosques, aviam si donant-li vo
 title: AfterPCPuzzle
 ---
 Sam: Doncs al final me n'he sortit! Espero que no s'enfadin amb mí per haver fet el trencaclosques.
-<<margaret>>
 Comentari: (arriba una dona)
 ???: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
 ???: Quina és la teva especialitat? 
@@ -113,8 +112,6 @@ Guardia: Alto aquí senyoreta! Això es zona restringida!
 Guardia: Torna al teu lloc de treball immediatament!
 <<sendPlayerGuard>>
 Sam: (Vaja, m'han enxampat)
-Sam: (Tal com m'ha dit la Margaret, he d'evitar que em vegin)
-Sam: (Hauré de vigilar més...)
 Instruccions: Evita passar prop del centre de visió dels guardies o sortir-ne abans que et vinguin a cridar l'atenció.
 <<movement 1>>
 ===

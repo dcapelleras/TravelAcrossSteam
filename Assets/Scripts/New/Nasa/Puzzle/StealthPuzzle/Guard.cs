@@ -28,8 +28,6 @@ public class Guard : MonoBehaviour
     float timerWhileFriendly;
     bool friendly;
 
-    public int roomIndexToGoBack;
-
 
     private void Awake()
     {
@@ -75,7 +73,7 @@ public class Guard : MonoBehaviour
         {
             if (!friendly)
             {
-                CatchPlayer(roomIndexToGoBack);
+                CatchPlayer();
             }
 
         }
@@ -124,13 +122,12 @@ public class Guard : MonoBehaviour
         
     }
 
-    void CatchPlayer(int roomIndex)
+    void CatchPlayer()
     {
         nav.isStopped = true;
         nav.ResetPath();
         friendly = true;
         timerWhileFriendly= 0;
         NasaDialogueManager.instance.CatchedDialogue();
-        NasaDialogueManager.instance.roomIndexToGoBack = roomIndex;
     }
 }

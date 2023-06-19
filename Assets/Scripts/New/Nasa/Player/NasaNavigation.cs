@@ -27,6 +27,8 @@ public class NasaNavigation : MonoBehaviour
 
     public bool isExterior;
 
+    public int placeToGoBackWhenCaught;
+
 
     private void Awake()
     {
@@ -175,6 +177,10 @@ public class NasaNavigation : MonoBehaviour
                         }
                         CamManager.instance.MoveToCam(doorBeingCrossed.doorIndex);
                         nav.SetDestination(door.crossedPos.position);
+                        if (door.indexForGuards != 10)
+                        {
+                            placeToGoBackWhenCaught = door.indexForGuards;
+                        }
                     }
                 }
                 else

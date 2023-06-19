@@ -15,6 +15,7 @@ public class PickBossKeys : EventClickable
         margaret.SitDown();
         base.ExecuteAction();
         NasaNavigation nav = FindObjectOfType<NasaNavigation>();
+        nav.placeToGoBackWhenCaught = 0;
         nav.hasBossKeys = true;
         gameObject.SetActive(false);
     }

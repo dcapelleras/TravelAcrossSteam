@@ -39,6 +39,36 @@ public class CodingManager : MonoBehaviour
         initialSpriteRot = spriteTransform.rotation;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            switch (puzzleIndex)
+            {
+                case 0:
+                    NasaDialogueManager.instance.FinishCodingPuzzle();
+                    SceneManager.UnloadSceneAsync(4);
+                    break;
+                case 1:
+                    NasaDialogueManager.instance.FinishCodingPuzzle();
+                    SceneManager.UnloadSceneAsync(5);
+                    break;
+                case 2:
+                    NasaDialogueManager.instance.FinishCodingPuzzle();
+                    SceneManager.UnloadSceneAsync(6);
+                    break;
+                case 3:
+                    NasaDialogueManager.instance.FinishCodingPuzzle();
+                    SceneManager.UnloadSceneAsync(7);
+                    break;
+                case 4:
+                    NasaDialogueManager.instance.FinishCodingPuzzle();
+                    SceneManager.UnloadSceneAsync(8);
+                    break;
+            }
+        }
+    }
+
     public void UpdateCodeList(int lineIndex, Action _action)
     {
         actions[lineIndex] = _action;

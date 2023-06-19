@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
@@ -27,7 +28,6 @@ public class NasaDialogueManager : MonoBehaviour
         runner = FindObjectOfType<DialogueRunner>();
         lineView = FindObjectOfType<LineView>();
         runner.AddCommandHandler("progPuzzle", ProgrammingPuzzle);
-        runner.AddCommandHandler("margaret", MargaretAppears);
         runner.AddCommandHandler("sendPlayerGuard", SendPlayerBack);
         runner.AddCommandHandler<int>("OpenTutorial", ShowThisTutorial);
         runner.AddCommandHandler("lastScene", GoToLastScene);
@@ -67,14 +67,7 @@ public class NasaDialogueManager : MonoBehaviour
         runner.Dialogue.Stop();
         runner.StartDialogue("AfterPCPuzzle");
         decorationPeople.SetActive(true); //activate decoration people
-    }
-
-    private void Update() //for testing purposes only
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            FinishCodingPuzzle();
-        }
+        MargaretAppears();
     }
 
     public void MargaretAppears()
@@ -100,7 +93,15 @@ public class NasaDialogueManager : MonoBehaviour
 
     public void SendPlayerBack()
     {
-        FindObjectOfType<NasaNavigation>().MoveToThisDestination(placesToSend[roomIndexToGoBack]);
+        NasaNavigation playerNav = FindObjectOfType<NasaNavigation>();
+        int index = playerNav.placeToGoBackWhenCaught;
+        Vector3 placeToGo = placesToSend[index].position;
+        playerNav.transform.position = placeToGo;
+        NavMeshAgent playerAgent = playerNav.GetComponent<NavMeshAgent>();
+        playerAgent.ResetPath();
+        Vector3 offset = placeToGo;
+        offset.z += 1f;
+        playerAgent.SetDestination(offset);
     }
 
     public void OpenWarehouse()
