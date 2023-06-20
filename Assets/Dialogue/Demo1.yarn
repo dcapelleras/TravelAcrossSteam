@@ -17,7 +17,7 @@ Sam: Doncs aquí estem, sembla que està obert.
 Sam: Hauria d'entrar o no?
 -> Evidentment, què faré aquí fora sinó?
     <<jump Entered>>
--> No ho se pas Ricard, sembla mala idea...
+-> No se Rick, sembla mala idea...
     <<jump NotEntered>>
 ===
 

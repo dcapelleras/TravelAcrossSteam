@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject menuPausa;
-    public GameObject exit;
+    public GameObject menuSettings;
     bool menuOpen;
     [SerializeField] AudioSource audioSource;
     public static GameManager instance;
     [SerializeField] ScriptableSettings settings;
     [SerializeField] GameObject tutorialPanel;
     [SerializeField]List<GameObject> tutorials;
+    public int currentTutorialIndex;
+    [SerializeField] GameObject tutorialReminderButton;
 
     private void Awake()
     {
@@ -37,7 +39,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                menuPausa.SetActive(true);
+                PauseGame();
                 menuOpen = true;
             }
         }
@@ -46,12 +48,26 @@ public class GameManager : MonoBehaviour
     public void Resume()
     {
         menuPausa.SetActive(false);
-        exit.SetActive(false);
+        menuSettings.SetActive(false);
+        Time.timeScale= 1f;
     }
 
-    public void Exit()
+    public void PauseGame()
     {
-        exit.SetActive(true);
+        menuPausa.SetActive(true);
+        Time.timeScale= 0f;
+    }
+
+    public void OpenSettings()
+    {
+        menuPausa.SetActive(false);
+        menuSettings.SetActive(true);
+    }
+
+    public void CloseSettings()
+    {
+        menuPausa.SetActive(true);
+        menuSettings.SetActive(false);
     }
 
     public void QuitGame()
@@ -59,11 +75,18 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void ShowLastTutorial()
+    {
+        ShowTutorial(currentTutorialIndex);
+    }
+
     public void ShowTutorial(int index)
     {
         tutorialPanel.SetActive(true);
         tutorials[index].SetActive(true);
         //Time.timeScale = 0f;
+        currentTutorialIndex= index;
+        tutorialReminderButton.SetActive(true);
     }
 
     public void HideTutorial()

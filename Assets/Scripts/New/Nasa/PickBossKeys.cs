@@ -12,7 +12,10 @@ public class PickBossKeys : EventClickable
     }
     public override void ExecuteAction()
     {
-        margaret.SitDown();
+        if (margaret != null)
+        {
+            margaret.SitDown();
+        }
         base.ExecuteAction();
         NasaNavigation nav = FindObjectOfType<NasaNavigation>();
         nav.placeToGoBackWhenCaught = 0;

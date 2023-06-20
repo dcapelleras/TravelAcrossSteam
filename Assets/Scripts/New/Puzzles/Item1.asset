@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item1
   m_EditorClassIdentifier: 
   id: 1
-  itemName: Caixa simple
+  itemName: Caixa groga
   icon: {fileID: 21300000, guid: 7ae9adb6c146bd44aad69577ca64d9e4, type: 3}
   thisItem: {fileID: 11400000}
   value: 0
