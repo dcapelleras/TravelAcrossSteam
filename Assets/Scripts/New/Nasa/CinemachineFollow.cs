@@ -16,6 +16,8 @@ public class CinemachineFollow : MonoBehaviour
 
     [SerializeField] Vector3 limitPos;
 
+    public int camIndex;
+
     private void Awake()
     {
         player = FindObjectOfType<NasaNavigation>();
@@ -36,13 +38,23 @@ public class CinemachineFollow : MonoBehaviour
             {
                 pos.z = player.transform.position.z + zOffset;
             }
-            if (movableAxis== 1)
+            switch (camIndex)
             {
-                if (pos.z < -30f)
-                {
-                    transform.position = limitPos;
-                    return;
-                }
+                case 0:
+                    pos.x = Mathf.Clamp(pos.x, -10f, 35f);
+                    break;
+                case 1:
+                    pos.z = Mathf.Clamp(pos.z, -30f, 1000f);
+                    break; 
+                case 2:
+                    pos.z = Mathf.Clamp(pos.z, 170f, 230f);
+                    break;
+                case 3:
+                    pos.z = Mathf.Clamp(pos.z, 285f, 315f);
+                    break;
+                case 4:
+
+                    break;
             }
             transform.position = pos;
         }

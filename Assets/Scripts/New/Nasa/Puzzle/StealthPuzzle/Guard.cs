@@ -17,16 +17,12 @@ public class Guard : MonoBehaviour
     [SerializeField] float minZPos;
     [SerializeField] Transform placeToLookAt;
     Vector3 goalPos;
-    float timerToGoBack;
-    float timeToGoBack = 4f;
     bool patrolling;
     [SerializeField] float timeBetweenPatrolChange = 5f;
 
     [SerializeField] List<Transform> wayPoints= new List<Transform>();
 
-    float timeFriendly = 5f;
-    float timerWhileFriendly;
-    bool friendly;
+    public bool friendly;
 
 
     private void Awake()
@@ -61,42 +57,13 @@ public class Guard : MonoBehaviour
         {
             anim.SetBool("walking", true);
         }
-        if (friendly)
-        {
-            timerWhileFriendly += Time.deltaTime;
-            if (timerWhileFriendly >= timeFriendly)
-            {
-                friendly = false;
-            }
-        }
+        
         if (Vector3.Distance(playerTransform.position, transform.position) < 3.2f)
         {
             if (!friendly)
             {
                 CatchPlayer();
             }
-
-        }
-        if (timerToGoBack < timeToGoBack)
-        {
-            if (Vector3.Distance(transform.position, goalPos) > 12f)
-            {
-                timerToGoBack += Time.deltaTime;
-            }
-            else
-            {
-                timerToGoBack = 0f;
-            }
-        }
-
-        if (timerToGoBack >= timeToGoBack && nav.remainingDistance < 0.2f)
-        {
-            Quaternion newRotation = Quaternion.LookRotation(placeToLookAt.position - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 1);
-        }
-        if (transform.position.x > maxXPos || transform.position.x < minXPos || transform.position.z > maxZPos || transform.position.z < minZPos || (timerToGoBack >= timeToGoBack)) 
-        {
-            nav.SetDestination(goalPos);
         }
     }
 
@@ -108,6 +75,7 @@ public class Guard : MonoBehaviour
             {
                 goalPos = wayPoints[i].position;
                 yield return new WaitForSeconds(timeBetweenPatrolChange);
+                nav.SetDestination(goalPos);
             }
         }
     }
@@ -116,8 +84,7 @@ public class Guard : MonoBehaviour
     {
         if (!friendly)
         {
-            timerToGoBack = 0;
-            nav.SetDestination(playerTransform.position);
+            CatchPlayer();
         }
         
     }
@@ -127,7 +94,6 @@ public class Guard : MonoBehaviour
         nav.isStopped = true;
         nav.ResetPath();
         friendly = true;
-        timerWhileFriendly= 0;
         NasaDialogueManager.instance.CatchedDialogue();
     }
 }

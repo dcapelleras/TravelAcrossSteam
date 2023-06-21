@@ -19,6 +19,8 @@ public class NasaDialogueManager : MonoBehaviour
 
     [SerializeField] List<Transform> placesToSend;
 
+    [SerializeField] List<Guard> guards = new List<Guard>();
+
     private void Awake()
     {
         if (instance == null)
@@ -32,6 +34,24 @@ public class NasaDialogueManager : MonoBehaviour
         runner.AddCommandHandler<int>("OpenTutorial", ShowThisTutorial);
         runner.AddCommandHandler("lastScene", GoToLastScene);
         runner.AddCommandHandler("openWarehouse", UnlockWarehouseDoor);
+        runner.AddCommandHandler("guardsFriendly", GuardsFriendly);
+        runner.AddCommandHandler("guardsUnfriendly", GuardsUnfriendly);
+    }
+
+    public void GuardsFriendly()
+    {
+        foreach (Guard g in guards)
+        {
+            g.friendly = true;
+        }
+    }
+
+    public void GuardsUnfriendly()
+    {
+        foreach (Guard g in guards)
+        {
+            g.friendly = false;
+        }
     }
 
     public void ShowThisTutorial(int i)

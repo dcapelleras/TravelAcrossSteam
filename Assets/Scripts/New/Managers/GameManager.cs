@@ -35,18 +35,19 @@ public class GameManager : MonoBehaviour
             if (menuOpen)
             {
                 Resume();
-                menuOpen = false;
+
             }
             else
             {
                 PauseGame();
-                menuOpen = true;
+
             }
         }
     }
 
     public void Resume()
     {
+        menuOpen = false;
         menuPausa.SetActive(false);
         menuSettings.SetActive(false);
         Time.timeScale= 1f;
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
+        menuOpen = true;
         menuPausa.SetActive(true);
         Time.timeScale= 0f;
     }

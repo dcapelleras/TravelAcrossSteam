@@ -108,11 +108,13 @@ Sam: He d'anar al passadís, i sense que em vegin he d'arribar a la porta vermel
 title: PlayerCatched
 ---
 <<movement 0>>
+<<guardsFriendly>>
 Guardia: Alto aquí senyoreta! Això es zona restringida!
 Guardia: Torna al teu lloc de treball immediatament!
 <<sendPlayerGuard>>
 Sam: (Vaja, m'han enxampat)
 Instruccions: Evita passar prop del centre de visió dels guardies o sortir-ne abans que et vinguin a cridar l'atenció.
+<<guardsUnfriendly>>
 <<movement 1>>
 ===
 
