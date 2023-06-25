@@ -33990,6 +33990,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6501126078817937301}
     m_Modifications:
+    - target: {fileID: 2016057704890125589, guid: a201b67b9fb7b6e42941357b79e3b586, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016057704890125589, guid: a201b67b9fb7b6e42941357b79e3b586, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9568628
+      objectReference: {fileID: 0}
     - target: {fileID: 5520051352904081968, guid: a201b67b9fb7b6e42941357b79e3b586, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

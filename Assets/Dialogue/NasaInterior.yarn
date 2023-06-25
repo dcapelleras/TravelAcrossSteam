@@ -2,8 +2,8 @@ title: Start
 tags:
 ---
 <<movement 0>>
-Sam: Doncs ja he entrat, suposo que ja no puc fer-me enrere, aprofitaré per veure com es per dins.
-Sam: La recepció sembla una mica antiquada, suposo que l'alta tecnología deu ser més endavant.
+Montserrat: Doncs ja he entrat, suposo que ja no puc fer-me enrere, aprofitaré per veure com es per dins.
+Montserrat: La recepció sembla una mica antiquada, suposo que l'alta tecnología deu ser més endavant.
 Comentari:(prova a obrir la porta)
 <<movement 1>>
 ===
@@ -11,63 +11,63 @@ Comentari:(prova a obrir la porta)
 title: TriedOpeningDoor
 ---
 <<movement 0>>
-Sam: Vaja ja m'ho imaginava que estaría tancat, ja m'he fet ilusions per res...
+Montserrat: Vaja ja m'ho imaginava que estaría tancat, ja m'he fet ilusions per res...
 <<callJanitor>>
 Comentari:(apareix conserge)
 Tom: Renoi! Que puntual! Deus estar esperant als homes per entrar no?
-Tom: Tranquila ja t'obro jo, es una bona costum això d'arribar d'hora! Res com la bona olor a netejaterres a les 5 del matí!
-Comentari:(toca anar a l'oficina, l'unica que està oberta es la que toca anar, i potser alguna més sense res important)
+Tom: Tranquil·la ja t'obro jo, és un bon costum això d'arribar d'hora! Res com la bona olor de neteja terres a les 5 del matí!
+<<janitorDoor>>
 ===
 
 title: JanitorOpenedDoor
 ---
 Tom: Doncs ja ho tenim! Porta oberta! 
-Tom: Et deixo fer que he de seguir amb la feina!! Ja estic amb tu estimada fregona!
+Tom: Et deixo fer que he de continuar amb la feina!! Ja estic amb tu estimada fregona!
 <<movement 1>>
 ===
 
 title: InOffice
 ---
 <<movement 0>>
-Sam: Vaja sembla que m'ha confós per un científic de la Masa, es extrany ja que segons la revista "Trending Tecnologies" tots els científics d'aquí son homes...
-Sam: Em pregunto per qui em deuen haver confós.
-Sam: En fí, de res serveix donar-hi voltes, aprofitaré aquesta oportunitat única en la vida per veure què es fa a la Masa!!
-Sam: Per començar miraré aviam que és el que es fa per aquí.
+Montserrat: Vaja sembla que m'ha confós per un científic de la Masa, és estrany, ja que segons la revista "Trending Technologies" tots els científics d'aquí són homes...
+Montserrat: Em pregunto per qui em deuen haver confós.
+Montserrat: En fí, de res serveix donar-hi voltes, aprofitaré aquesta oportunitat única en la vida per veure què es fa a la Masa!!
+Montserrat: Per començar miraré aviam que és el que es fa per aquí.
 <<movement 1>>
 ===
 
 title: PCPuzzle
 ---
 <<movement 0>>
-Sam: Què deu ser això? Sembla una targeta de programació, pero dubto que aquí facin servir una cosa tan antiga.
-Sam: O aquí treballa una col·leccionista d'antiguitats o he viatjat en el temps!! jajaj!
-Sam: Potser es un passatemps de qui treballa aquí.
+Montserrat: Què deu ser això? Sembla una targeta de programació, però dubto que aquí facin servir una cosa tan antiga.
+Montserrat: O aquí treballa una col·leccionista d'antiguitats o he viatjat en el temps!!
+Montserrat: Potser es un passatemps de qui treballa aquí.
 <<OpenTutorial 0>>
-Sam: Que interessant, això es casi com un trencaclosques, aviam si donant-li voltes se m'acudeix la resposta.
+Montserrat: Que interessant, això es casi com un trencaclosques, aviam si donant-li voltes se m'acudeix la resposta.
 <<progPuzzle>>
 ===
 
 title: AfterPCPuzzle
 ---
-Sam: Doncs al final me n'he sortit! Espero que no s'enfadin amb mí per haver fet el trencaclosques.
+Montserrat: Doncs al final me n'he sortit! Espero que no s'enfadin amb mí per haver fet el trencaclosques.
 Comentari: (arriba una dona)
 ???: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
 ???: Quina és la teva especialitat? 
-Sam: Jo no... no treballo aquí...
+Montserrat: Jo no... no treballo aquí...
 ???: I que fas aquí? No hauríes d'entrar en oficines on no treballes!
-Sam: Ho sento... i sento haver tocat els teus trencaclosques...
+Montserrat: Ho sento... i sento haver tocat els teus trencaclosques...
 ???: (sobresaltada) trencaclosques?? Estic a punt d'un gran descobriment! I a sobre estava amb feines extra que no fan més que relentitzarme...
 ???: (Mira els papers) Mmmh... Está tot fet... Ho has fet tu?
-Sam: Sí, ho sento, m'agrada molt aquest tipus de tasques i ho he vist a mitges...
+Montserrat: Sí, ho sento, m'agrada molt aquest tipus de tasques i ho he vist a mitges...
 ???: Ara et veig amb uns altres ulls, deixa'm que em torni a presentar.
-Margaret Hamilton: Encantada, soc la Margaret Hamilton.
-Sam: Es tot un plaer! Jo soc la Sam.
+Margaret Hamilton: Encantada, sóc la Margaret Hamilton.
+Montserrat: Es tot un plaer! Jo soc la Sam.
 Margaret Hamilton: Ja que m'has ajudat, Sam, deixa que t'ensenyi la meva investigació.
 Margaret Hamilton: Estic acabant els càlculs d'òrbita per un nou programa espacial revolucionari.
-Sam: Increïble, sembla que es possible que presencii un moment históric! I que necessites per aconseguir-ho? Puc ajudar en alguna cosa?
+Montserrat: Increïble, sembla que es possible que presencii un moment históric! I que necessites per aconseguir-ho? Puc ajudar en alguna cosa?
 Margaret Hamilton: Doncs l'únic que falta es probar els càlculs, però no es tan fàcil, necessito documents confidencials als quals la majoría aquí tenen accés però ser una dona té les seves desavantatges...
-Sam: Quina tontería! Només falta això? Amb el mèrit i importància que té la teva feina hauríes de tenir la màxima prioritat!
-Sam: Si fa falta jo mateixa aconseguiré els documents!
+Montserrat: Quina tontería! Només falta això? Amb el mèrit i importància que té la teva feina hauríes de tenir la màxima prioritat!
+Montserrat: Si fa falta jo mateixa aconseguiré els documents!
 Margaret Hamilton: Em tens molt sorpresa! Però has arribat aquí i se't veu més que motivada, així que es pot intentar.
 Margaret Hamilton: Primer hauràs d'anar a l'oficina del costat de la recepció, la més gran, i entrar-hi quan no hi hagi ningú per agafar la clau de sobre la taula.
 <<OpenTutorial 1>>
@@ -81,27 +81,27 @@ title: StealthGame
 Margaret Hamilton: Ben fet!
 Margaret Hamilton: Ara falta la part arriscada, si no ho vols fer no et preocupis, al cap i a la fí no et puc demanar una cosa que jo no tinc el valor de fer.
 Margaret Hamilton: Hauràs de creuar aquesta porta situada al fons de la sala, la que dona a la sala de comandaments.
-Sam: (Oh mare meva podré entrar a la sala de comandaments! Cara de poker, que no es noti l'emoció!)
+Montserrat: (Oh mare meva podré entrar a la sala de comandaments! Cara de poker, que no es noti l'emoció!)
 Margaret Hamilton: Si és massa ho entenc.
-Sam: (dissimulant l'emoció) Pots comptar amb mí, faré l'esforç per l'equip.
+Montserrat: (dissimulant l'emoció) Pots comptar amb mí, faré l'esforç per l'equip.
 Margaret Hamilton: No em para de sorprendre la teva valentía!
 Margaret Hamilton: Doncs aquí vé la part complicada... Hauràs de passar la sala de comandaments fins al fons, evitant tots els numerosos guardies assentats a la sala, on et trobaràs la porta al magatzem.
 Margaret Hamilton: Allà faltarà buscar els documents de registre dels últims vols espacials... La carpeta vermella dins l'arxivador blau, i portarlo de nou fins aquí.
-Sam: Entès, registre dels últims vols espacials. 
-Sam: (carpeta vermella dins l'arxivador blau)
+Montserrat: Entès, registre dels últims vols espacials. 
+Montserrat: (carpeta vermella dins l'arxivador blau)
 <<movement 1>>
 ===
 
 title: MargaretAfterBossKeys
 ---
 <<movement 0>>
-Sam: Ja tinc la clau!
+Montserrat: Ja tinc la clau!
 Margaret Hamilton: Genial! Però ara vé la part difícil.
 Margaret Hamilton: Has de creuar la porta de davant aquesta oficina, tranquila, està oberta, però a partir d'allà hauràs de assegurar-te que ningú et veu.
 Margaret Hamilton: Creuant la porta et trobaràs un passadís, i avançant pel passadís et trobaràs una porta vermella, aquí es on necessitaràs la clau.
 Margaret Hamilton: Un cop hagis entrat veuràs la sala de registres, simplement has de trobar els documents referents a les especificacions del cohet.
-Sam: Ja m'estic començant a arrepentir... però cap innovació s'ha fet sense esforç!
-Sam: He d'anar al passadís, i sense que em vegin he d'arribar a la porta vermella, després només falta buscar els documents i tornar sense que em vegin.
+Montserrat: Ja m'estic començant a arrepentir... però cap innovació s'ha fet sense esforç!
+Montserrat: He d'anar al passadís, i sense que em vegin he d'arribar a la porta vermella, després només falta buscar els documents i tornar sense que em vegin.
 <<movement 1>>
 ===
 
@@ -112,7 +112,7 @@ title: PlayerCatched
 Guardia: Alto aquí senyoreta! Això es zona restringida!
 Guardia: Torna al teu lloc de treball immediatament!
 <<sendPlayerGuard>>
-Sam: (Vaja, m'han enxampat)
+Montserrat: (Vaja, m'han enxampat)
 Instruccions: Evita passar prop del centre de visió dels guardies o sortir-ne abans que et vinguin a cridar l'atenció.
 <<guardsUnfriendly>>
 <<movement 1>>
@@ -121,8 +121,8 @@ Instruccions: Evita passar prop del centre de visió dels guardies o sortir-ne a
 title: WarehouseOpened
 ---
 <<movement 0>>
-Sam: Ara només falta utilitzar la clau i...
-Sam: Porta oberta!
+Montserrat: Ara només falta utilitzar la clau i...
+Montserrat: Porta oberta!
 <<openWarehouse>>
 <<movement 1>>
 ===
@@ -130,16 +130,16 @@ Sam: Porta oberta!
 title: StartSlidingPuzzleDialogue
 ---
 <<movement 0>>
-Sam: Estan tots els papers desordenats i fets un desastre!
+Montserrat: Estan tots els papers desordenats i fets un desastre!
 <<OpenTutorial 2>>
-Sam: Vaig a ordenarlos, es el mínim que puc fer per ajudar la Margaret.
+Montserrat: Vaig a ordenarlos, es el mínim que puc fer per ajudar la Margaret.
 ===
 
 title: FinishSlidingPuzzleDialogue
 ---
-Sam: Ja està tot al seu lloc, ara sí es llegíble!
-Sam: Suposos que amb això no tindrà cap problema per acabar els càlculs.
-Sam: Ara només falta portar-li!
+Montserrat: Ja està tot al seu lloc, ara sí es llegíble!
+Montserrat: Suposos que amb això no tindrà cap problema per acabar els càlculs.
+Montserrat: Ara només falta portar-li!
 <<movement 1>>
 ===
 
@@ -148,13 +148,13 @@ title: MargaretAfterDocuments
 <<movement 0>>
 Margaret Hamilton: Ho has aconseguit! La veritat es que no tenía moltes esperances!
 Margaret Hamilton: No t'agradaría ser la meva ajudant?
-Sam: M'encantaría però no crec que pugui, hauría de tornar d'on vinc (tot i que no sé com...)
+Montserrat: M'encantaría però no crec que pugui, hauría de tornar d'on vinc (tot i que no sé com...)
 Margaret Hamilton: Quina pena, es necessita gent amb empenta i decidida en aquest sector!
 Margaret Hamilton: Ara ja falta menys! Deixa que t'expliqui l'importància d'aquest projecte!
 Margaret Hamilton: Igual que l'humanitat fins fa relativament poc només podía somiar en veure la terra des de l'espai i ho vam aconseguir...
 Margaret Hamilton: Ara estem a punt de realitzar una missió encara més ambiciosa! Estem a punt de conquistar la lluna!
 Margaret Hamilton: Tots aquests càlculs són part del que farà possible la pròxima missió: El programa Apollo!
-Sam: No m'ho puc creure! (Es possible que realment estigui a l'època del primer viatge a la lluna?)
+Montserrat: No m'ho puc creure! (Es possible que realment estigui a l'època del primer viatge a la lluna?)
 Margaret Hamilton: Ara només falta... 
 (apareix pantalla de some time later)
 <<lastScene>>

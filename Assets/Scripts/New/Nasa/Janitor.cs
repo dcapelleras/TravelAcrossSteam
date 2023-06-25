@@ -13,6 +13,7 @@ public class Janitor : MonoBehaviour
     //[SerializeField] SpriteRenderer rend;
     [SerializeField] Animator anim;
     float timer = 0;
+    bool canUnlockDoor = false;
 
     private void Awake()
     {
@@ -29,7 +30,7 @@ public class Janitor : MonoBehaviour
     {
         if (receptionDoor.isLocked)
         {
-            if (Vector3.Distance(transform.position, doorAssistTransform.position) < 1f)
+            if (Vector3.Distance(transform.position, doorAssistTransform.position) < 1f && canUnlockDoor)
             {
                 anim.SetBool("walking", false);
                 timer += Time.deltaTime;
@@ -49,6 +50,11 @@ public class Janitor : MonoBehaviour
         {
             anim.SetBool("walking", true);
         }
+    }
+
+    public void UnlockDoor()
+    {
+        canUnlockDoor = true;
     }
 
     void GoAway()

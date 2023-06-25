@@ -82,8 +82,8 @@ public class CodingManager : MonoBehaviour
     IEnumerator RunCodingCommands()
     {
         hasCollided = false;
-        spriteRb.position = initialSpritePos;
-        spriteTransform.rotation = initialSpriteRot;
+        initialSpritePos = spriteRb.position;
+        //spriteTransform.rotation = initialSpriteRot;
         for (int i = 0; i < actions.Count; i++)
         {
             Debug.Log(actions[i].ToString());

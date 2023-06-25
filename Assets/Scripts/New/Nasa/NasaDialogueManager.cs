@@ -36,6 +36,7 @@ public class NasaDialogueManager : MonoBehaviour
         runner.AddCommandHandler("openWarehouse", UnlockWarehouseDoor);
         runner.AddCommandHandler("guardsFriendly", GuardsFriendly);
         runner.AddCommandHandler("guardsUnfriendly", GuardsUnfriendly);
+        runner.AddCommandHandler("janitorDoor", JanitorCanOpenDoor);
     }
 
     public void GuardsFriendly()
@@ -63,6 +64,11 @@ public class NasaDialogueManager : MonoBehaviour
     {
         runner.Dialogue.Stop();
         runner.StartDialogue("JanitorOpenedDoor");
+    }
+
+    public void JanitorCanOpenDoor()
+    {
+        FindObjectOfType<Janitor>().UnlockDoor();
     }
 
     public void EnterOfficesFirstTime()
