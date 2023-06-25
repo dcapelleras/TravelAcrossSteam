@@ -2,10 +2,10 @@ title: Start
 tags:
 ---
 <<movement 0>>
-Sam: Què acaba de passar...? On soc?
-Sam: MASA...? Estaré al·lucinant? Juraria que fa un moment estava a l'oficina...
-Sam: Sempre havia somiat en venir aquí i s'ha fet realitat el meu desig de la forma més estranya.
-Sam: Suposo que és cert el que diuen que desitjant molt les coses, acaben arribant! Suposo que ja que hi som, entraré!
+Montserrat: Què acaba de passar...? On soc?
+Montserrat: MASA...? Estaré al·lucinant? Juraria que fa un moment estava a l'oficina...
+Montserrat: Sempre havia somiat en venir aquí i s'ha fet realitat el meu desig de la forma més estranya.
+Montserrat: Suposo que és cert el que diuen que desitjant molt les coses, acaben arribant! Suposo que ja que hi som, entraré!
 Comentari: (Camina cap a l'oficina fins a la porta i canvia l'escena)
 <<movement 1>>
 ===
@@ -13,8 +13,8 @@ Comentari: (Camina cap a l'oficina fins a la porta i canvia l'escena)
 title: ShouldEnter
 ---
 <<movement 0>>
-Sam: Doncs aquí estem, sembla que està obert.
-Sam: Hauria d'entrar o no?
+Montserrat: Doncs aquí estem, sembla que està obert.
+Montserrat: Hauria d'entrar o no?
 -> Evidentment, què faré aquí fora sinó?
     <<jump Entered>>
 -> No se Rick, sembla mala idea...
@@ -23,142 +23,13 @@ Sam: Hauria d'entrar o no?
 
 title: Entered
 ---
-Decidit, cap a dins que vaig!
+Montserrat: Decidit, cap a dins que vaig!
 <<enterBuilding>>
 ===
 
 title: NotEntered
 ---
-Saps què, ja m'ho deia tothom que una noia aquí no hi pinta res, millor em quedo fora.
+Montserrat: Saps què, ja m'ho deia tothom que una noia aquí no hi pinta res, millor em quedo fora.
 <<dontEnter>>
 <<movement 1>>
-===
-
-title: JokeStart
-tags:
----
-
-Fí... esperem que t'hagi agradat.
-I doncs, t'ha agradat?
--> Moltíssim
-    <<jump GoodOpinion>>
--> És millorable
-    <<jump BadOpinion>>
-===
-
-title: BadOpinion
----
-Està lleig dir mentides, estar clar que t'ha encantat.
-Moltes gràcies per jugar!
-<<goInside>>
-===
-
-title: GoodOpinion
----
-Gràcies per la honestitat!
-Moltes gràcies per jugar!
-<<goInside>>
-===
-
-title: OldStart
----
-Hello Person! Welcome to the demo! How are you?
--> Four!
-    <<jump Conversation1ESP>>
--> Yes.
-    <<jump Conversation1ESP>>
--> No entiendo nah...
-    <<jump Conversation1ESP>>
-===
-
-title: Conversation1
----
-You can click the objects in the room to interact with them and pick them up to your inventory.
-You can change scenaries with the number keys.
-If that is too complicated for you, do not worry, i have the solution!
--> Bring me to the scene selection.
-    <<jump SelectScene>>
--> Give me the first mission.
-===
-
-title: Conversation1ESP
----
-Tranqui, vamos a cambiar de idioma mejor...
-Puedes pulsar los objetos en la sala para interactuar con ellos y guardarlos en el inventario.
-Puedes cambiar entre escenarios con los numeros del teclado.
--> Empieza la primera misión.
-    <<jump Mission1ESP>>
--> Llévame a la selección de escenarios primero.
-    <<jump SelectSceneESP>>
-===
-
-title: SelectScene
----
--> First scenary
-    <<camera 1>>
-    <<jump Mission1>>
--> Second scenary
-    <<camera 2>>
-    <<jump Mission1>>
-===
-
-title: SelectSceneESP
----
--> Primer escenario
-    <<camera 1>>
-    <<jump Mission1ESP>>
--> Segundo escenario
-    <<camera 2>>
-    <<jump Mission1ESP>>
-===
-
-title: Mission1ESP
----
-¡Hola! ¿Puedes oirme? Soy la científica de la segunda sala. Estoy intentando arreglar mi máquina del tiempo y necesito algunos componentes, primero ¿puedes traerme una patata? No preguntes porqué.
-
-===
-
-title: Mission2ESP
----
-¡Perfecto! Ahora necesito un calabacín.
-
-===
-
-title: Mission3ESP
----
-¡Perfecto! Ahora necesito un boniato.
-
-===
-
-title: Mission4ESP
----
-¡Perfecto! Ahora necesito un ravioli.
-
-===
-
-title: Mission5ESP
----
-¡Perfecto! Ahora necesito un kiwi.
-
-===
-
-title: Mission6ESP
----
-¡Perfecto! Ahora necesito una galleta de esas que a veces te traen con el café creo que se llama lotus, que buena está.
-
-===
-
-title: FinalESP
----
-¡Perfecto! Ya tengo la barriga llena, ya podemos usar la máquina que lleva rato reparada.
-===
-
-title: AlreadyFinishedESP
----
-Ya has terminado la demo, no seas pesado...
-===
-
-title: MuertePorPortal
----
-Ups no ha funcionado, supongo que al ser una demo aun no es funcional, has muerto...
 ===
