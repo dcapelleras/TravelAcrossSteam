@@ -49,7 +49,7 @@ public class PlayerDoor : MonoBehaviour
         Debug.Log("Crossing door");
         //cam manager move camera and show loading screen
         //transform.position = crossingDoor.spawnPosition.position; //has to be the place of the connecting door
-        nav.agent.SetDestination(crossingDoor.spawnPosition.position);
+        nav.nav.SetDestination(crossingDoor.spawnPosition.position);
         crossingDoor = null;
 
     }

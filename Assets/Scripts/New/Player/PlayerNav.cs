@@ -7,7 +7,7 @@ using Yarn.Unity;
 public class PlayerNav : MonoBehaviour //have to set a point to go to if i click a puzzle so it doesnt block vision of it
 {
     #region References
-    public NavMeshAgent agent;
+    public NavMeshAgent nav;
     Camera cam;
     DialogueRunner dialogueRunner;
     [SerializeField] Animator anim;
@@ -15,7 +15,6 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
     bool canMove;
     bool gameEnded = false;
     [SerializeField] Transform endgameTransform;
-    [SerializeField] SpriteRenderer _renderer;
     [SerializeField] GameObject staticDoor1;
     [SerializeField] GameObject animatedDoor1;
 
@@ -23,6 +22,9 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
     [SerializeField] GameObject workingCables;
 
     [SerializeField] GameObject triggerTeleport;
+    [SerializeField] AudioSource secondaryAudio;
+    bool walkingSoundOn;
+    bool walking;
 
     private void Awake()
     {
@@ -35,9 +37,23 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
 
     private void Update()
     {
-        if (Vector3.Distance(agent.destination, transform.position) < 3f)
+        float dist = 3f;
+        if (Vector3.Distance(nav.destination, transform.position) < dist && walkingSoundOn)
         {
+            walkingSoundOn = false;
             anim.SetFloat("Walk", 0f);
+            secondaryAudio.Stop();
+        }
+        if (GameManager.instance.menuOpen)
+        {
+            walkingSoundOn = false;
+            secondaryAudio.Stop();
+        }
+        else if (!walkingSoundOn && Vector3.Distance(nav.destination, transform.position) > dist)
+        {
+            walkingSoundOn = true;
+            anim.SetFloat("Walk", 1f);
+            secondaryAudio.Play();
         }
         if (!canMove || gameEnded)
         {
@@ -52,33 +68,27 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
             {
                 if (hit.collider.TryGetComponent(out PuzzleDetector puzzle))
                 {
-                    agent.SetDestination(puzzle.moveToPos.position);
+                    nav.SetDestination(puzzle.moveToPos.position);
                 }
                 else
                 {
-                    agent.SetDestination(hit.point);
+                    nav.SetDestination(hit.point);
                 }
 
-                if ((transform.position.x - hit.point.x) < -0.5f)
-                {
-                    anim.SetFloat("Walk", 1f);
-                    _renderer.flipX = true;
-                    //anim turn left
-                    //anim walk
-                }
-                else if ((transform.position.x - hit.point.x) > 0.5f)
-                {
-                    anim.SetFloat("Walk", 1f);
-                    _renderer.flipX = false;
-                    //anim turn right
-                    //anim walk
-                }
-                else
-                {
-                    anim.SetFloat("Walk", 0f);
-                    //anim idle
-                }
             }
+        }
+    }
+
+    public void MoveToThisDestination(Transform pos)
+    {
+        nav.SetDestination(pos.position);
+        if (Vector3.Distance(nav.destination, transform.position) < 3f)
+        {
+            anim.SetFloat("Walk", 0f);
+        }
+        else
+        {
+            anim.SetFloat("Walk", 1f);
         }
     }
 

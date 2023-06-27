@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject menuPausa;
     public GameObject menuSettings;
-    bool menuOpen;
+    public bool menuOpen;
     [SerializeField] AudioSource audioSource;
     public static GameManager instance;
     [SerializeField] ScriptableSettings settings;
@@ -35,12 +35,10 @@ public class GameManager : MonoBehaviour
             if (menuOpen)
             {
                 Resume();
-
             }
             else
             {
                 PauseGame();
-
             }
         }
     }

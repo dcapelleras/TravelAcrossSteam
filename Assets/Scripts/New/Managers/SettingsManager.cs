@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SettingsManager : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource playerAudio;
 
     [SerializeField] Slider volumeSlider;
 
@@ -13,7 +14,6 @@ public class SettingsManager : MonoBehaviour
 
     private void Start()
     {
-
         volumeSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
     }
 
@@ -21,5 +21,6 @@ public class SettingsManager : MonoBehaviour
     {
         settings.volume = volumeSlider.value;
         audioSource.volume = settings.volume;
+        playerAudio.volume = settings.volume;
     }
 }

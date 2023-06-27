@@ -29,6 +29,9 @@ public class NasaNavigation : MonoBehaviour
 
     public int placeToGoBackWhenCaught;
 
+    [SerializeField] AudioSource secondaryAudio;
+
+    bool walkingSoundOn;
 
     private void Awake()
     {
@@ -39,71 +42,29 @@ public class NasaNavigation : MonoBehaviour
 
     private void Update()
     {
-        /*
-        if (transform.rotation != cam.transform.rotation)
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, cam.transform.rotation, 2f);
-        }*/
         float dist = 3f;
         if (isExterior)
         {
             dist = 1.35f;
         }
-        if (Vector3.Distance(nav.destination, transform.position) < dist)
+        if (Vector3.Distance(nav.destination, transform.position) < dist && walkingSoundOn)
         {
+            walkingSoundOn = false;
             anim.SetFloat("Walk", 0f);
+            secondaryAudio.Stop();
         }
-        else
+        if (GameManager.instance.menuOpen)
         {
+            walkingSoundOn = false;
+            secondaryAudio.Stop();
+        }
+        else if (!walkingSoundOn && Vector3.Distance(nav.destination, transform.position) > dist)
+        {
+            walkingSoundOn= true;
             anim.SetFloat("Walk", 1f);
+            secondaryAudio.Play();
         }
-        /*
-        if (invertedAxis)
-        {
-            if ((transform.position.z - nav.destination.z) < -0.5f) //walk to front
-            {
-                rend.flipX = false;
-                //anim turn left
-                //anim walk
-            }
-            else if ((transform.position.z - nav.destination.z) > 0.5f) //walk to back
-            {
-                rend.flipX = true;
-                //anim turn right
-                //anim walk
-            }
-        }
-        else
-        {
-            if ((transform.position.x - nav.destination.x) < -0.5f) //walk to left
-            {
-                if (isExterior)
-                {
-                    rend.flipX = false;
-                }
-                else
-                {
-                    rend.flipX = true;
-                }
-                //anim turn left
-                //anim walk
-            }
-            else if ((transform.position.x - nav.destination.x) > 0.5f) //walk to right
-            {
-                if (isExterior)
-                {
-                    rend.flipX = true;
-                }
-                else
-                {
-                    rend.flipX = false;
-                }
-                //anim turn right
-                //anim walk
-            }
-        }
-        */
-        if (!canMove)
+            if (!canMove)
         {
             return;
         }
@@ -187,66 +148,6 @@ public class NasaNavigation : MonoBehaviour
                 {
                     nav.SetDestination(hit.point);
                 }
-                /*
-                if (invertedAxis)
-                {
-                    if ((transform.position.z - hit.point.z) < -0.5f) //walk to front
-                    {
-                        anim.SetFloat("Walk", 1f);
-                        rend.flipX = false;
-                        //anim turn left
-                        //anim walk
-                    }
-                    else if ((transform.position.z - hit.point.z) > 0.5f) //walk to back
-                    {
-                        anim.SetFloat("Walk", 1f);
-                        rend.flipX = true;
-                        //anim turn right
-                        //anim walk
-                    }
-                    else
-                    {
-                        anim.SetFloat("Walk", 0f);
-                        //anim idle
-                    }
-                }
-                else
-                {
-                    if ((transform.position.x - hit.point.x) < -0.5f) //walk to left
-                    {
-                        anim.SetFloat("Walk", 1f);
-                        if (isExterior)
-                        {
-                            rend.flipX = false;
-                        }
-                        else
-                        {
-                            rend.flipX = true;
-                        }
-                        //anim turn left
-                        //anim walk
-                    }
-                    else if ((transform.position.x - hit.point.x) > 0.5f) //walk to right
-                    {
-                        anim.SetFloat("Walk", 1f);
-                        if (isExterior)
-                        {
-                            rend.flipX = true;
-                        }
-                        else
-                        {
-                            rend.flipX = false;
-                        }
-                        //anim turn right
-                        //anim walk
-                    }
-                    else
-                    {
-                        anim.SetFloat("Walk", 0f);
-                        //anim idle
-                    }
-                }*/
-                
             }
         }
     }
