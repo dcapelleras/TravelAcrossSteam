@@ -15,6 +15,7 @@ public class NasaDialogueManager : MonoBehaviour
     [SerializeField] GameObject bossKeys;
     [SerializeField] NasaDoor doorToCommand;
     [SerializeField] NasaDoor doorToWarehouse;
+    [SerializeField] Curious margaretCurious;
     public int roomIndexToGoBack;
 
     [SerializeField] List<Transform> placesToSend;
@@ -37,6 +38,45 @@ public class NasaDialogueManager : MonoBehaviour
         runner.AddCommandHandler("guardsFriendly", GuardsFriendly);
         runner.AddCommandHandler("guardsUnfriendly", GuardsUnfriendly);
         runner.AddCommandHandler("janitorDoor", JanitorCanOpenDoor);
+        runner.AddCommandHandler("MCurius1", MargaretCurious1);
+        runner.AddCommandHandler("MCurious2", MargaretCurious2);
+        runner.AddCommandHandler("MCuriousNull", MargaretCuriousNull);
+    }
+
+    public void CuriousTalk(int index)
+    {
+        switch(index)
+        {
+            case 0:
+                runner.Dialogue.Stop();
+                runner.StartDialogue("CuriousJanitor1");
+                break;
+            case 1:
+                runner.Dialogue.Stop();
+                runner.StartDialogue("CuriousJanitor2");
+                break;
+            case 2:
+                runner.Dialogue.Stop();
+                runner.StartDialogue("CuriousMargaret1");
+                break;
+            case 3:
+                runner.Dialogue.Stop();
+                runner.StartDialogue("CuriousMargaret2");
+                break;
+        }
+    }
+
+    public void MargaretCurious1()
+    {
+        margaretCurious.curiousIndex = 2;
+    }
+    public void MargaretCurious2()
+    {
+        margaretCurious.curiousIndex = 3;
+    }
+    public void MargaretCuriousNull()
+    {
+        margaretCurious.curiousIndex = -1;
     }
 
     public void GuardsFriendly()

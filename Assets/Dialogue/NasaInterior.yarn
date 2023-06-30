@@ -2,37 +2,38 @@ title: Start
 tags:
 ---
 <<movement 0>>
-Montserrat: Doncs ja he entrat, suposo que ja no puc fer-me enrere, aprofitaré per veure com es per dins.
-Montserrat: La recepció sembla una mica antiquada, suposo que l'alta tecnología deu ser més endavant.
-Comentari:(prova a obrir la porta)
+Montserrat: Doncs ja he entrat, suposo que ja no puc fer-me enrere. Aprofitaré l'oportunitat per explorar com és per dins.
+Montserrat: A primera vista, la recepció sembla una mica antiquada. Segurament l'alta tecnologia es troba més endavant.
+Montserrat: Sembla que a l'esquerra hi ha la porta a les oficines, provaré sort.
 <<movement 1>>
 ===
 
 title: TriedOpeningDoor
 ---
 <<movement 0>>
-Montserrat: Vaja ja m'ho imaginava que estaría tancat, ja m'he fet ilusions per res...
+Montserrat: Vaja, ja m'ho imaginava. Sembla que està tancat. Sembla que m'he fet il·lusions per res. És una mica decebedor, però a vegades les coses no surten com esperem.
 <<callJanitor>>
-Comentari:(apareix conserge)
-Tom: Renoi! Que puntual! Deus estar esperant als homes per entrar no?
-Tom: Tranquil·la ja t'obro jo, és un bon costum això d'arribar d'hora! Res com la bona olor de neteja terres a les 5 del matí!
+Conserge: Renoi quina noia més matinera!
+Francesc el conserge: Bon dia! Que no pots entrar? Suposo que ets la noia que treballa al final de l'oficina! Jo soc en Francesc, el conserge amb mes marxa de la Masa!
+Francesc el conserge: És molt bona costum això de venir a la feina a les 5 del matí! M'alegro de conèixer algú que valora tant com jo l'olor de netejaterres a primera hora!
+Francesc el conserge: Poca gent ho sap, però fer el que t'agrada i gaudir-ho tant com per matinar és el secret de la joventut! I si no mira'm a mi!
 <<janitorDoor>>
 ===
 
 title: JanitorOpenedDoor
 ---
-Tom: Doncs ja ho tenim! Porta oberta! 
-Tom: Et deixo fer que he de continuar amb la feina!! Ja estic amb tu estimada fregona!
+Frank: Doncs ja ho tenim! Porta oberta! 
+Frank: Et deixo fer que la brutícia m'espera!
 <<movement 1>>
 ===
 
 title: InOffice
 ---
 <<movement 0>>
-Montserrat: Vaja sembla que m'ha confós per un científic de la Masa, és estrany, ja que segons la revista "Trending Technologies" tots els científics d'aquí són homes...
+Montserrat: Vaja, sembla que m'ha confós per un científic de la Masa, és estrany, ja que segons la revista "Trending Technologies" tots els científics d'aquí són homes...
 Montserrat: Em pregunto per qui em deuen haver confós.
-Montserrat: En fí, de res serveix donar-hi voltes, aprofitaré aquesta oportunitat única en la vida per veure què es fa a la Masa!!
-Montserrat: Per començar miraré aviam que és el que es fa per aquí.
+Montserrat: En fi, de res serveix donar-hi voltes, aprofitaré aquesta oportunitat única en la vida per veure què es fa a la Masa!!
+Montserrat: Per començar buscaré alguna taula amb documents als quals pugui donar un cop d'ull.
 <<movement 1>>
 ===
 
@@ -40,16 +41,18 @@ title: PCPuzzle
 ---
 <<movement 0>>
 Montserrat: Què deu ser això? Sembla una targeta de programació, però dubto que aquí facin servir una cosa tan antiga.
-Montserrat: O aquí treballa una col·leccionista d'antiguitats o he viatjat en el temps!!
-Montserrat: Potser es un passatemps de qui treballa aquí.
+Montserrat: És curiós trobar una relíquia com aquesta en un lloc tan modern com la Masa.
+Montserrat: Potser hi ha un col·leccionista d'antiguitats treballant aquí... O potser he viatjat en el temps!
+Montserrat: Ja estic delirant! Segurament és només el passatemps d'algú.
 <<OpenTutorial 0>>
-Montserrat: Que interessant, això es casi com un trencaclosques, aviam si donant-li voltes se m'acudeix la resposta.
+Montserrat: Que interessant, això es gairebé com un trencaclosques, aviam si donant-li voltes se m'acudeix la resposta.
 <<progPuzzle>>
 ===
 
 title: AfterPCPuzzle
 ---
-Montserrat: Doncs al final me n'he sortit! Espero que no s'enfadin amb mí per haver fet el trencaclosques.
+<<MCuriousNull>>
+Montserrat: Doncs al final me n'he sortit! He resolt el trencaclosques d'algú prou intel·ligent per treballar a la Masa! De fet, sona pitjor dit en veu alta... Espero que no s'enfadin amb mí per haver-lo fet sense permís.
 Comentari: (arriba una dona)
 ???: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
 ???: Quina és la teva especialitat? 
@@ -72,12 +75,14 @@ Margaret Hamilton: Em tens molt sorpresa! Però has arribat aquí i se't veu mé
 Margaret Hamilton: Primer hauràs d'anar a l'oficina del costat de la recepció, la més gran, i entrar-hi quan no hi hagi ningú per agafar la clau de sobre la taula.
 <<OpenTutorial 1>>
 Margaret Hamilton: Un cop la tinguis, torna i et donaré més instruccions.
+<<MCurious1>>
 <<movement 1>>
 ===
 
 title: StealthGame
 ---
 <<movement 0>>
+<<MCuriousNull>>
 Margaret Hamilton: Ben fet!
 Margaret Hamilton: Ara falta la part arriscada, si no ho vols fer no et preocupis, al cap i a la fí no et puc demanar una cosa que jo no tinc el valor de fer.
 Margaret Hamilton: Hauràs de creuar aquesta porta situada al fons de la sala, la que dona a la sala de comandaments.
@@ -89,12 +94,14 @@ Margaret Hamilton: Doncs aquí vé la part complicada... Hauràs de passar la sa
 Margaret Hamilton: Allà faltarà buscar els documents de registre dels últims vols espacials... La carpeta vermella dins l'arxivador blau, i portarlo de nou fins aquí.
 Montserrat: Entès, registre dels últims vols espacials. 
 Montserrat: (carpeta vermella dins l'arxivador blau)
+<<MCurious2>>
 <<movement 1>>
 ===
 
 title: MargaretAfterBossKeys
 ---
 <<movement 0>>
+<<MCuriousNull>>
 Montserrat: Ja tinc la clau!
 Margaret Hamilton: Genial! Però ara vé la part difícil.
 Margaret Hamilton: Has de creuar la porta de davant aquesta oficina, tranquila, està oberta, però a partir d'allà hauràs de assegurar-te que ningú et veu.
@@ -102,6 +109,7 @@ Margaret Hamilton: Creuant la porta et trobaràs un passadís, i avançant pel p
 Margaret Hamilton: Un cop hagis entrat veuràs la sala de registres, simplement has de trobar els documents referents a les especificacions del cohet.
 Montserrat: Ja m'estic començant a arrepentir... però cap innovació s'ha fet sense esforç!
 Montserrat: He d'anar al passadís, i sense que em vegin he d'arribar a la porta vermella, després només falta buscar els documents i tornar sense que em vegin.
+<<MCurious2>>
 <<movement 1>>
 ===
 
@@ -146,6 +154,7 @@ Montserrat: Ara només falta portar-li!
 title: MargaretAfterDocuments
 ---
 <<movement 0>>
+<<MCuriousNull>>
 Margaret Hamilton: Ho has aconseguit! La veritat es que no tenía moltes esperances!
 Margaret Hamilton: No t'agradaría ser la meva ajudant?
 Montserrat: M'encantaría però no crec que pugui, hauría de tornar d'on vinc (tot i que no sé com...)
@@ -162,4 +171,32 @@ Margaret Hamilton: Ara només falta...
 ("opcional" La Montserrat es teletransporta a la actualitat i se la veu a la recepcio de la upc apuntantse a ingenyeria)
 (El recepcionista li pregunta que quina motivació té per apuntar-se i respon que ha tingut molt bons referents.)
 (FI)
+===
+
+title: CuriousJanitor1
+---
+<<movement 0>>
+Conserge: Res com posar-se a netejar a primera hora abans que arribi ningú! Uns estiraments i ja podem començar!
+<<movement 1>>
+===
+
+title: CuriousJanitor2
+---
+<<movement 0>>
+Francesc el conserge: Recorda, treballar en el que t'agrada i uns moviments com els meus cada matí són la recepta de l'èxit!
+<<movement 1>>
+===
+
+title: CuriousMargaret1
+---
+<<movement 0>>
+Margaret Hamilton: Recorda, has d'aconseguir la clau de la taula al costat de l'entrada, un cop la tinguis torna amb mi i planegem el següent pas.
+<<movement 1>>
+===
+
+title: CuriousMargaret2
+---
+<<movement 0>>
+Margaret Hamilton: Recorda, ara que tens la clau podràs entrar als arxius, estan passada la sala de control, però compte, hi ha uns quants guàrdies vigilant la sala.
+<<movement 1>>
 ===

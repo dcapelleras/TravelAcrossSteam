@@ -14,14 +14,17 @@ public class Janitor : MonoBehaviour
     [SerializeField] Animator anim;
     float timer = 0;
     bool canUnlockDoor = false;
+    Curious curious;
 
     private void Awake()
     {
         agent= GetComponent<NavMeshAgent>();
+        curious = GetComponent<Curious>();
     }
 
     public void GoAssistDoor()
     {
+        curious.curiousIndex = -1;
         agent.SetDestination(doorAssistTransform.position);
 
     }
@@ -61,5 +64,6 @@ public class Janitor : MonoBehaviour
     {
         agent.SetDestination(awayPosition.position);
         //rend.flipX = true;
+        curious.curiousIndex = 1;
     }
 }

@@ -14,10 +14,12 @@ public class Margaret : MonoBehaviour
     bool isSitting;
     bool canCheckAgent;
     [SerializeField] GameObject chair;
+    Curious curious;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        curious = GetComponent<Curious>();
     }
 
     private async void OnEnable()
@@ -60,5 +62,6 @@ public class Margaret : MonoBehaviour
         isSitting = true;
         anim.SetBool("sit", true);
         chair.SetActive(true);
+        curious.curiousIndex = 3;
     }
 }

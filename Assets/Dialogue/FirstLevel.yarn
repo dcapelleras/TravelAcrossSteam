@@ -2,56 +2,56 @@
 tags:
 ---
 <<Movement 0>>
-Montserrat: Ugh, Avui ha sigut un dia esgotador a la recepció. No puc esperar a marxar ja a casa..
-Montserrat: A sobre em toca recollir aquest desastre… Millor em poso mans a l’obra.
+Montserrat: Avui ha sigut un dia esgotador a la recepció. No puc esperar a marxar a casa.
+Montserrat: Ara, desordre, prepara't, avui et dic adéu definitivament.
 <<OpenTutorial 0>>
-Montserrat: Sembla que hauré de ordenar l'estantería.
+Montserrat: Sembla que falta organitzar l'estantería. Millor ho faig abans que em renyin.
 <<Movement 1>>
 ===
 
 title: FirstPuzzle
 ---
-Montserrat: Sembla que aquí és on hauria de posar els trastos. Millor els col·loco abans em donin la culpa.
-Montserrat: Anem a recollir objectes.
+Montserrat: Anem a posar a prova les meves dots organitzatives. Cada peça al seu lloc.
 <<inventory 1>>
 ===
 
 title: FirstPuzzleReminder
 ---
-Montserrat: Cal cercar, recollir i col·locar els objectes que falten.
-Montserrat: Aviam els objectes que tinc guardats...
+Montserrat: He de col·locar cada peça al seu lloc.
 <<inventory 1>>
 ===
 
 title: FinishBookcasePuzzle
 ---
-Montserrat: Per fi he acabat! Bé, millor organitzo també la sala del costat, no m’agradaria que em renyessin per deixar-ho a mitges.
+Montserrat: Ja està, sala impecable! Bé, millor organitzo també la sala del costat i en un tres i no res ho tinc enllestit.
 <<Movement 1>>
 ===
 
 title: EnteringRoom
 ---
-Montserrat: És molt fosc, vaig a veure si trobo la llum.
-(torna la llum)
+Montserrat: És molt fosc, qualsevol diria que no hi volen ningú aquí.
+Montserrat: Potser és una d'aquelles llums antigues de quan s'utilitzaven interruptors...
 <<WarehouseLights 1>>
-Montserrat: Oh no! Això està fet un desastre espero que no es pensin que he sigut jo!!
-Montserrat: Sembla que aquesta màquina cau a trossos, té tot de peces escampades pel terra!
-Montserrat: Per ara provaré a recollir les peces i a veure si aconsegueixo que no faci mal a la vista.
+Montserrat: Per fi posem llum a la foscor! Sort dels enginyers i els seus invents!
+Montserrat: Oh no! Això està fet un desastre! Espero que no es pensin que he sigut jo qui ho ha desmuntat tot!
+Montserrat: Sembla que aquesta màquina s'ha desmuntat per complet, amb tot de peces disperses per terra!
+Montserrat: Per ara, m'hi poso i recullo les peces i provo de col·locar-les a veure si aconsegueixo deixar-ho com toca i de pas potser evito algun accident.
 <<Movement 1>>
 ===
 
 title: StartPlugging
 ---
-Montserrat: Ja està tot al seu lloc...
+Montserrat: Finalment, tot està al seu lloc...
 <<startPluggingGame 1>>
 <<OpenTutorial 1>>
-Montserrat: Ara només falta conectar connectar-ho i ja estarà!
+Montserrat: Ara només em queda connectar-ho tot i voilà! Tot normal i aquí no haurà passat res.
 <<camera 4>>
 ===
 
 title: FinishCables
 ---
-Montserrat: Ara sí sembla que funciona, em pregunto per què deu servir... No crec que ningú s'enfadi si entro a mirar un segon.
+Montserrat: Ara sí, sembla que funciona, però em pregunto quina és la seva finalitat. Bé, com no hi ha ningú a part de mi, suposo que no passa res si entro a mirar un segon.
+Montserrat: Què podrà fer? Què hi haurà a l'interior? Per molt estrany que sigui, tot i ser una noia la curiositat científica em supera!
 <<FinishCable 1>>
 <<Movement 1>>
 ===
@@ -59,6 +59,6 @@ Montserrat: Ara sí sembla que funciona, em pregunto per què deu servir... No c
 title: StartingTeleport
 ---
 Montserrat: Què està passant?
-Montserrat: Què es aquesta sensació tan extranya? Què m'està passant?
+Montserrat: Què és aquesta sensació tan estranya? 
 <<TeleportToNasa 1>>
 ===

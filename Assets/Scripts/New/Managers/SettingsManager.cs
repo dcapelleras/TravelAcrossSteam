@@ -21,6 +21,9 @@ public class SettingsManager : MonoBehaviour
     {
         settings.volume = volumeSlider.value;
         audioSource.volume = settings.volume;
-        playerAudio.volume = settings.volume;
+        if (playerAudio != null)
+        {
+            playerAudio.volume = settings.volume;
+        }
     }
 }

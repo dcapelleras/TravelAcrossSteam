@@ -6,18 +6,17 @@ Montserrat: Què acaba de passar...? On soc?
 Montserrat: MASA...? Estaré al·lucinant? Juraria que fa un moment estava a l'oficina...
 Montserrat: Sempre havia somiat en venir aquí i s'ha fet realitat el meu desig de la forma més estranya.
 Montserrat: Suposo que és cert el que diuen que desitjant molt les coses, acaben arribant! Suposo que ja que hi som, entraré!
-Comentari: (Camina cap a l'oficina fins a la porta i canvia l'escena)
 <<movement 1>>
 ===
 
 title: ShouldEnter
 ---
 <<movement 0>>
-Montserrat: Doncs aquí estem, sembla que està obert.
+Montserrat: Doncs aquí estem, sembla que és obert.
 Montserrat: Hauria d'entrar o no?
--> Evidentment, què faré aquí fora sinó?
+-> Evidentment, no puc desaprofitar una oportunitat com aquesta!
     <<jump Entered>>
--> No se Rick, sembla mala idea...
+-> No ho sé pas, sembla mala idea...
     <<jump NotEntered>>
 ===
 
@@ -29,7 +28,7 @@ Montserrat: Decidit, cap a dins que vaig!
 
 title: NotEntered
 ---
-Montserrat: Saps què, ja m'ho deia tothom que una noia aquí no hi pinta res, millor em quedo fora.
+Montserrat: Saps què, ja m'ho deia tothom que una noia no hi pinta res en aquest món, millor em quedo fora.
 <<dontEnter>>
 <<movement 1>>
 ===
