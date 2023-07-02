@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickBossKeys : EventClickable
 {
     Margaret margaret;
+    [SerializeField]GameObject keyUI;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class PickBossKeys : EventClickable
         NasaNavigation nav = FindObjectOfType<NasaNavigation>();
         nav.placeToGoBackWhenCaught = 0;
         nav.hasBossKeys = true;
+        keyUI.SetActive(true);
         gameObject.SetActive(false);
     }
 }

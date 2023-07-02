@@ -53,7 +53,6 @@ title: AfterPCPuzzle
 ---
 <<MCuriousNull>>
 Montserrat: Doncs al final me n'he sortit! He resolt el trencaclosques d'algú prou intel·ligent per treballar a la Masa! De fet, sona pitjor dit en veu alta... Espero que no s'enfadin amb mí per haver-lo fet sense permís.
-Comentari: (arriba una dona)
 ???: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
 ???: Quina és la teva especialitat? 
 Montserrat: Jo no... no treballo aquí...
@@ -72,7 +71,7 @@ Margaret Hamilton: Doncs l'únic que falta es probar els càlculs, però no es t
 Montserrat: Quina tontería! Només falta això? Amb el mèrit i importància que té la teva feina hauríes de tenir la màxima prioritat!
 Montserrat: Si fa falta jo mateixa aconseguiré els documents!
 Margaret Hamilton: Em tens molt sorpresa! Però has arribat aquí i se't veu més que motivada, així que es pot intentar.
-Margaret Hamilton: Primer hauràs d'anar a l'oficina del costat de la recepció, la més gran, i entrar-hi quan no hi hagi ningú per agafar la clau de sobre la taula.
+Margaret Hamilton: Hauràs d'anar a la recepció, trobaràs la clau al costat dels recepcionistes, són molt simpàtics per si vols parlar amb ells, però una mica despistats, no crec que se n'adonin si les agafes.
 <<OpenTutorial 1>>
 Margaret Hamilton: Un cop la tinguis, torna i et donaré més instruccions.
 <<MCurious1>>
@@ -198,5 +197,57 @@ title: CuriousMargaret2
 ---
 <<movement 0>>
 Margaret Hamilton: Recorda, ara que tens la clau podràs entrar als arxius, estan passada la sala de control, però compte, hi ha uns quants guàrdies vigilant la sala.
+<<movement 1>>
+===
+
+title: CuriousRecepcionist1
+---
+<<movement 0>>
+Guifé el recepcionista: Bon dia! Soc en Guifé, la persona amb més recursos de la Masa! Necessites alguna cosa?
+Montserrat: Bon dia! Doncs ara que ho dius un bolígraf i paper m'aniria molt bé!
+Guifé el recepcionista: Doncs... vaja... deixa'm que busqui...
+<<movement 1>>
+===
+
+title: CuriousRecepcionist2
+---
+<<movement 0>>
+Montserrat: Hola Guifré! Has aconseguit un bolígraf?
+Guifé el recepcionista: ... Segueixo buscant...
+<<movement 1>>
+===
+
+title: CuriousRecepcionist3
+---
+<<movement 0>>
+Ausiàs el recepcionista: Bon dia! Soc l'Ausiàs, la persona amb més respostes de la Masa! Vols saber alguna cosa?
+Montserrat: Bon dia! Deixa'm pensar... Quants astronautes hi ha a la Masa?
+Ausiàs el recepcionista: Exactament entre 10 i 100.
+Montserrat: Suposo que és millor que entre 0 i 1000...
+<<movement 1>>
+===
+
+title: CuriousRecepcionist4
+---
+<<movement 0>>
+Ausiàs el recepcionista: Vols saber alguna cosa més?
+Montserrat: Gràcies però no fa falta.
+<<movement 1>>
+===
+
+title: CuriousRecepcionist5
+---
+<<movement 0>>
+Joanic el recepcionista: Bon dia! Soc en Joanic, la persona més optimista de la Masa!
+Montserrat: Bon dia Joanic! És agradable veure't de bon humor!
+Joanic el recepcionista: Què vol dir això? Que no és agradable veure'm si no estic de bon humor?
+Montserrat: No! No volia dir això... Millor ho deixo estar.
+<<movement 1>>
+===
+
+title: CuriousRecepcionist6
+---
+<<movement 0>>
+Montserrat: Millor que no ho intenti arreglar...
 <<movement 1>>
 ===

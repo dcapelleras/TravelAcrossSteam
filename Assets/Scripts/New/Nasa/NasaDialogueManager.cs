@@ -38,7 +38,7 @@ public class NasaDialogueManager : MonoBehaviour
         runner.AddCommandHandler("guardsFriendly", GuardsFriendly);
         runner.AddCommandHandler("guardsUnfriendly", GuardsUnfriendly);
         runner.AddCommandHandler("janitorDoor", JanitorCanOpenDoor);
-        runner.AddCommandHandler("MCurius1", MargaretCurious1);
+        runner.AddCommandHandler("MCurious1", MargaretCurious1);
         runner.AddCommandHandler("MCurious2", MargaretCurious2);
         runner.AddCommandHandler("MCuriousNull", MargaretCuriousNull);
     }
@@ -62,6 +62,30 @@ public class NasaDialogueManager : MonoBehaviour
             case 3:
                 runner.Dialogue.Stop();
                 runner.StartDialogue("CuriousMargaret2");
+                break;
+            case 4:
+                runner.Dialogue.Stop();
+                runner.StartDialogue("CuriousRecepcionist1");
+                break;
+            case 5:
+                runner.Dialogue.Stop();
+                runner.StartDialogue("CuriousRecepcionist2");
+                break;
+            case 6:
+                runner.Dialogue.Stop();
+                runner.StartDialogue("CuriousRecepcionist3");
+                break;
+            case 7:
+                runner.Dialogue.Stop();
+                runner.StartDialogue("CuriousRecepcionist4");
+                break;
+            case 8:
+                runner.Dialogue.Stop();
+                runner.StartDialogue("CuriousRecepcionist5");
+                break;
+            case 9:
+                runner.Dialogue.Stop();
+                runner.StartDialogue("CuriousRecepcionist6");
                 break;
         }
     }
