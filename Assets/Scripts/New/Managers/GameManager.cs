@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
     {
         tutorialPanel.SetActive(true);
         tutorials[index].SetActive(true);
-        //Time.timeScale = 0f;
+        Time.timeScale = 0f;
         currentTutorialIndex= index;
         tutorialReminderButton.SetActive(true);
     }
@@ -97,6 +97,9 @@ public class GameManager : MonoBehaviour
             t.SetActive(false);
         }
         tutorialPanel.SetActive(false);
-        //Time.timeScale = 1f;
+        if (!menuOpen)
+        {
+            Time.timeScale = 1f;
+        }
     }
 }

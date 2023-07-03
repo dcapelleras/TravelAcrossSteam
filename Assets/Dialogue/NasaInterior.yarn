@@ -203,9 +203,9 @@ Margaret Hamilton: Recorda, ara que tens la clau podràs entrar als arxius, esta
 title: CuriousRecepcionist1
 ---
 <<movement 0>>
-Guifé el recepcionista: Bon dia! Soc en Guifé, la persona amb més recursos de la Masa! Necessites alguna cosa?
+Guifré el recepcionista: Bon dia! Soc en Guifré, la persona amb més recursos de la Masa! Necessites alguna cosa?
 Montserrat: Bon dia! Doncs ara que ho dius un bolígraf i paper m'aniria molt bé!
-Guifé el recepcionista: Doncs... vaja... deixa'm que busqui...
+Guifré el recepcionista: Doncs... vaja... deixa'm que busqui...
 <<movement 1>>
 ===
 
@@ -213,7 +213,7 @@ title: CuriousRecepcionist2
 ---
 <<movement 0>>
 Montserrat: Hola Guifré! Has aconseguit un bolígraf?
-Guifé el recepcionista: ... Segueixo buscant...
+Guifré el recepcionista: ... Segueixo buscant...
 <<movement 1>>
 ===
 

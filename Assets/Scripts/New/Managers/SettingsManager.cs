@@ -9,21 +9,31 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] AudioSource playerAudio;
 
     [SerializeField] Slider volumeSlider;
+    [SerializeField] Slider sfxVolumeSlider;
 
     [SerializeField] ScriptableSettings settings;
 
     private void Start()
     {
-        volumeSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+        volumeSlider.onValueChanged.AddListener(delegate { MusicValueChangeCheck(); });
+        sfxVolumeSlider.onValueChanged.AddListener(delegate { SFXValueChangeCheck(); });
+
+        volumeSlider.value = settings.volume;
+        sfxVolumeSlider.value = settings.sfxVolume;
     }
 
-    public void ValueChangeCheck()
+    public void MusicValueChangeCheck()
     {
         settings.volume = volumeSlider.value;
         audioSource.volume = settings.volume;
+    }
+
+    public void SFXValueChangeCheck()
+    {
+        settings.sfxVolume = sfxVolumeSlider.value;
         if (playerAudio != null)
         {
-            playerAudio.volume = settings.volume;
+            playerAudio.volume = settings.sfxVolume;
         }
     }
 }

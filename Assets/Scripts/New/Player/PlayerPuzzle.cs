@@ -70,7 +70,7 @@ public class PlayerPuzzle : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 doingPuzzle = false;
                 CamManager.instance.MoveToCam(previousCamUsed);

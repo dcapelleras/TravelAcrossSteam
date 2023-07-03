@@ -10,21 +10,31 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject settingsPanel;
     [SerializeField] GameObject menuPanel;
     [SerializeField] GameObject levelsPanel;
-    [SerializeField] Slider volumeSlider;
+    [SerializeField] Slider musicSlider;
+    [SerializeField] Slider sfxSlider;
     [SerializeField] AudioSource audioSource;
     [SerializeField] ScriptableSettings settings;
 
     private void Awake()
     {
-        audioSource.volume = settings.volume;
-        volumeSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+        musicSlider.onValueChanged.AddListener(delegate { MusicValueChangeCheck(); });
+        musicSlider.onValueChanged.AddListener(delegate { SFXValueChangeCheck(); });
+
+        musicSlider.value = settings.volume;
+        sfxSlider.value = settings.sfxVolume;
+
         audioSource.Play();
     }
 
-    public void ValueChangeCheck()
+    public void MusicValueChangeCheck()
     {
-        settings.volume = volumeSlider.value;
+        settings.volume = musicSlider.value;
         audioSource.volume = settings.volume;
+    }
+
+    public void SFXValueChangeCheck()
+    {
+        settings.sfxVolume = sfxSlider.value;
     }
 
     public void PlayGame(int sceneIndex)

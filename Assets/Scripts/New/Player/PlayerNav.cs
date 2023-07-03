@@ -22,7 +22,7 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
     [SerializeField] GameObject workingCables;
 
     [SerializeField] GameObject triggerTeleport;
-    [SerializeField] AudioSource secondaryAudio;
+    //[SerializeField] AudioSource secondaryAudio;
     bool walkingSoundOn;
     bool walking;
 
@@ -42,18 +42,18 @@ public class PlayerNav : MonoBehaviour //have to set a point to go to if i click
         {
             walkingSoundOn = false;
             anim.SetFloat("Walk", 0f);
-            secondaryAudio.Stop();
+            //secondaryAudio.Stop();
         }
         if (GameManager.instance.menuOpen)
         {
             walkingSoundOn = false;
-            secondaryAudio.Stop();
+            //secondaryAudio.Stop();
         }
         else if (!walkingSoundOn && Vector3.Distance(nav.destination, transform.position) > dist)
         {
             walkingSoundOn = true;
             anim.SetFloat("Walk", 1f);
-            secondaryAudio.Play();
+            //secondaryAudio.Play();
         }
         if (!canMove || gameEnded)
         {

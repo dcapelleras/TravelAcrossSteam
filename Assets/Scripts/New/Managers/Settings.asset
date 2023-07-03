@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ed8735efba8614a96aafbdc242403c, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  volume: 1
+  volume: 0.11542498
+  sfxVolume: 1

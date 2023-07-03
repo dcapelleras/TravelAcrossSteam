@@ -6,4 +6,5 @@ using UnityEngine;
 public class ScriptableSettings : ScriptableObject
 {
     public float volume;
+    public float sfxVolume;
 }
