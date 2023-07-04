@@ -13,6 +13,8 @@ public class SettingsManager : MonoBehaviour
 
     [SerializeField] ScriptableSettings settings;
 
+    [SerializeField] List<AudioSource> variousSFXAudioSources = new List<AudioSource>();
+
     private void Start()
     {
         volumeSlider.onValueChanged.AddListener(delegate { MusicValueChangeCheck(); });
@@ -34,6 +36,13 @@ public class SettingsManager : MonoBehaviour
         if (playerAudio != null)
         {
             playerAudio.volume = settings.sfxVolume;
+        }
+        if (variousSFXAudioSources.Count > 0)
+        {
+            for (int i = 0; i < variousSFXAudioSources.Count; i++)
+            {
+                variousSFXAudioSources[i].volume = settings.sfxVolume;
+            }
         }
     }
 }

@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 using Yarn.Unity;
 
 public class FinalVideoManager : MonoBehaviour
 {
     DialogueRunner runner;
     [SerializeField] List<GameObject> videoList;
+    [SerializeField] GameObject backgroundImage;
 
     int currentDiapositiveIndex = 0;
 
@@ -20,6 +22,7 @@ public class FinalVideoManager : MonoBehaviour
 
     public void StartVideo()
     {
+        backgroundImage.SetActive(true);
         videoOn= true;
         videoList[0].SetActive(true);
     }
@@ -28,6 +31,10 @@ public class FinalVideoManager : MonoBehaviour
     {
         if (videoOn)
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                videoList[videoList.Count].SetActive(true);
+            }
             if (Input.anyKeyDown)
             {
                 GoToNextDiapositive();
