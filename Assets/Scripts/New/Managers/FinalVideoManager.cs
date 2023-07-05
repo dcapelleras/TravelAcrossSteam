@@ -14,22 +14,38 @@ public class FinalVideoManager : MonoBehaviour
 
     bool videoOn = false;
 
+    [SerializeField] AudioSource applauseSource;
+    [SerializeField] AudioSource myManSource;
+
     private void Awake()
     {
         runner = FindObjectOfType<DialogueRunner>();
         runner.AddCommandHandler("startVideo", StartVideo);
+        runner.AddCommandHandler("applauses", Applauses);
     }
 
     public void StartVideo()
     {
         videoOn= true;
         videoList[0].SetActive(true);
-        LastButtonAppear();
+        StartCoroutine(LastButtonAppear());
     }
 
-    public async void LastButtonAppear()
+    public void Applauses()
     {
-        await Task.Delay(60000);
+        applauseSource.Play();
+        StartCoroutine(DelayApplauses());
+    }
+
+    IEnumerator DelayApplauses()
+    {
+        yield return new WaitForSeconds(0.5f);
+        myManSource.Play();
+    }
+
+    public IEnumerator LastButtonAppear()
+    {
+        yield return new WaitForSeconds(60);
         lastButton.SetActive(true);
     }
 

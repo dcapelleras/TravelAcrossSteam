@@ -38,10 +38,10 @@ public class CodingManager : MonoBehaviour
         initialSpritePos = spriteTransform.position;
         initialSpriteRot = spriteTransform.rotation;
     }
-
-    private void Update()
+    /*
+    private void Update() //cheats
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             switch (puzzleIndex)
             {
@@ -68,7 +68,7 @@ public class CodingManager : MonoBehaviour
             }
         }
     }
-
+    */
     public void UpdateCodeList(int lineIndex, Action _action)
     {
         actions[lineIndex] = _action;
