@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 96238234}
-  m_IndirectSpecularColor: {r: 0.051055033, g: 0.066513814, b: 0.124916285, a: 1}
+  m_IndirectSpecularColor: {r: 0.051055014, g: 0.06651369, b: 0.12491619, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7911,6 +7911,7 @@ MonoBehaviour:
   volumeSlider: {fileID: 272690955}
   sfxVolumeSlider: {fileID: 1075191676}
   settings: {fileID: 11400000, guid: ce0bbea3b47f96c4786806f775181c78, type: 2}
+  variousSFXAudioSources: []
 --- !u!1 &908526993
 GameObject:
   m_ObjectHideFlags: 0
@@ -9038,6 +9039,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3292657647476544606, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3292657647476544606, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: yarnProject
       value: 
@@ -12013,8 +12022,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7538828139750945962}
-  m_LocalRotation: {x: 0.21868658, y: 0.084278055, z: 0.41149217, w: 0.8807654}
-  m_LocalPosition: {x: 0.27, y: -1.1, z: 4.13}
+  m_LocalRotation: {x: 0.22001436, y: 0.05641911, z: 0.41396624, w: 0.8815002}
+  m_LocalPosition: {x: 2.11, y: -0.08, z: 3.82}
   m_LocalScale: {x: 258.74747, y: 181.64131, z: 181.64131}
   m_ConstrainProportionsScale: 0
   m_Children: []
