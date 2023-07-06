@@ -41,7 +41,7 @@ public class CodingManager : MonoBehaviour
     /*
     private void Update() //cheats
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             switch (puzzleIndex)
             {
