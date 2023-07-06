@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8941177, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.63529414, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8941177, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.63529414, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8941177, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.63529414, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -835,7 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8941177, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.63529414, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1104,12 +1104,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6702702314362278649, guid: ab8728362d165984192ce342cfe21766, type: 3}
       propertyPath: m_Type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6702702314362278649, guid: ab8728362d165984192ce342cfe21766, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 806cd24bea55acb4f8e9ee4fcfdde3f5, type: 3}
     - target: {fileID: 6702702314362278649, guid: ab8728362d165984192ce342cfe21766, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -1321,6 +1321,14 @@ PrefabInstance:
     - target: {fileID: 1859133118558526138, guid: 760c43333adcee046b6668479dc01867, type: 3}
       propertyPath: m_Name
       value: Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859133118558526138, guid: 760c43333adcee046b6668479dc01867, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859133118558526140, guid: 760c43333adcee046b6668479dc01867, type: 3}
+      propertyPath: m_Color.g
+      value: 0.63529414
       objectReference: {fileID: 0}
     - target: {fileID: 1859133118558526141, guid: 760c43333adcee046b6668479dc01867, type: 3}
       propertyPath: m_Pivot.x

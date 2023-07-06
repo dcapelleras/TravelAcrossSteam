@@ -13,6 +13,7 @@ title: TriedOpeningDoor
 <<movement 0>>
 Montserrat: Vaja, ja m'ho imaginava. Sembla que està tancat. Sembla que m'he fet il·lusions per res. És una mica decebedor, però a vegades les coses no surten com esperem.
 <<callJanitor>>
+<<ManSound>>
 Conserge: Renoi quina noia més matinera!
 Francesc el conserge: Bon dia! Que no pots entrar? Suposo que ets la noia que treballa al final de l'oficina! Jo soc en Francesc, el conserge amb mes marxa de la Masa!
 Francesc el conserge: És molt bona costum això de venir a la feina a les 5 del matí! M'alegro de conèixer algú que valora tant com jo l'olor de netejaterres a primera hora!
@@ -22,6 +23,7 @@ Francesc el conserge: Poca gent ho sap, però fer el que t'agrada i gaudir-ho ta
 
 title: JanitorOpenedDoor
 ---
+<<ManSound>>
 Francesc: Doncs ja ho tenim! Porta oberta! 
 Francesc: Et deixo fer que la brutícia m'espera!
 <<movement 1>>
@@ -53,23 +55,27 @@ title: AfterPCPuzzle
 ---
 <<MCuriousNull>>
 Montserrat: Doncs al final me n'he sortit! He resolt el trencaclosques d'algú prou intel·ligent per treballar a la Masa! De fet, sona pitjor dit en veu alta... Espero que no s'enfadin amb mí per haver-lo fet sense permís.
+<<WomanSound>>
 ???: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
 ???: Quina és la teva especialitat? 
 Montserrat: Jo no... no treballo aquí...
 ???: I que fas aquí? No hauríes d'entrar en oficines on no treballes!
 Montserrat: Ho sento... i sento haver tocat els teus trencaclosques...
 ???: (sobresaltada) trencaclosques?? Estic a punt d'un gran descobriment! I a sobre estava amb feines extra que no fan més que relentitzarme...
+<<WomanSound>>
 ???: (Mira els papers) Mmmh... Está tot fet... Ho has fet tu?
 Montserrat: Sí, ho sento, m'agrada molt aquest tipus de tasques i ho he vist a mitges...
 ???: Ara et veig amb uns altres ulls, deixa'm que em torni a presentar.
 Margaret Hamilton: Encantada, sóc la Margaret Hamilton.
 Montserrat: Es tot un plaer! Jo soc la Montserrat.
+<<WomanSound>>
 Margaret Hamilton: Ja que m'has ajudat, Montserrat, deixa que t'ensenyi la meva investigació.
 Margaret Hamilton: Estic acabant els càlculs d'òrbita per un nou programa espacial revolucionari.
 Montserrat: Increïble, sembla que es possible que presencii un moment históric! I que necessites per aconseguir-ho? Puc ajudar en alguna cosa?
 Margaret Hamilton: Doncs l'únic que falta es probar els càlculs, però no es tan fàcil, necessito documents confidencials als quals la majoría aquí tenen accés però ser una dona té les seves desavantatges...
 Montserrat: Quina tontería! Només falta això? Amb el mèrit i importància que té la teva feina hauríes de tenir la màxima prioritat!
 Montserrat: Si fa falta jo mateixa aconseguiré els documents!
+<<WomanSound>>
 Margaret Hamilton: Em tens molt sorpresa! Però has arribat aquí i se't veu més que motivada, així que es pot intentar.
 Margaret Hamilton: Hauràs d'anar a la recepció, trobaràs la clau al costat dels recepcionistes, són molt simpàtics per si vols parlar amb ells, però una mica despistats, no crec que se n'adonin si les agafes.
 <<OpenTutorial 1>>
@@ -83,11 +89,13 @@ title: MargaretAfterBossKeys
 <<movement 0>>
 <<MCuriousNull>>
 Montserrat: Ja tinc la clau!
+<<WomanSound>>
 Margaret Hamilton: Genial! Però ara ve la part arriscada.
 Margaret Hamilton: Travessant la porta que tenim aquí al costat et trobaràs la sala de control, i al fons de la sala de control hi ha la sala que ens interessa.
 Margaret Hamilton: Ja tens les claus així que només farà falta obrir la sala.
 Margaret Hamilton: Un cop siguis dins, simplement has de trobar els documents referents a les especificacions del coet.
 Montserrat: Ja m'estan agafant els nervis... No crec que una noia com jo pogués ajudar a algú de la Masa...
+<<WomanSound>>
 Margaret Hamilton: Em temo que tens la impressió equivocada! Potser la gent pensa que una noia és menys capaç...
 Margaret Hamilton: Però has de saber que únicament passen desapercebudes, aquí mateix a la Masa som bastants dones encarregant-nos de la part tècnica.
 Montserrat: Això canvia bastant el meu punt de vista, és possible que hi hagi prejudicis que no són veritat?
@@ -101,6 +109,7 @@ title: PlayerCatched
 ---
 <<movement 0>>
 <<guardsFriendly>>
+<<ManSound>>
 Guardia: Alto aquí senyoreta! Això es zona restringida!
 Guardia: Torna al teu lloc de treball immediatament!
 <<sendPlayerGuard>>
@@ -139,17 +148,19 @@ title: MargaretAfterDocuments
 ---
 <<movement 0>>
 <<MCuriousNull>>
+<<WomanSound>>
 Margaret Hamilton: Ho has aconseguit! La veritat es que no tenía moltes esperances!
 Margaret Hamilton: No t'agradaría ser la meva ajudant?
 Montserrat: M'encantaría però no crec que pugui, hauría de tornar d'on vinc (tot i que no sé com...)
 Margaret Hamilton: Quina pena, es necessita gent amb empenta i decidida en aquest sector!
 Margaret Hamilton: Ara ja falta menys! Deixa que t'expliqui l'importància d'aquest projecte!
+<<WomanSound>>
 Margaret Hamilton: Igual que l'humanitat fins fa relativament poc només podía somiar en veure la terra des de l'espai i ho vam aconseguir...
 Margaret Hamilton: Ara estem a punt de realitzar una missió encara més ambiciosa! Estem a punt de conquistar la lluna!
 Margaret Hamilton: Tots aquests càlculs són part del que farà possible la pròxima missió: El programa Apollo!
 Montserrat: No m'ho puc creure! (Es possible que realment estigui a l'època del primer viatge a la lluna?)
 Margaret Hamilton: Ara només falta... 
-(Some time later)
+(Uns anys més tard...)
 <<lastScene>>
 (carrega escena final de margaret rebent el reconeixement de tothom i agraint a la Montserrat i animantla a començar la seva carrera)
 ("opcional" La Montserrat es teletransporta a la actualitat i se la veu a la recepcio de la upc apuntantse a ingenyeria)
@@ -160,6 +171,7 @@ Margaret Hamilton: Ara només falta...
 title: CuriousJanitor1
 ---
 <<movement 0>>
+<<ManSound>>
 Conserge: Res com posar-se a netejar a primera hora abans que arribi ningú! Uns estiraments i ja podem començar!
 <<movement 1>>
 ===
@@ -167,6 +179,7 @@ Conserge: Res com posar-se a netejar a primera hora abans que arribi ningú! Uns
 title: CuriousJanitor2
 ---
 <<movement 0>>
+<<ManSound>>
 Francesc el conserge: Recorda, treballar en el que t'agrada i uns moviments com els meus cada matí són la recepta de l'èxit!
 <<movement 1>>
 ===
@@ -174,6 +187,7 @@ Francesc el conserge: Recorda, treballar en el que t'agrada i uns moviments com 
 title: CuriousMargaret1
 ---
 <<movement 0>>
+<<WomanSound>>
 Margaret Hamilton: Recorda, has d'aconseguir la clau de la taula al costat de l'entrada, un cop la tinguis torna amb mi i planegem el següent pas.
 <<movement 1>>
 ===
@@ -181,6 +195,7 @@ Margaret Hamilton: Recorda, has d'aconseguir la clau de la taula al costat de l'
 title: CuriousMargaret2
 ---
 <<movement 0>>
+<<WomanSound>>
 Margaret Hamilton: Recorda, ara que tens la clau podràs entrar als arxius, estan passada la sala de control, però compte, hi ha uns quants guàrdies vigilant la sala.
 <<movement 1>>
 ===
@@ -188,6 +203,7 @@ Margaret Hamilton: Recorda, ara que tens la clau podràs entrar als arxius, esta
 title: CuriousRecepcionist1
 ---
 <<movement 0>>
+<<ManSound>>
 Guifré el recepcionista: Bon dia! Soc en Guifré, la persona amb més recursos de la Masa! Necessites alguna cosa?
 Montserrat: Bon dia! Doncs ara que ho dius un bolígraf i paper m'aniria molt bé!
 Guifré el recepcionista: Doncs... vaja... deixa'm que busqui...
@@ -197,6 +213,7 @@ Guifré el recepcionista: Doncs... vaja... deixa'm que busqui...
 title: CuriousRecepcionist2
 ---
 <<movement 0>>
+<<ManSound>>
 Montserrat: Hola Guifré! Has aconseguit un bolígraf?
 Guifré el recepcionista: ... Segueixo buscant...
 <<movement 1>>
@@ -205,6 +222,7 @@ Guifré el recepcionista: ... Segueixo buscant...
 title: CuriousRecepcionist3
 ---
 <<movement 0>>
+<<ManSound>>
 Ausiàs el recepcionista: Bon dia! Soc l'Ausiàs, la persona amb més respostes de la Masa! Vols saber alguna cosa?
 Montserrat: Bon dia! Deixa'm pensar... Quants astronautes hi ha a la Masa?
 Ausiàs el recepcionista: Exactament entre 10 i 100.
@@ -215,6 +233,7 @@ Montserrat: Suposo que és millor que entre 0 i 1000...
 title: CuriousRecepcionist4
 ---
 <<movement 0>>
+<<ManSound>>
 Ausiàs el recepcionista: Vols saber alguna cosa més?
 Montserrat: Gràcies però no fa falta.
 <<movement 1>>
@@ -223,6 +242,7 @@ Montserrat: Gràcies però no fa falta.
 title: CuriousRecepcionist5
 ---
 <<movement 0>>
+<<ManSound>>
 Joanic el recepcionista: Bon dia! Soc en Joanic, la persona més optimista de la Masa!
 Montserrat: Bon dia Joanic! És agradable veure't de bon humor!
 Joanic el recepcionista: Què vol dir això? Que no és agradable veure'm si no estic de bon humor?
@@ -233,6 +253,7 @@ Montserrat: No! No volia dir això... Millor ho deixo estar.
 title: CuriousRecepcionist6
 ---
 <<movement 0>>
+<<ManSound>>
 Montserrat: Millor que no ho intenti arreglar...
 <<movement 1>>
 ===

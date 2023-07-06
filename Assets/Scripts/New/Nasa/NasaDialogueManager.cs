@@ -22,6 +22,9 @@ public class NasaDialogueManager : MonoBehaviour
 
     [SerializeField] List<Guard> guards = new List<Guard>();
 
+    [SerializeField]AudioSource audioPeople;
+    [SerializeField] List<AudioClip> peopleSounds = new List<AudioClip>();
+
     private void Awake()
     {
         if (instance == null)
@@ -41,6 +44,8 @@ public class NasaDialogueManager : MonoBehaviour
         runner.AddCommandHandler("MCurious1", MargaretCurious1);
         runner.AddCommandHandler("MCurious2", MargaretCurious2);
         runner.AddCommandHandler("MCuriousNull", MargaretCuriousNull);
+        runner.AddCommandHandler("ManSound", PlayManSound);
+        runner.AddCommandHandler("WomanSound", PlayWomanSound);
     }
 
     public void CuriousTalk(int index)
@@ -88,6 +93,18 @@ public class NasaDialogueManager : MonoBehaviour
                 runner.StartDialogue("CuriousRecepcionist6");
                 break;
         }
+    }
+
+    public void PlayManSound()
+    {
+        audioPeople.clip = peopleSounds[0];
+        audioPeople.Play();
+    }
+
+    public void PlayWomanSound()
+    {
+        audioPeople.clip = peopleSounds[1];
+        audioPeople.Play();
     }
 
     public void MargaretCurious1()
