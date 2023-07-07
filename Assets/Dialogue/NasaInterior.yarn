@@ -47,35 +47,32 @@ Montserrat: És curiós trobar una relíquia com aquesta en un lloc tan modern c
 Montserrat: Potser hi ha un col·leccionista d'antiguitats treballant aquí... O potser he viatjat en el temps!
 Montserrat: Ja estic delirant! Segurament és només el passatemps d'algú.
 <<OpenTutorial 0>>
-Montserrat: Que interessant, això es gairebé com un trencaclosques, aviam si donant-li voltes se m'acudeix la resposta.
+Montserrat: Que interessant, això és gairebé com un trencaclosques, a veure si donant-li voltes se m'acudeix la resposta.
 <<progPuzzle>>
 ===
 
 title: AfterPCPuzzle
 ---
 <<MCuriousNull>>
-Montserrat: Doncs al final me n'he sortit! He resolt el trencaclosques d'algú prou intel·ligent per treballar a la Masa! De fet, sona pitjor dit en veu alta... Espero que no s'enfadin amb mí per haver-lo fet sense permís.
+Montserrat: Doncs al final me n'he sortit! He resolt el trencaclosques d'algú prou intel·ligent per treballar a la Masa! De fet, sona pitjor dit en veu alta... Espero que no s'enfadin amb mi per haver-lo fet sense permís.
 <<WomanSound>>
-???: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faràn compartirla!
-???: Quina és la teva especialitat? 
+???: Qui ets i que fas a la meva cadira? No em diguis ara que a sobre de tenir l'oficina més petita em faran compartir-la!
+???: Quina és la teva especialitat?
 Montserrat: Jo no... no treballo aquí...
-???: I que fas aquí? No hauríes d'entrar en oficines on no treballes!
+???: I que fas aquí? No hauries d'entrar en oficines on no treballes!
 Montserrat: Ho sento... i sento haver tocat els teus trencaclosques...
-???: (sobresaltada) trencaclosques?? Estic a punt d'un gran descobriment! I a sobre estava amb feines extra que no fan més que relentitzarme...
-<<WomanSound>>
-???: (Mira els papers) Mmmh... Está tot fet... Ho has fet tu?
+???: (sobresaltada) trencaclosques?? Estic a punt d'un gran descobriment! I a sobre estava amb feines extra que no fan més que ralentitzar-me...
+???: (Mira els papers) Mmm... Està tot fet... Ho has fet tu?
 Montserrat: Sí, ho sento, m'agrada molt aquest tipus de tasques i ho he vist a mitges...
 ???: Ara et veig amb uns altres ulls, deixa'm que em torni a presentar.
-Margaret Hamilton: Encantada, sóc la Margaret Hamilton.
-Montserrat: Es tot un plaer! Jo soc la Montserrat.
-<<WomanSound>>
+Margaret Hamilton: Encantada, soc la Margaret Hamilton.
+Montserrat: És tot un plaer! Jo soc la Montserrat.
 Margaret Hamilton: Ja que m'has ajudat, Montserrat, deixa que t'ensenyi la meva investigació.
 Margaret Hamilton: Estic acabant els càlculs d'òrbita per un nou programa espacial revolucionari.
-Montserrat: Increïble, sembla que es possible que presencii un moment históric! I que necessites per aconseguir-ho? Puc ajudar en alguna cosa?
-Margaret Hamilton: Doncs l'únic que falta es probar els càlculs, però no es tan fàcil, necessito documents confidencials als quals la majoría aquí tenen accés però ser una dona té les seves desavantatges...
-Montserrat: Quina tontería! Només falta això? Amb el mèrit i importància que té la teva feina hauríes de tenir la màxima prioritat!
+Montserrat: Increïble, sembla que és possible que presenciï un moment històric! I que necessites per aconseguir-ho? Puc ajudar en alguna cosa?
+Margaret Hamilton: Doncs l'únic que falta és provar els càlculs, però no és tan fàcil, necessito documents confidencials als quals la majoria aquí tenen accés, però ser una dona té els seus desavantatges...
+Montserrat: Quina tontería! Només falta això? Amb el mèrit i importància que té la teva feina hauries de tenir la màxima prioritat!
 Montserrat: Si fa falta jo mateixa aconseguiré els documents!
-<<WomanSound>>
 Margaret Hamilton: Em tens molt sorpresa! Però has arribat aquí i se't veu més que motivada, així que es pot intentar.
 Margaret Hamilton: Hauràs d'anar a la recepció, trobaràs la clau al costat dels recepcionistes, són molt simpàtics per si vols parlar amb ells, però una mica despistats, no crec que se n'adonin si les agafes.
 <<OpenTutorial 1>>
@@ -94,13 +91,12 @@ Margaret Hamilton: Genial! Però ara ve la part arriscada.
 Margaret Hamilton: Travessant la porta que tenim aquí al costat et trobaràs la sala de control, i al fons de la sala de control hi ha la sala que ens interessa.
 Margaret Hamilton: Ja tens les claus així que només farà falta obrir la sala.
 Margaret Hamilton: Un cop siguis dins, simplement has de trobar els documents referents a les especificacions del coet.
-Montserrat: Ja m'estan agafant els nervis... No crec que una noia com jo pogués ajudar a algú de la Masa...
-<<WomanSound>>
+Montserrat: Ja m'estan agafant els nervis... Tothom diu que una noia no encaixa en sectors tècnics, potser tenen raó...
 Margaret Hamilton: Em temo que tens la impressió equivocada! Potser la gent pensa que una noia és menys capaç...
 Margaret Hamilton: Però has de saber que únicament passen desapercebudes, aquí mateix a la Masa som bastants dones encarregant-nos de la part tècnica.
 Montserrat: Això canvia bastant el meu punt de vista, és possible que hi hagi prejudicis que no són veritat?
 Montserrat: Suposo que hauria de confiar més en mi, al cap i a la fi, cap innovació s'ha fet sense esforç!
-Montserrat: He d'anar al passadís, i sense que em vegin he d'arribar a la porta del final de la sala, després només falta buscar els documents i tornar sense que em vegin.
+Montserrat: He d'anar a la sala de control, i sense que em vegin he d'arribar a la porta del final de la sala, després només falta trobar els documents i portar-li a la Margaret.
 <<MCurious2>>
 <<movement 1>>
 ===
@@ -110,11 +106,11 @@ title: PlayerCatched
 <<movement 0>>
 <<guardsFriendly>>
 <<ManSound>>
-Guardia: Alto aquí senyoreta! Això es zona restringida!
-Guardia: Torna al teu lloc de treball immediatament!
+Guàrdia: Alto aquí senyoreta! Això és zona restringida!
+Guàrdia: Torna al teu lloc de treball immediatament!
 <<sendPlayerGuard>>
 Montserrat: (Vaja, m'han enxampat)
-Instruccions: Evita passar prop del centre de visió dels guardies o sortir-ne abans que et vinguin a cridar l'atenció.
+Instruccions: Evita passar prop del centre de visió dels guàrdies o sortir-ne abans que et vinguin a cridar l'atenció.
 <<guardsUnfriendly>>
 <<movement 1>>
 ===
@@ -133,7 +129,7 @@ title: StartSlidingPuzzleDialogue
 <<movement 0>>
 Montserrat: Estan tots els papers desordenats i fets un desastre!
 <<OpenTutorial 2>>
-Montserrat: Vaig a ordenarlos, es el mínim que puc fer per ajudar la Margaret.
+Montserrat: Vaig a ordenar-los, és el mínim que puc fer per ajudar la Margaret.
 ===
 
 title: FinishSlidingPuzzleDialogue
@@ -149,17 +145,16 @@ title: MargaretAfterDocuments
 <<movement 0>>
 <<MCuriousNull>>
 <<WomanSound>>
-Margaret Hamilton: Ho has aconseguit! La veritat es que no tenía moltes esperances!
-Margaret Hamilton: No t'agradaría ser la meva ajudant?
-Montserrat: M'encantaría però no crec que pugui, hauría de tornar d'on vinc (tot i que no sé com...)
+Margaret Hamilton: Ho has aconseguit! Potser s'haurien de plantejar fer renovació de personal de seguretat...
+Margaret Hamilton: No t'agradaria ser la meva ajudant?
+Montserrat: M'encantaria, però no crec que pugui, hauria de tornar d'on vinc (tot i que no sé com...)
 Margaret Hamilton: Quina pena, es necessita gent amb empenta i decidida en aquest sector!
-Margaret Hamilton: Ara ja falta menys! Deixa que t'expliqui l'importància d'aquest projecte!
-<<WomanSound>>
-Margaret Hamilton: Igual que l'humanitat fins fa relativament poc només podía somiar en veure la terra des de l'espai i ho vam aconseguir...
+Margaret Hamilton: Ara ja falta menys! Deixa que t'expliqui la importància d'aquest projecte!
+Margaret Hamilton: Igual que la humanitat fins fa relativament veia impossible arribar a l'espai i ho vam assolir...
 Margaret Hamilton: Ara estem a punt de realitzar una missió encara més ambiciosa! Estem a punt de conquistar la lluna!
 Margaret Hamilton: Tots aquests càlculs són part del que farà possible la pròxima missió: El programa Apollo!
-Montserrat: No m'ho puc creure! (Es possible que realment estigui a l'època del primer viatge a la lluna?)
-Margaret Hamilton: Ara només falta... 
+Montserrat: No m'ho puc creure! (És possible que realment estigui a l'època del primer viatge a la lluna?)
+Margaret Hamilton: Ara només falta...
 (Uns anys més tard...)
 <<lastScene>>
 (carrega escena final de margaret rebent el reconeixement de tothom i agraint a la Montserrat i animantla a començar la seva carrera)
