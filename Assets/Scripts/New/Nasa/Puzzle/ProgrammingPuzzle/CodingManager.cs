@@ -67,8 +67,8 @@ public class CodingManager : MonoBehaviour
                     break;
             }
         }
-    }
-    */
+    }*/
+    
     public void UpdateCodeList(int lineIndex, Action _action)
     {
         actions[lineIndex] = _action;

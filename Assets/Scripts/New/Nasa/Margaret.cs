@@ -8,11 +8,13 @@ public class Margaret : MonoBehaviour
 {
     [SerializeField] Transform myDeskPos;
     [SerializeField] Transform secondPos;
+    [SerializeField] Transform thirdPos;
     NavMeshAgent agent;
     [SerializeField] Animator anim;
     bool isIdle = false;
     bool isSitting;
     bool canCheckAgent;
+    bool passedSecond;
     [SerializeField] GameObject chair;
     Curious curious;
 
@@ -47,9 +49,14 @@ public class Margaret : MonoBehaviour
                         isIdle = true;
                         anim.SetBool("idle", true);
                     }
-                    if (agent.remainingDistance < 0.3f)
+                    if (agent.remainingDistance < 0.5f && !passedSecond)
                     {
+                        passedSecond = true;
                         agent.SetDestination(secondPos.position);
+                    }
+                    if (agent.remainingDistance < 0.3f && passedSecond)
+                    {
+                        agent.SetDestination(thirdPos.position);
                     }
                 }
             }
@@ -60,8 +67,8 @@ public class Margaret : MonoBehaviour
     {
         canCheckAgent= false;
         isSitting = true;
-        anim.SetBool("sit", true);
-        chair.SetActive(true);
+        //anim.SetBool("sit", true);
+        //chair.SetActive(true);
         curious.curiousIndex = 3;
     }
 }

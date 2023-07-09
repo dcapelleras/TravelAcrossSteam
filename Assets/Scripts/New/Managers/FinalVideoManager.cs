@@ -45,7 +45,7 @@ public class FinalVideoManager : MonoBehaviour
 
     public IEnumerator LastButtonAppear()
     {
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(40);
         lastButton.SetActive(true);
     }
 

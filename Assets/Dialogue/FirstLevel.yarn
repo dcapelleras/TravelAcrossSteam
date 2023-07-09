@@ -51,7 +51,7 @@ Montserrat: Ara només em queda connectar-ho tot i voilà! Tot normal i aquí no
 title: FinishCables
 ---
 Montserrat: Ara sí, sembla que funciona, però em pregunto quina és la seva finalitat. Bé, com no hi ha ningú a part de mi, suposo que no passa res si entro a mirar un segon.
-Montserrat: Què podrà fer? Què hi haurà a l'interior? Per molt estrany que sigui, tot i ser una noia la curiositat científica em supera!
+Montserrat: Sempre m'han dit que aquestes coses no fan per una noia, però la curiositat científica em supera!
 <<FinishCable 1>>
 <<Movement 1>>
 ===
