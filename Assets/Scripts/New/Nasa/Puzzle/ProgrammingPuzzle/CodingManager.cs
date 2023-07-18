@@ -38,7 +38,7 @@ public class CodingManager : MonoBehaviour
         initialSpritePos = spriteTransform.position;
         initialSpriteRot = spriteTransform.rotation;
     }
-    /*
+    
     private void Update() //cheats
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -67,7 +67,7 @@ public class CodingManager : MonoBehaviour
                     break;
             }
         }
-    }*/
+    }
     
     public void UpdateCodeList(int lineIndex, Action _action)
     {

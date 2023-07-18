@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class Curious : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class Curious : MonoBehaviour
 
     void TriggerCuriousDialogue()
     {
+        if (FindObjectOfType<DialogueRunner>().IsDialogueRunning)
+        {
+            return;
+        }
         if (isRecepcionist)
         {
             NasaDialogueManager.instance.CuriousTalk(index);
